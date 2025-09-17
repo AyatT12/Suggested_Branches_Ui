@@ -84,10 +84,18 @@ body{
         transform: translateX(-100%); 
     }
   }
-
-
   #userDropdown{
     text-align: end;
   }
- 
+   #branchList {
+  background-position: right .75rem center;
+  padding: .375rem 2.25rem .375rem .75rem;
+  text-align: left;
+}
+#carFilter{
+  background-position: right .75rem center;
+  padding: .375rem 2.25rem .375rem .75rem;
+  text-align: left;
+}
+
   
