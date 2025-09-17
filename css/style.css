@@ -1450,7 +1450,15 @@ body::-webkit-scrollbar-thumb {
   z-index: 999;
   background: #fffffa;
 }
-
+#nextBtn,
+#prevBtn
+{
+  color: green;
+}
+#nextBtn:disabled ,
+#prevBtn:disabled{
+color: #6c757d;
+}
 /* إعادة الترتيب للجوال */
 @media (max-width:575px) {
   .footer-buttons-row {
