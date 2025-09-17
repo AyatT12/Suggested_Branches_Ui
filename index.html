@@ -759,7 +759,7 @@
                                                                     <h5 class="car-title">هيونداي - النترا - سيدان متوسطة - 2019 - و ق ق 6417 - عودي</h5>
                                                                 </div>
                                                     
-                                                                <div class="car-data-row p-2">
+                                                                <div class="row car-data-row p-2">
                                                                     <div class="car-icons">
                                                                         <div class="icon-item">
                                                                             <div class="icon">
@@ -820,7 +820,7 @@
                                                                     <h5 class="car-title">فورد - تورس -  سيدان متوسطة - 2019 - س ك ب 3965 - عودي</h5>
                                                                 </div>
                                     
-                                                                <div class="car-data-row p-2">
+                                                                <div class="row car-data-row p-2">
                                                                         <div class="car-icons">
                                                                             <div class="icon-item">
                                                                                 <div class="icon">
@@ -881,7 +881,7 @@
                                                                     <h5 class="car-title">هيونداي - أكسنت -  سيدان صغيرة - 2019 - ص ى ى 8445 - أحمر </h5>
                                                                 </div>
                                     
-                                                                <div class="car-data-row p-2">
+                                                                <div class="row car-data-row p-2">
                                                                         <div class="car-icons">
                                                                             <div class="icon-item">
                                                                                 <div class="icon">
@@ -943,7 +943,7 @@
                                                                         أصفر</h5>
                                                                 </div>
                                                     
-                                                                <div class="car-data-row p-2">
+                                                                <div class="row car-data-row p-2">
                                                                     <div class="car-icons">
                                                                         <div class="icon-item">
                                                                             <div class="icon">
@@ -1004,7 +1004,7 @@
                                                                     <h5 class="car-title">فورد - تورس -  سيدان متوسطة - 2019 - س ك ب 3965 - عودي</h5>
                                                                 </div>
                                                     
-                                                                <div class="car-data-row p-2">
+                                                                <div class="row car-data-row p-2">
                                                                     <div class="car-icons">
                                                                         <div class="icon-item">
                                                                             <div class="icon">
@@ -1060,8 +1060,8 @@
                                                     </div>
                                                     <!-- Pagination controls -->
                                                     <div class="d-flex justify-content-center mt-2 gap-2 pagination_Container">
-                                                        <button id="nextBtn" class="btn ">التالي</button>
-                                                        <button id="prevBtn" class="btn  me-2">السابق</button>
+                                                        <button id="nextBtn" class="btn "><i class="fa-solid fa-angles-left"></i></button>
+                                                        <button id="prevBtn" class="btn  me-2"><i class="fa-solid fa-angles-right"></i></button>
                                                     </div>
                                                     </div>
                                         </div>
@@ -1379,21 +1379,33 @@
                                     </select>
                                     <button type="button" class="btn btn-secondary1  mt-2 active1" id="chart"
                                         onclick="showCarouselItem(1) , setActiveButton(0)"><img
-                                            src="img/Rectangle 74.svg" class="chart-buttons-img">الاحصائيات</button>
+                                            src="img/Rectangle 74.svg" class="chart-buttons-img">
+                                        <p>الاحصائيات</p>
+                                    </button>
 
                                     <button type="button" class="btn btn-secondary1 " id="toggleCarousel"
                                         onclick="showCarouselItem(2) ,setActiveButton(1)"><img
-                                            src="img/Rectangle 75.svg" class="chart-buttons-img">مؤجرة</button>
+                                            src="img/Rectangle 75.svg" class="chart-buttons-img">
+                                        <p>مؤجرة</p>
+                                    </button>
                                     <button type="button" class="btn btn-secondary1 " id="toggleCarousel2"
                                         onclick="showCarouselItem(3) ,setActiveButton(2)"><img
-                                            src="img/Rectangle 76.svg" class="chart-buttons-img">متاحة</button>
+                                            src="img/Rectangle 76.svg" class="chart-buttons-img">
+                                        <p>
+                                            متاحة
+                                        </p>
+                                    </button>
                                     <button type="button" class="btn btn-secondary1 " id="toggleCarousel3"
                                         onclick="showCarouselItem(4),setActiveButton(3)"><img src="img/Rectangle 77.svg"
-                                            class="chart-buttons-img">غير متاحة</button>
+                                            class="chart-buttons-img">
+                                            <p>غير متاحة</p>
+                                        </button>
 
                                     <button type="button" class="btn btn-secondary1"
                                         onclick="showCarouselItem(5),setActiveButton(4)"><img src="img/SavedCars.svg"
-                                            class="chart-buttons-img">محفوظة</button>
+                                            class="chart-buttons-img">
+                                            <p>محفوظة</p>
+                                        </button>
 
                                 </form>
 
@@ -1673,6 +1685,5 @@
         }
     </script>
 </body>
-
 
 </html>
