@@ -1,0 +1,1677 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>كدي</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="بنان, خيار لإدارة شركات و مكاتب تأجير السيارات">
+    <link rel="icon" type="image/png" href="img/CompanyLogo_20240325231449.png">
+    <!-- ========================= CSS here ========================= -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Cairo:500,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400&display=swap" rel="stylesheet">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href='css/style.css' />
+    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/dripicons/2.0.0/webfont.min.css' />
+
+    <!-- <link rel="stylesheet" href='css/english.css' /> -->
+<style>
+    .car-card {
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        transition: all 0.4s ease;
+        border: none;
+        height: 100%;
+    }
+
+    .card-body {
+        width: 100%;
+    }
+
+    .car-image {
+        width: 100%;
+        height: 100px;
+        object-fit: contain;
+        transition: all 0.3s ease;
+    }
+
+    .car-title {
+        font-size: .8rem;
+        font-weight: 500;
+        color: #2c3e50;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+
+    .more-btn {
+        background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+        border: none;
+        color: white;
+        padding: 0.75rem 2rem;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+    }
+
+    .more-btn:hover {
+        background: linear-gradient(135deg, #ee5a24 0%, #ff6b6b 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+        color: white;
+    }
+
+
+    #carousel3 {
+        height: 100%;
+        overflow: auto;
+    }
+
+    #carFilter {
+        background-color: rgb(255, 253, 253);
+        border-radius: 8px;
+        border: 3px solid #FF9626;
+        text-align: start;
+        direction: rtl;
+        background-position: left .75rem center;
+        padding: .375rem .75rem .375rem 2.25rem;
+        width: 100%;
+        max-width: 250px;
+    }
+
+    @media (max-width: 768px) {
+        .car-specs {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .page-title {
+            font-size: 2rem;
+        }
+
+        .spec-icon {
+            font-size: 1.25rem;
+        }
+    }
+</style>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+
+    <header class="header">
+        <div class="navbar-area">
+            <!-- Topbar -->
+            <nav class="navbar navbar-expand navbar-light topbar mb-1 static-top  justify-content-between"
+                style="height:100px">
+                <!-- Topbar -->
+                <!-- Topbar Navbar -->
+                <ul class="navbar-nav p-0">
+                    <!-- Nav Item - User Information -->
+                    <li class="nav-item dropdown no-arrow position-relative">
+                        <a class="nav-link dropdown-toggle  gap-2" href="#" id="userDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="img-profile rounded-circle" src="img/pic (3).svg">
+                            <div class="userName" style="display: flex; flex-direction: column;">
+                                <span class=" text-dark font-weight-bold">
+                                    عيسى هاني مبروك عزام
+                                </span>
+                                <span class="text-dark">
+                                    مشرف على الفروع
+                                </span>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-left  animated--grow-in "
+                            style="font-size: 14px; width: 200px;" aria-labelledby="userDropdown">
+                            <!-- item-->
+                            <a class="dropdown-item notify-item ">
+                                <img src="img/Frame (2).svg" />
+                                <span>حسابى</span>
+                            </a>
+                            <a class="dropdown-item notify-item ">
+                                <img src="img/Frame (1).svg" />
+                                <span>تغيير كلمة السر</span>
+                            </a>
+                            <a class="dropdown-item notify-item ">
+                                <img src="img/Frame (3).svg" />
+                                <span>الانظمة</span>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <!-- item-->
+                            <a class="dropdown-item notify-item ">
+                                <img src="img/Frame (4).svg" />
+                                <span>تسجيل الخروج</span>
+                            </a>
+                        </div>
+                    </li>
+                    <!-- Nav Item - Alerts -->
+                    <li class="nav-item dropdown no-arrow mx-2">
+                        <a class="nav-link dropdown-toggle p-0" href="#" id="alertsDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="dripicons-bell noti-icon d-flex "
+                                style="font-size: 22px;vertical-align: middle;line-height: 70px;color: #7a7272;"></i>
+                            <!-- Counter - Alerts -->
+                            <span class="noti-icon-badge"></span>
+                        </a>
+                        <!-- Dropdown - Alerts -->
+                        <div class="dropdown-list dropdown-menu dropdown-menu-left shadow animated--grow-in"
+                            aria-labelledby="alertsDropdown">
+                            <div class="row alert">
+                                <div class="col-6" style="text-align:end;">
+                                    الاشعارات
+                                </div>
+
+                                <div class="col-3">
+                                    علي وشك
+                                </div>
+                                <div class="col-3">
+                                    <span class="d-block">
+                                        منتهي
+                                    </span>
+                                    <span>
+                                        (لم يسجل)
+                                    </span>
+                                </div>
+                            </div>
+                            <a class="dropdown-item dropdown-item-custom ">
+                                <div class="col-md-6 p-0" style="text-align:end;">
+                                    مستندات الفرع
+                                </div>
+                                <div class="col-md-3 Not-ended-Docs-Num text-center">
+                                    1
+                                </div>
+                                <div class="col-md-3 ended-Docs-Num">
+                                    0
+                                </div>
+                            </a>
+                            <a class="dropdown-item dropdown-item-custom ">
+                                <div class="col-md-6 p-0" style="text-align:end;">
+                                    وثائق السيارة
+                                </div>
+                                <div class="col-md-3 Not-ended-Docs-Num text-center">
+                                    0
+                                </div>
+                                <div class="col-md-3 ended-Docs-Num">
+                                    4
+                                </div>
+                            </a>
+                            <a class="dropdown-item dropdown-item-custom ">
+                                <div class="col-md-6 p-0" style="text-align:end;">
+                                    صيانة السيارة
+                                </div>
+                                <div class="col-md-3 Not-ended-Docs-Num text-center">
+                                    0
+                                </div>
+                                <div class="col-md-3 ended-Docs-Num">
+                                    5
+                                </div>
+                            </a>
+                            <a class="dropdown-item dropdown-item-custom ">
+                                <div class="col-md-6 p-0" style="text-align:end;">
+                                    اسعار السيارات
+                                </div>
+
+                                <div class="col-md-3 Not-ended-Docs-Num text-center">
+                                    0
+                                </div>
+                                <div class="col-md-3 ended-Docs-Num">
+                                    2
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <!-- Nav Item - Language -->
+                    <li class="nav-item dropdown no-arrow mx-2 ">
+                        <a class="nav-link dropdown-toggle p-0" role="button" href="#">
+                            <h5 style="color: #272524;">En</h5>
+                        </a>
+                    </li>
+                </ul>
+                <!-- logo -->
+
+                <div class="d-flex align-items-end on-mobile gap-3" style="color:black;">
+                    <div class="">
+                        <h1 class="hide-on-mobile" style="font-size: 1.2rem;font-weight: bold;">
+                            شركة كدي لتأجير السيارات </h1>
+                        <p class="extra-small-mobile m-0">
+                            &#x627;&#x644;&#x631;&#x626;&#x64A;&#x633;&#x64A; </p>
+                    </div>
+                    <a href="#">
+                        <img class="extra-small-mobile " src="img/CompanyLogo_20240325231449.png" style="height: 60px;">
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="wrapper flex-grow-1 d-flex align-items-center flex-column ">
+        <!-- Alerts -->
+        <div class="col">
+
+        </div>
+        <!-- --- -->
+        <div class="col">
+            <div class="container-fluid ">
+                <!-- Content Row -->
+                <section class="home-section">
+                    <div class="row justify-content-center  main-row ">
+                        <!--  Chart -->
+                        <div class="col-lg-10 col-xl-9">
+
+                            <div class="card shadow ">
+
+                                <div class="card-body" id="cardBody">
+
+                                    <div class="main-carousel-item active" id="carouselItem1">
+                                        <div class="row " id="first-row-of-charts">
+                                            <div class="col-md-6 card-col Branch-car-col">
+                                                <div class="row Branch-car-canvas-row">
+                                                    <div class=" col-md-9 col-lg-9 col-xl-9 ">
+                                                        <canvas id="horizontal_bar" aria-label="chart"></canvas>
+                                                    </div>
+                                                    <div class=" col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                                        <p class="chart-p">سيارات الفرع : <span>500</span></p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6 card-col pieChart-col">
+                                                <div class="row flex-row-reverse">
+                                                    <div class="col-md-4 pieChart-data">
+                                                        <div class="chart-legend" style="line-height: normal;">
+                                                            <p class="chart-p ">
+                                                                <span>32</span> : العقود القائمة
+                                                            </p>
+                                                            <p class="chart-p ">
+                                                                <span>2</span> : العقود المغلقة
+                                                            </p>
+                                                            <p class="chart-p ">
+                                                                <span>2</span> : العقود المغلقة
+                                                            </p>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 pieChart">
+                                                        <canvas id="pieChart" aria-label="chart"></canvas>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- <hr style="color:#FF9626" > -->
+
+                                        <div class="row" id="second-row-of-charts">
+
+                                            <div class="col-md-6 card-col branch-col">
+                                                <div class="row branch-row">
+                                                    <div class="col-sm-8">
+                                                        <canvas id="barChart2" aria-label="chart"></canvas>
+                                                    </div>
+                                                    <div class="col-sm-4 branch-chart-data">
+                                                        <div class="data chart-p">
+                                                            <p class="mb-2">عهدة الفرع : <span
+                                                                    id="brunch-custody">100000</span></p>
+                                                            <p class="mb-2">الرصيد المتاح : <span
+                                                                    id="Available-balance-brunch">5000</span></p>
+                                                            <p class="mb-2">الرصيد المحجوز : <span
+                                                                    id="used-balance-brunch">1820</span></p>
+                                                            <!--  -->
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6 card-col employee-col">
+                                                <div class="row employee-row">
+                                                    <div class="col-sm-8">
+                                                        <canvas id="chartId" aria-label="chart"></canvas>
+                                                    </div>
+                                                    <div class="col-sm-4 employee-chart-data">
+                                                        <div class="data chart-p">
+                                                            <p class="mb-2 ">عهدة الموظف :<span
+                                                                    id="employee-custody">100000</span></p>
+                                                            <p class="mb-2">الرصيد المتاح : <span
+                                                                    id="Available-balance-employee">50000</span></p>
+                                                            <p class="mb-2">الرصيد المحجوز : <span
+                                                                    id="used-balance-employee">500</span></p>
+                                                            <!--  -->
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="main-carousel-item " id="carouselItem2">
+                                        <div id="carousel2" class="carousel slide carousel-dark "
+                                            data-bs-ride="carousel">
+                                            <div class="carousel-inner" id="carousel-inner1">
+                                                <div class="row flex-row-reverse g-4">
+                                                    <div class="col-md-auto">
+                                                        <div
+                                                            class="row buttons text-center flex-column g-1 buttons-car-categories  gap-1 px-1 ">
+                                                            <button class="btn btn-car-categoray"> الكل </button>
+
+                                                            <button class="btn btn-car-categoray"> اقتصادية </button>
+
+                                                            <button class="btn btn-car-categoray"> عائلية صغيرة
+                                                            </button>
+
+                                                            <button class="btn btn-car-categoray"> عائلية وسط </button>
+
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="row px-3 align-items-start carsdiv"
+                                                            id="RentedCarListdiv">
+                                                            <table width="100%" class="table table-hover"
+                                                                id="RentedCarsListTable">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div
+                                                                                class="row flex-row-reverse car-img-data">
+                                                                                <div class="col-md-3">
+                                                                                    <div
+                                                                                        class="d-flex justify-content-center align-items-center h-100">
+                                                                                        <img src="img/cars/2020000006.png"
+                                                                                            class="carImg w-100">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-9">
+                                                                                    <div class="row">
+                                                                                        <div class="col">
+                                                                                            <div
+                                                                                                class="row car-data-row ">
+
+                                                                                                <div
+                                                                                                    class="col-lg-5 car-data">
+                                                                                                    <p>1579634852</p>
+                                                                                                </div>
+                                                                                                <div
+                                                                                                    class="col-auto car-data">
+                                                                                                    <p>القراءة الحالية:
+                                                                                                        1050</p>
+                                                                                                </div>
+
+                                                                                            </div>
+                                                                                            <div class="row">
+                                                                                                <div
+                                                                                                    class="col car-data">
+                                                                                                    <P>فورد - تورس -
+                                                                                                        ۲۰۱۹ -
+                                                                                                        سيدان متوسطة -
+                                                                                                        أزرق
+                                                                                                        - 9714 ق د ف
+                                                                                                    </P>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="row">
+                                                                                                <div
+                                                                                                    class="col car-data">
+                                                                                                    <p>24-1401-4004101-000061
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div
+                                                                                                class="row car-data-row flex-row-reverse">
+                                                                                                <div
+                                                                                                    class="col car-data">
+                                                                                                    <p> عبدالرحيم ماجد
+                                                                                                        عبدالجبار
+                                                                                                        المحيسني
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                                <div
+                                                                                                    class="col-md-auto  car-data">
+                                                                                                    <p>ينتهي اليوم</p>
+                                                                                                </div>
+
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </td>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div
+                                                                                class="row flex-row-reverse car-img-data">
+                                                                                <div class="col-md-3">
+                                                                                    <div
+                                                                                        class="d-flex justify-content-center align-items-center h-100">
+                                                                                        <img src="img/cars/2020000006.png"
+                                                                                            class="carImg w-100">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-9">
+                                                                                    <div class="row">
+                                                                                        <div class="col">
+                                                                                            <div
+                                                                                                class="row car-data-row ">
+
+                                                                                                <div
+                                                                                                    class="col-lg-5 car-data">
+                                                                                                    <p>1579634852</p>
+                                                                                                </div>
+                                                                                                <div
+                                                                                                    class="col-auto car-data">
+                                                                                                    <p>القراءة الحالية:
+                                                                                                        1050</p>
+                                                                                                </div>
+
+                                                                                            </div>
+                                                                                            <div class="row">
+                                                                                                <div
+                                                                                                    class="col car-data">
+                                                                                                    <P>فورد - تورس -
+                                                                                                        ۲۰۱۹ -
+                                                                                                        سيدان متوسطة -
+                                                                                                        أزرق
+                                                                                                        - 9714 ق د ف
+                                                                                                    </P>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="row">
+                                                                                                <div
+                                                                                                    class="col car-data">
+                                                                                                    <p>24-1401-4004101-000061
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div
+                                                                                                class="row car-data-row flex-row-reverse">
+                                                                                                <div
+                                                                                                    class="col car-data">
+                                                                                                    <p> عبدالرحيم ماجد
+                                                                                                        عبدالجبار
+                                                                                                        المحيسني
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                                <div
+                                                                                                    class="col-md-auto  car-data">
+                                                                                                    <p>ينتهي اليوم</p>
+                                                                                                </div>
+
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </td>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div
+                                                                                class="row flex-row-reverse car-img-data">
+                                                                                <div class="col-md-3">
+                                                                                    <div
+                                                                                        class="d-flex justify-content-center align-items-center h-100">
+                                                                                        <img src="img/cars/2020000006.png"
+                                                                                            class="carImg w-100">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-9">
+                                                                                    <div class="row">
+                                                                                        <div class="col">
+                                                                                            <div
+                                                                                                class="row car-data-row ">
+
+                                                                                                <div
+                                                                                                    class="col-lg-5 car-data">
+                                                                                                    <p>1579634852</p>
+                                                                                                </div>
+                                                                                                <div
+                                                                                                    class="col-auto car-data">
+                                                                                                    <p>القراءة الحالية:
+                                                                                                        1050</p>
+                                                                                                </div>
+
+                                                                                            </div>
+                                                                                            <div class="row">
+                                                                                                <div
+                                                                                                    class="col car-data">
+                                                                                                    <P>فورد - تورس -
+                                                                                                        ۲۰۱۹ -
+                                                                                                        سيدان متوسطة -
+                                                                                                        أزرق
+                                                                                                        - 9714 ق د ف
+                                                                                                    </P>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="row">
+                                                                                                <div
+                                                                                                    class="col car-data">
+                                                                                                    <p>24-1401-4004101-000061
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div
+                                                                                                class="row car-data-row flex-row-reverse">
+                                                                                                <div
+                                                                                                    class="col car-data">
+                                                                                                    <p> عبدالرحيم ماجد
+                                                                                                        عبدالجبار
+                                                                                                        المحيسني
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                                <div
+                                                                                                    class="col-md-auto  car-data">
+                                                                                                    <p>ينتهي اليوم</p>
+                                                                                                </div>
+
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </td>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div
+                                                                                class="row flex-row-reverse car-img-data">
+                                                                                <div class="col-md-3">
+                                                                                    <div
+                                                                                        class="d-flex justify-content-center align-items-center h-100">
+                                                                                        <img src="img/cars/2020000006.png"
+                                                                                            class="carImg w-100">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-9">
+                                                                                    <div class="row">
+                                                                                        <div class="col">
+                                                                                            <div
+                                                                                                class="row car-data-row ">
+
+                                                                                                <div
+                                                                                                    class="col-lg-5 car-data">
+                                                                                                    <p>1579634852</p>
+                                                                                                </div>
+                                                                                                <div
+                                                                                                    class="col-auto car-data">
+                                                                                                    <p>القراءة الحالية:
+                                                                                                        1050</p>
+                                                                                                </div>
+
+                                                                                            </div>
+                                                                                            <div class="row">
+                                                                                                <div
+                                                                                                    class="col car-data">
+                                                                                                    <P>فورد - تورس -
+                                                                                                        ۲۰۱۹ -
+                                                                                                        سيدان متوسطة -
+                                                                                                        أزرق
+                                                                                                        - 9714 ق د ف
+                                                                                                    </P>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="row">
+                                                                                                <div
+                                                                                                    class="col car-data">
+                                                                                                    <p>24-1401-4004101-000061
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div
+                                                                                                class="row car-data-row flex-row-reverse">
+                                                                                                <div
+                                                                                                    class="col car-data">
+                                                                                                    <p> عبدالرحيم ماجد
+                                                                                                        عبدالجبار
+                                                                                                        المحيسني
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                                <div
+                                                                                                    class="col-md-auto  car-data">
+                                                                                                    <p>ينتهي اليوم</p>
+                                                                                                </div>
+
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </td>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div
+                                                                                class="row flex-row-reverse car-img-data">
+                                                                                <div class="col-md-3">
+                                                                                    <div
+                                                                                        class="d-flex justify-content-center align-items-center h-100">
+                                                                                        <img src="img/cars/2020000006.png"
+                                                                                            class="carImg w-100">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-9">
+                                                                                    <div class="row">
+                                                                                        <div class="col">
+                                                                                            <div
+                                                                                                class="row car-data-row ">
+
+                                                                                                <div
+                                                                                                    class="col-lg-5 car-data">
+                                                                                                    <p>1579634852</p>
+                                                                                                </div>
+                                                                                                <div
+                                                                                                    class="col-auto car-data">
+                                                                                                    <p>القراءة الحالية:
+                                                                                                        1050</p>
+                                                                                                </div>
+
+                                                                                            </div>
+                                                                                            <div class="row">
+                                                                                                <div
+                                                                                                    class="col car-data">
+                                                                                                    <P>فورد - تورس -
+                                                                                                        ۲۰۱۹ -
+                                                                                                        سيدان متوسطة -
+                                                                                                        أزرق
+                                                                                                        - 9714 ق د ف
+                                                                                                    </P>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="row">
+                                                                                                <div
+                                                                                                    class="col car-data">
+                                                                                                    <p>24-1401-4004101-000061
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div
+                                                                                                class="row car-data-row flex-row-reverse">
+                                                                                                <div
+                                                                                                    class="col car-data">
+                                                                                                    <p> عبدالرحيم ماجد
+                                                                                                        عبدالجبار
+                                                                                                        المحيسني
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                                <div
+                                                                                                    class="col-md-auto  car-data">
+                                                                                                    <p>ينتهي اليوم</p>
+                                                                                                </div>
+
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </td>
+
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="main-carousel-item " id="carouselItem3">
+                                        <div id="carousel3" class="carousel slide" data-bs-ride="carousel">
+                                            <div class="carousel-inner h-100 px-3" id="carousel-inner2" style="overflow-y: auto; position: relative;">
+                                                   <!-- select type  -->
+                                                    <div class="text-end filter_Container">
+                                                        <select id="carFilter" class="form-select w-auto d-inline-block">
+                                                            <option value="all">الكل</option>
+                                                            <option value="سيدان متوسطة">سيدان متوسطة</option>
+                                                            <option value="سيدان صغيرة">سيدان صغيرة</option>
+                                                            <option value="عائلية كبيرة">عائلية كبيرة</option>
+                                                        </select>
+                                                    </div>
+                                                <div class="row g-2 p-1 justify-content-end " id="carsContainer">
+                                                   <!-- Cars -->
+                                                    <div class="col-lg-4 col-md-6 car-item" data-type="سيدان متوسطة">
+                                                        <div class="card car-card p-2">
+                                                            <img src="img//car1.png" alt="كيا كارنيفال" class="car-image">
+                                                            <div class="card-body p-0">
+                                                                <div class="p-2">
+                                                                    <h5 class="car-title">هيونداي - النترا - سيدان متوسطة - 2019 - و ق ق 6417 - عودي</h5>
+                                                                </div>
+                                                    
+                                                                <div class="car-data-row p-2">
+                                                                    <div class="car-icons">
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 94.svg" class="car-icondata">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 93.svg" class="car-icondata">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 95.svg" class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">4</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 96.svg" class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">5</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 97.svg" class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">2</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 98.svg" class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">4</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                    
+                                                                <div class="p-2 text-end">
+                                                                    <p>القراءة الحالية: 28٬000</p>
+                                                                    <p>6923958732</p>
+                                                                </div>
+                                                    
+                                                                <div class="text-center">
+                                                                    <button class="btn more-btn" data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+                                                                        onclick="loadCarDetails('كيا كارنيفال 2020', 'carnival')">
+                                                                        <i class="bi bi-info-circle me-2"></i>المزيد من التفاصيل
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-6 car-item"  data-type="سيدان متوسطة">
+                                                        <div class="card car-card p-2">
+                                                            <img src="img//car2.png" alt="كيا كارنيفال" class="car-image">
+                                                            <div class="card-body p-0">
+                                                                <div class="p-2">
+                                                                    <h5 class="car-title">فورد - تورس -  سيدان متوسطة - 2019 - س ك ب 3965 - عودي</h5>
+                                                                </div>
+                                    
+                                                                <div class="car-data-row p-2">
+                                                                        <div class="car-icons">
+                                                                            <div class="icon-item">
+                                                                                <div class="icon">
+                                                                                    <img src="img/carDataIcons/Rectangle 94.svg" class="car-icondata">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="icon-item">
+                                                                                <div class="icon">
+                                                                                    <img src="img/carDataIcons/Rectangle 93.svg" class="car-icondata">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="icon-item">
+                                                                                <div class="icon">
+                                                                                    <img src="img/carDataIcons/Rectangle 95.svg" class="car-icondata">
+                                                                                </div>
+                                                                                <span class="icon-text">4</span>
+                                                                            </div>
+                                                                            <div class="icon-item">
+                                                                                <div class="icon">
+                                                                                    <img src="img/carDataIcons/Rectangle 96.svg" class="car-icondata">
+                                                                                </div>
+                                                                                <span class="icon-text">5</span>
+                                                                            </div>
+                                                                            <div class="icon-item">
+                                                                                <div class="icon">
+                                                                                    <img src="img/carDataIcons/Rectangle 97.svg" class="car-icondata">
+                                                                                </div>
+                                                                                <span class="icon-text">2</span>
+                                                                            </div>
+                                                                            <div class="icon-item">
+                                                                                <div class="icon">
+                                                                                    <img src="img/carDataIcons/Rectangle 98.svg" class="car-icondata">
+                                                                                </div>
+                                                                                <span class="icon-text">4</span>
+                                                                            </div>
+                                                                    </div>
+                                                                </div>
+                                    
+                                                                <div class="p-2 text-end">
+                                                                    <p>القراءة الحالية: 28٬000</p>
+                                                                    <p>6923958732</p>
+                                                                </div>
+                                    
+                                                                <div class="text-center">
+                                                                    <button class="btn more-btn" data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+                                                                        onclick="loadCarDetails('كيا كارنيفال 2020', 'carnival')">
+                                                                        <i class="bi bi-info-circle me-2"></i>المزيد من التفاصيل
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-6 car-item"  data-type="سيدان صغيرة">
+                                                        <div class="card car-card p-2">
+                                                            <img src="img//car3.png" alt="كيا كارنيفال" class="car-image">
+                                                            <div class="card-body p-0">
+                                                                <div class="p-2">
+                                                                    <h5 class="car-title">هيونداي - أكسنت -  سيدان صغيرة - 2019 - ص ى ى 8445 - أحمر </h5>
+                                                                </div>
+                                    
+                                                                <div class="car-data-row p-2">
+                                                                        <div class="car-icons">
+                                                                            <div class="icon-item">
+                                                                                <div class="icon">
+                                                                                    <img src="img/carDataIcons/Rectangle 94.svg" class="car-icondata">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="icon-item">
+                                                                                <div class="icon">
+                                                                                    <img src="img/carDataIcons/Rectangle 93.svg" class="car-icondata">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="icon-item">
+                                                                                <div class="icon">
+                                                                                    <img src="img/carDataIcons/Rectangle 95.svg" class="car-icondata">
+                                                                                </div>
+                                                                                <span class="icon-text">4</span>
+                                                                            </div>
+                                                                            <div class="icon-item">
+                                                                                <div class="icon">
+                                                                                    <img src="img/carDataIcons/Rectangle 96.svg" class="car-icondata">
+                                                                                </div>
+                                                                                <span class="icon-text">5</span>
+                                                                            </div>
+                                                                            <div class="icon-item">
+                                                                                <div class="icon">
+                                                                                    <img src="img/carDataIcons/Rectangle 97.svg" class="car-icondata">
+                                                                                </div>
+                                                                                <span class="icon-text">2</span>
+                                                                            </div>
+                                                                            <div class="icon-item">
+                                                                                <div class="icon">
+                                                                                    <img src="img/carDataIcons/Rectangle 98.svg" class="car-icondata">
+                                                                                </div>
+                                                                                <span class="icon-text">4</span>
+                                                                            </div>
+                                                                    </div>
+                                                                </div>
+                                    
+                                                                <div class="p-2 text-end">
+                                                                    <p>القراءة الحالية: 28٬000</p>
+                                                                    <p>6923958732</p>
+                                                                </div>
+                                    
+                                                                <div class="text-center">
+                                                                    <button class="btn more-btn" data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+                                                                       onclick="loadCarDetails('فورد تورس 2020', 'ford')">
+                                                                        <i class="bi bi-info-circle me-2"></i>المزيد من التفاصيل
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-6 car-item"  data-type="عائلية كبيرة">
+                                                        <div class="card car-card p-2">
+                                                            <img src="img//car4.png" alt="كيا كارنيفال" class="car-image">
+                                                            <div class="card-body p-0">
+                                                                <div class="p-2">
+                                                                    <h5 class="car-title">كيا - كارنيفال أي اكس جان 8 - عائلية كبيرة - 2020 - ح س و 8630 -
+                                                                        أصفر</h5>
+                                                                </div>
+                                                    
+                                                                <div class="car-data-row p-2">
+                                                                    <div class="car-icons">
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 94.svg" class="car-icondata">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 93.svg" class="car-icondata">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 95.svg" class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">4</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 96.svg" class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">5</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 97.svg" class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">2</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 98.svg" class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">4</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                    
+                                                                <div class="p-2 text-end">
+                                                                    <p>القراءة الحالية: 28٬000</p>
+                                                                    <p>6923958732</p>
+                                                                </div>
+                                                    
+                                                                <div class="text-center">
+                                                                    <button class="btn more-btn" data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+                                                                        onclick="loadCarDetails('كيا كارنيفال 2020', 'carnival')">
+                                                                        <i class="bi bi-info-circle me-2"></i>المزيد من التفاصيل
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-6 car-item"  data-type="سيدان متوسطة">
+                                                        <div class="card car-card p-2">
+                                                            <img src="img//car1.png" alt="كيا كارنيفال" class="car-image">
+                                                            <div class="card-body p-0">
+                                                                <div class="p-2">
+                                                                    <h5 class="car-title">فورد - تورس -  سيدان متوسطة - 2019 - س ك ب 3965 - عودي</h5>
+                                                                </div>
+                                                    
+                                                                <div class="car-data-row p-2">
+                                                                    <div class="car-icons">
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 94.svg" class="car-icondata">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 93.svg" class="car-icondata">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 95.svg" class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">4</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 96.svg" class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">5</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 97.svg" class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">2</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 98.svg" class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">4</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                    
+                                                                <div class="p-2 text-end">
+                                                                    <p>القراءة الحالية: 28٬000</p>
+                                                                    <p>6923958732</p>
+                                                                </div>
+                                                    
+                                                                <div class="text-center">
+                                                                    <button class="btn more-btn" data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+                                                                        onclick="loadCarDetails('كيا كارنيفال 2020', 'carnival')">
+                                                                        <i class="bi bi-info-circle me-2"></i>المزيد من التفاصيل
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                    <!-- Pagination controls -->
+                                                    <div class="d-flex justify-content-center mt-2 gap-2 pagination_Container">
+                                                        <button id="nextBtn" class="btn ">التالي</button>
+                                                        <button id="prevBtn" class="btn  me-2">السابق</button>
+                                                    </div>
+                                                    </div>
+                                        </div>
+                                    </div>
+                                    <div class="main-carousel-item" id="carouselItem4">
+                                        <div id="carousel4" class="carousel slide" data-bs-ride="carousel">
+                                            <div class="carousel-inner" id="carousel-inner3">
+                                                <div class="row flex-row-reverse g-4">
+                                                    <div class="col-md-auto">
+                                                        <div
+                                                            class="row buttons text-center flex-column g-1 px-1 gap-1 buttons-car-categories ">
+
+                                                            <button class="btn btn-car-categoray"> الكل </button>
+
+                                                            <button class="btn btn-car-categoray"> اقتصادية </button>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="row px-3 align-items-start carsdiv"
+                                                            id="NotAvailableCarListdiv">
+                                                            <table width="100%" class="table table-hover"
+                                                                id="NotAvailableCarsListTable">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="row flex-row-reverse ">
+
+                                                                                <div class="col-lg-9">
+                                                                                    <div
+                                                                                        class="row flex-row-reverse car-img-data align-items-center">
+                                                                                        <div class="col-md-4">
+                                                                                            <div
+                                                                                                class="d-flex justify-content-center align-items-center h-100">
+                                                                                                <img src="img/cars/2020000006.png"
+                                                                                                    class="carImg w-100">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-md-8">
+                                                                                            <div class="row w-100">
+                                                                                                <div class="col">
+                                                                                                    <div
+                                                                                                        class="row car-data-row ">
+
+                                                                                                        <div
+                                                                                                            class="col-lg-6 car-data">
+                                                                                                            <p>1579634852
+                                                                                                            </p>
+                                                                                                        </div>
+                                                                                                        <div
+                                                                                                            class="col-auto car-data">
+                                                                                                            <p>القراءة
+                                                                                                                الحالية:
+                                                                                                                1050</p>
+                                                                                                        </div>
+
+                                                                                                    </div>
+                                                                                                    <div class="row">
+                                                                                                        <div
+                                                                                                            class="col car-data">
+                                                                                                            <P>فورد -
+                                                                                                                تورس -
+                                                                                                                ۲۰۱۹ -
+                                                                                                                سيدان
+                                                                                                                متوسطة -
+                                                                                                                أزرق -
+                                                                                                                9714
+                                                                                                                ق د ف
+                                                                                                            </P>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="row car-data-row">
+                                                                                                       <div class="col">
+                                                                                                         <div class="car-icons">
+                                                                                                            <div class="icon-item">
+                                                                                                                <div class="icon">
+                                                                                                                    <img src="img/carDataIcons/Rectangle 94.svg"
+                                                                                                                        class="car-icondata">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="icon-item">
+                                                                                                                <div class="icon">
+                                                                                                                   <img src="img/carDataIcons/Rectangle 93.svg"
+                                                                                                                        class="car-icondata">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="icon-item">
+                                                                                                                <div class="icon">
+                                                                                                                    <img src="img/carDataIcons/Rectangle 95.svg"
+                                                                                                                        class="car-icondata">
+                                                                                                                </div>
+                                                                                                                <span
+                                                                                                                    class="icon-text">4</span>
+                                                                                                            </div>
+                                                                                                            <div
+                                                                                                                class="icon-item">
+                                                                                                                <div class="icon">
+                                                                                                                    <img src="img/carDataIcons/Rectangle 96.svg"
+                                                                                                                        class="car-icondata">
+                                                                                                                </div>
+                                                                                                                <span class="icon-text">5</span>
+                                                                                                            </div>
+                                                                                                            <div class="icon-item">
+                                                                                                                <div class="icon">
+                                                                                                                    <img src="img/carDataIcons/Rectangle 97.svg"
+                                                                                                                        class="car-icondata">
+                                                                                                                </div>
+                                                                                                                <span
+                                                                                                                    class="icon-text">2</span>
+                                                                                                            </div>
+                                                                                                            <div class="icon-item">
+                                                                                                                <div class="icon">
+                                                                                                                    <img src="img/carDataIcons/Rectangle 98.svg"
+                                                                                                                        class="car-icondata">
+                                                                                                                </div>
+                                                                                                                <span
+                                                                                                                    class="icon-text">4</span>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                       </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="col-lg-2">
+                                                                                    <div
+                                                                                        class="row flex-nowrap resons-icon">
+                                                                                        <div
+                                                                                            class="col-auto text-center">
+
+                                                                                            <div class="p-2 extra-details"
+                                                                                                title=" الاسباب">
+                                                                                                <img src="img/carDataIcons/Frame.svg"
+                                                                                                    class="w-100">
+                                                                                                <div
+                                                                                                    class="dropdown-content ">
+
+
+                                                                                                    <div
+                                                                                                        class="row dropdown-content-row pt-2">
+                                                                                                        <div
+                                                                                                            class="col titles ">
+                                                                                                            <p> مالك
+                                                                                                                موقوف
+                                                                                                            </p>
+                                                                                                        </div>
+
+
+                                                                                                    </div>
+                                                                                                    <div
+                                                                                                        class="row dropdown-content-row pt-2">
+                                                                                                        <div
+                                                                                                            class="col titles ">
+                                                                                                            <p> بدون سعر
+                                                                                                            </p>
+                                                                                                        </div>
+
+
+                                                                                                    </div>
+
+                                                                                                </div>
+                                                                                            </div>
+
+
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </td>
+
+                                                                    </tr>
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="main-carousel-item" id="carouselItem5">
+                                        <div id="carousel5" class="carousel slide" data-bs-ride="carousel">
+                                            <div class="carousel-inner" id="carousel-inner5">
+                                                <div class="row flex-row-reverse g-4">
+                                                    <div class="col-md-auto">
+                                                        <div
+                                                            class="row buttons text-center flex-column g-1 buttons-car-categories  gap-1 px-1 ">
+                                                            <button class="btn btn-car-categoray"> الكل </button>
+
+                                                            <button class="btn btn-car-categoray"> اقتصادية </button>
+
+                                                            <button class="btn btn-car-categoray"> عائلية صغيرة
+                                                            </button>
+
+                                                            <button class="btn btn-car-categoray"> عائلية وسط </button>
+
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="row px-3 align-items-start carsdiv"
+                                                            id="RentedCarListdiv">
+                                                            <table width="100%" class="table table-hover"
+                                                                id="RentedCarsListTable">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div
+                                                                                class="row flex-row-reverse car-img-data">
+                                                                                <div class="col-md-3">
+                                                                                    <div
+                                                                                        class="d-flex justify-content-center align-items-center h-100">
+                                                                                        <img src="img/cars/2020000006.png"
+                                                                                            class="carImg w-100">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-9">
+                                                                                    <div class="row">
+                                                                                        <div class="col">
+                                                                                            <div
+                                                                                                class="row car-data-row ">
+
+                                                                                                <div
+                                                                                                    class="col-lg-5 car-data">
+                                                                                                    <p>1579634852</p>
+                                                                                                </div>
+                                                                                                <div
+                                                                                                    class="col-auto car-data">
+                                                                                                    <p>القراءة الحالية:
+                                                                                                        1050</p>
+                                                                                                </div>
+
+                                                                                            </div>
+                                                                                            <div class="row">
+                                                                                                <div
+                                                                                                    class="col car-data">
+                                                                                                    <P>فورد - تورس -
+                                                                                                        ۲۰۱۹ -
+                                                                                                        سيدان متوسطة -
+                                                                                                        أزرق
+                                                                                                        - 9714 ق د ف
+                                                                                                    </P>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div
+                                                                                                class="row flex-row-reverse justify-content-between">
+
+                                                                                                <div class="col-xl-6">
+                                                                                                    <div class="row">
+                                                                                                        <div
+                                                                                                            class="col-md-12 car-data">
+                                                                                                            <p>24-1401-4004101-000061
+                                                                                                            </p>
+                                                                                                        </div>
+                                                                                                        <div
+                                                                                                            class="col-md-12 car-data">
+                                                                                                            <p> عبدالرحيم
+                                                                                                                ماجد
+                                                                                                                عبدالجبار
+                                                                                                                المحيسني
+                                                                                                            </p>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div
+                                                                                                    class="col-xl-auto car-data">
+                                                                                                    <p><span>22/05/2025</span>
+                                                                                                        :تاريخ الحفظ
+                                                                                                    </p>
+                                                                                                    <p><span>22/05/2025</span>
+                                                                                                        :نهاية الحفظ
+                                                                                                    </p>
+                                                                                                    <p> المصدر:
+                                                                                                        <span>شركة كدي
+                                                                                                            لتأجير
+                                                                                                            السيارات</span>
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </td>
+
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-2  bg-transparent " id="button-on-mobile">
+                            <!-- Card Body -->
+                            <div class="card-body">
+                                <form action="" method="" id="formID" class="buttons-container">
+                                    <select class="form-select" id="branchList" name="branchList">
+                                        <option selected>اختر </option>
+                                        <option value="الفرع_الاول"> الرئيسي </option>
+                                        <option value="الفرع_الثاني">الوشحاء</option>
+                                    </select>
+                                    <button type="button" class="btn btn-secondary1  mt-2 active1" id="chart"
+                                        onclick="showCarouselItem(1) , setActiveButton(0)"><img
+                                            src="img/Rectangle 74.svg" class="chart-buttons-img">الاحصائيات</button>
+
+                                    <button type="button" class="btn btn-secondary1 " id="toggleCarousel"
+                                        onclick="showCarouselItem(2) ,setActiveButton(1)"><img
+                                            src="img/Rectangle 75.svg" class="chart-buttons-img">مؤجرة</button>
+                                    <button type="button" class="btn btn-secondary1 " id="toggleCarousel2"
+                                        onclick="showCarouselItem(3) ,setActiveButton(2)"><img
+                                            src="img/Rectangle 76.svg" class="chart-buttons-img">متاحة</button>
+                                    <button type="button" class="btn btn-secondary1 " id="toggleCarousel3"
+                                        onclick="showCarouselItem(4),setActiveButton(3)"><img src="img/Rectangle 77.svg"
+                                            class="chart-buttons-img">غير متاحة</button>
+
+                                    <button type="button" class="btn btn-secondary1"
+                                        onclick="showCarouselItem(5),setActiveButton(4)"><img src="img/SavedCars.svg"
+                                            class="chart-buttons-img">محفوظة</button>
+
+                                </form>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!-- buttons  -->
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start Footer Area -->
+
+    <footer>
+        <div class="before-footer-widget">
+            <svg width: 100%; height:auto viewbox="0 0 2444 132">
+                <path fill="rgba(254, 248, 232, 1)" fill-rule="evenodd"
+                    d="M1222 0h1222c-444.13 88-852.127 132-1223.993 132C849.253 132 442.585 88.263 0 .789V0h1222z">
+                </path>
+            </svg>
+        </div>
+        <div class="container footer-buttons justify-content-center py-1" style="box-sizing: border-box; ">
+            <div class="row  footer-buttons-row">
+                <!-- First row of buttons -->
+                <div class="col-sm-6 col-md-6 col-lg-3 ">
+                    <a type="button" href="https://ayatt12.github.io/SavedContracts/index.html"
+                        class="btn btn-Pages mb-2"><img src="img/Rectangle 35.png">
+                        العقود المحفوظة </a>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-3  ">
+                    <a type="button" href="https://ayatt12.github.io/extension/" class="btn btn-Pages mb-2"><img
+                            src="img/Rectangle 31.png">
+                        تمديد العقد</a>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-3  ">
+                    <a type="button" href="https://ayatt12.github.io/settelment/index.html"
+                        class="btn btn-Pages mb-2"><img src="img/Rectangle 30.png">
+                        تسوية العقد</a>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-3  ">
+                    <a type="button" href="https://ayatt12.github.io/ContractV2/" class="btn btn-Pages mb-2"><img
+                            src="img/Rectangle 29.png">
+                        إنشاء العقد</a>
+                </div>
+
+
+                <!-- Second row of buttons -->
+                <div class="col-sm-6 col-md-6 col-lg-3 mb-1 ">
+                    <a type="button" class="btn btn-Pages neonShadow " id="pulse-button-brunch"
+                        href="https://ayatt12.github.io/custody/"><img src="img/Rectangle 36.png" class="anm"
+                            id="brunch_button-img">تسليم
+                        العهدة</a>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-3  mb-1   ">
+                    <a type="button" href="https://ayatt12.github.io/Feed/" class="btn btn-Pages neonShadow "
+                        id="pulse-button-employee"><img src="img/Rectangle 33.png" class="anm"> تغذية
+                        الصندوق</a>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-3  mb-1  ">
+                    <a type="button" href="https://ayatt12.github.io/report/" class="btn btn-Pages "><img
+                            src="img/Rectangle 32.png">
+                        التقرير المالي</a>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-3  mb-1 ">
+                    <a type="button" href="https://ayatt12.github.io/tenant/" class="btn btn-Pages "><img
+                            src="img/Rectangle 34.png">
+                        مستأجرين</a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!--/ End Footer Area -->
+
+    <!-- feed modal -->
+    <div class="modal fade" id="FeedModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header password-modal-header mb-2">
+                    <p class="card-title feed-card-title"> تغذية الصندوق </p>
+                    <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><img src="img/Close.svg"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row feed-content-row">
+
+                        <form action="">
+                            <div class="col-12 feedRows">
+                                <div class="col-auto">
+                                    <P>رقم التغذية</P>
+                                </div>
+                                <div class="col-auto personal-data">
+                                    <P class="Feeddata"> 23-1-62-5001-000003 </P>
+                                </div>
+                            </div>
+                            <div class="col-12 feedRows">
+                                <div class="col-auto">
+                                    <P> المُغذي </P>
+                                </div>
+                                <div class="col-auto personal-data">
+                                    <P class="Feeddata">محمود سعد الكشغري </P>
+                                </div>
+                            </div>
+                            <div class="col-12 feedRows">
+                                <div class="col-auto">
+                                    <P> التاريخ </P>
+                                </div>
+                                <div class="col-auto personal-data">
+                                    <P class="Feeddata"> 2023/02/03</P>
+                                </div>
+                            </div>
+                            <div class="col-12 feedRows">
+                                <div class="col-auto">
+                                    <P> المبلغ </P>
+                                </div>
+                                <div class="col-auto personal-data">
+                                    <P class="Feeddata">1950.00 </P>
+                                </div>
+                            </div>
+                            <div class="col-12 feedRows">
+                                <div class="col-auto">
+                                    <label for="Feed-notes">ملاحظات</label>
+                                </div>
+                                <div class="col-md-10 pt-2">
+
+                                    <textarea class="form-control textarea-inputs" id="Feed-notes" maxlength="100"
+                                        rows="1" name="Feed-notes"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-12 feedRows">
+                                <div class="col">
+                                    <p class="feed-error mt-4">يمكنك قبول أو رفض تغذية الصندوق الخاص بك بالفرع الحالي
+                                    </p>
+                                </div>
+
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+                <div class="modal-footer border-0 justify-content-center">
+                    <button type="button" class="btn btn-secondary px-5" data-bs-dismiss="modal">رفض</button>
+                    <button type="button" class="btn feed-acceptt-btn px-5" id="acceptBtn"> قبول </button>
+                </div>
+            </div>
+        </div>
+    </div>
+ <!-- Modal -->
+    <div class="modal fade" id="carDetailsModal" tabindex="-1" aria-labelledby="carDetailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="carDetailsModalLabel">تفاصيل السيارة</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carDetailsContent">
+                        <!-- Content will be loaded here -->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ========================= JS here ========================= -->
+    <!-- charts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
+
+    <!--link to make javascript function operate-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <!--makes bootsrab animation works-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="js/javascript/scripts.js"></script>
+    <script src="js/javascript/charts.js"></script>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carItems = document.querySelectorAll('.car-item');
+            const itemsPerPage = 3;
+            let currentPage = 0;
+            let filteredCars = Array.from(carItems);
+            
+            // Show the appropriate page of cars
+            function showPage(page) {
+                const startIndex = page * itemsPerPage;
+                const endIndex = startIndex + itemsPerPage;
+                
+                // Hide all cars first
+                carItems.forEach(car => {
+                    car.style.display = 'none';
+                });
+                
+                // Show only the cars for the current page
+                filteredCars.forEach((car, index) => {
+                    if (index >= startIndex && index < endIndex) {
+                        car.style.display = 'block';
+                    }
+                });
+                
+                // Update button states
+                document.getElementById('prevBtn').disabled = page === 0;
+                document.getElementById('nextBtn').disabled = endIndex >= filteredCars.length;
+                
+                // Show message if no cars match the filter
+                const noCarsMessage = document.getElementById('noCarsMessage');
+                if (filteredCars.length === 0) {
+                    if (!noCarsMessage) {
+                        const messageDiv = document.createElement('div');
+                        messageDiv.id = 'noCarsMessage';
+                        messageDiv.className = 'no-cars';
+                        messageDiv.innerHTML = '<p>لا توجد سيارات تطابق معايير التصفية</p>';
+                        document.getElementById('carsContainer').appendChild(messageDiv);
+                    }
+                } else if (noCarsMessage) {
+                    noCarsMessage.remove();
+                }
+            }
+            
+            // Previous button event listener
+            document.getElementById('prevBtn').addEventListener('click', function() {
+                if (currentPage > 0) {
+                    currentPage--;
+                    showPage(currentPage);
+                }
+            });
+            
+            // Next button event listener
+            document.getElementById('nextBtn').addEventListener('click', function() {
+                if ((currentPage + 1) * itemsPerPage < filteredCars.length) {
+                    currentPage++;
+                    showPage(currentPage);
+                }
+            });
+            
+            // Filter event listener
+            document.getElementById('carFilter').addEventListener('change', function(e) {
+                const selectedType = e.target.value;
+                
+                if (selectedType === 'all') {
+                    filteredCars = Array.from(carItems);
+                } else {
+                    filteredCars = Array.from(carItems).filter(car => 
+                        car.getAttribute('data-type') === selectedType
+                    );
+                }
+                
+                currentPage = 0;
+                showPage(currentPage);
+            });
+            
+            // Initialize
+            showPage(currentPage);
+        });
+        
+        // Function to load car details (placeholder)
+        function loadCarDetails(carName, carType) {
+            const content = `
+                <div class="text-center">
+                    <h4>${carName}</h4>
+                    <p>نوع السيارة: ${carType}</p>
+                    <p>هذا النموذج يظهر تفاصيل السيارة عند النقر على زر "المزيد من التفاصيل".</p>
+                    <p>يمكنك إضافة المزيد من المعلومات التفصيلية عن السيارة هنا.</p>
+                </div>
+            `;
+            document.getElementById('carDetailsContent').innerHTML = content;
+        }
+    </script>
+</body>
+
+</html>
