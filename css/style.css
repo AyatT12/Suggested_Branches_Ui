@@ -1726,19 +1726,3 @@ body::-webkit-scrollbar-thumb {
 .not-available {
   color: #dc3545;
 }
-
-        /* 1. تأثير الهولوجرام المتحرك */
-        .hologram-effect {
-            background: linear-gradient(45deg, 
-                transparent 30%, 
-                rgba(255, 255, 255, 0.1) 40%, 
-                rgba(0, 255, 255, 0.2) 50%, 
-                rgba(255, 0, 255, 0.2) 60%, 
-                transparent 70%);
-            background-size: 200% 200%;
-            animation: hologramShift 3s infinite;
-            border: 2px solid rgba(0, 255, 255, 0.5);
-            box-shadow: 
-                inset 0 0 20px rgba(0, 255, 255, 0.1),
-                0 0 30px rgba(0, 255, 255, 0.3);
-        }
