@@ -19,88 +19,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href='css/style.css' />
     <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/dripicons/2.0.0/webfont.min.css' />
+<!-- bootstrab icons -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
 
     <!-- <link rel="stylesheet" href='css/english.css' /> -->
-<style>
-    .car-card {
-        background: white;
-        border-radius: 20px;
-        overflow: hidden;
-        transition: all 0.4s ease;
-        border: none;
-        height: 100%;
-    }
-
-    .card-body {
-        width: 100%;
-    }
-
-    .car-image {
-        width: 100%;
-        height: 100px;
-        object-fit: contain;
-        transition: all 0.3s ease;
-    }
-
-    .car-title {
-        font-size: .8rem;
-        font-weight: 500;
-        color: #2c3e50;
-        margin-bottom: 0.5rem;
-        text-align: center;
-    }
-
-    .more-btn {
-        background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
-        border: none;
-        color: white;
-        padding: 0.75rem 2rem;
-        border-radius: 50px;
-        font-weight: 600;
-        font-size: 0.9rem;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
-    }
-
-    .more-btn:hover {
-        background: linear-gradient(135deg, #ee5a24 0%, #ff6b6b 100%);
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
-        color: white;
-    }
-
-
-    #carousel3 {
-        height: 100%;
-        overflow: auto;
-    }
-
-    #carFilter {
-        background-color: rgb(255, 253, 253);
-        border-radius: 8px;
-        border: 3px solid #FF9626;
-        text-align: start;
-        direction: rtl;
-        background-position: left .75rem center;
-        padding: .375rem .75rem .375rem 2.25rem;
-        width: 100%;
-        max-width: 250px;
-    }
-
-    @media (max-width: 768px) {
-        .car-specs {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        .page-title {
-            font-size: 2rem;
-        }
-
-        .spec-icon {
-            font-size: 1.25rem;
-        }
-    }
-</style>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -745,7 +667,7 @@
                                                         <select id="carFilter" class="form-select w-auto d-inline-block">
                                                             <option value="all">الكل</option>
                                                             <option value="سيدان متوسطة">سيدان متوسطة</option>
-                                                            <option value="سيدان صغيرة">سيدان صغيرة</option>
+                                                            <option value="اقتصادية">اقتصادية</option>
                                                             <option value="عائلية كبيرة">عائلية كبيرة</option>
                                                         </select>
                                                     </div>
@@ -753,7 +675,7 @@
                                                    <!-- Cars -->
                                                     <div class="col-lg-4 col-md-6 car-item" data-type="سيدان متوسطة">
                                                         <div class="card car-card p-2">
-                                                            <img src="img//car1.png" alt="كيا كارنيفال" class="car-image">
+                                                            <img src="img//car1.png" alt="هيونداي - النترا" class="car-image">
                                                             <div class="card-body p-0">
                                                                 <div class="p-2">
                                                                     <h5 class="car-title">هيونداي - النترا - سيدان متوسطة - 2019 - و ق ق 6417 - عودي</h5>
@@ -804,143 +726,22 @@
                                                                 </div>
                                                     
                                                                 <div class="text-center">
-                                                                    <button class="btn more-btn" data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-                                                                        onclick="loadCarDetails('كيا كارنيفال 2020', 'carnival')">
-                                                                        <i class="bi bi-info-circle me-2"></i>المزيد من التفاصيل
+                                                                    <button class="btn more-btn"data-bs-toggle="modal" 
+                                                                        data-bs-target="#carDetailsModal"
+                                                                        data-car-id="0"
+                                                                        onclick="loadCarDetails(this)">
+                                                                        المزيد من التفاصيل
                                                                     </button>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-4 col-md-6 car-item"  data-type="سيدان متوسطة">
+                                                     <div class="col-lg-4 col-md-6 car-item" data-type="عائلية كبيرة">
                                                         <div class="card car-card p-2">
                                                             <img src="img//car2.png" alt="كيا كارنيفال" class="car-image">
                                                             <div class="card-body p-0">
                                                                 <div class="p-2">
-                                                                    <h5 class="car-title">فورد - تورس -  سيدان متوسطة - 2019 - س ك ب 3965 - عودي</h5>
-                                                                </div>
-                                    
-                                                                <div class="row car-data-row p-2">
-                                                                        <div class="car-icons">
-                                                                            <div class="icon-item">
-                                                                                <div class="icon">
-                                                                                    <img src="img/carDataIcons/Rectangle 94.svg" class="car-icondata">
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="icon-item">
-                                                                                <div class="icon">
-                                                                                    <img src="img/carDataIcons/Rectangle 93.svg" class="car-icondata">
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="icon-item">
-                                                                                <div class="icon">
-                                                                                    <img src="img/carDataIcons/Rectangle 95.svg" class="car-icondata">
-                                                                                </div>
-                                                                                <span class="icon-text">4</span>
-                                                                            </div>
-                                                                            <div class="icon-item">
-                                                                                <div class="icon">
-                                                                                    <img src="img/carDataIcons/Rectangle 96.svg" class="car-icondata">
-                                                                                </div>
-                                                                                <span class="icon-text">5</span>
-                                                                            </div>
-                                                                            <div class="icon-item">
-                                                                                <div class="icon">
-                                                                                    <img src="img/carDataIcons/Rectangle 97.svg" class="car-icondata">
-                                                                                </div>
-                                                                                <span class="icon-text">2</span>
-                                                                            </div>
-                                                                            <div class="icon-item">
-                                                                                <div class="icon">
-                                                                                    <img src="img/carDataIcons/Rectangle 98.svg" class="car-icondata">
-                                                                                </div>
-                                                                                <span class="icon-text">4</span>
-                                                                            </div>
-                                                                    </div>
-                                                                </div>
-                                    
-                                                                <div class="p-2 text-end">
-                                                                    <p>القراءة الحالية: 28٬000</p>
-                                                                    <p>6923958732</p>
-                                                                </div>
-                                    
-                                                                <div class="text-center">
-                                                                    <button class="btn more-btn" data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-                                                                        onclick="loadCarDetails('كيا كارنيفال 2020', 'carnival')">
-                                                                        <i class="bi bi-info-circle me-2"></i>المزيد من التفاصيل
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6 car-item"  data-type="سيدان صغيرة">
-                                                        <div class="card car-card p-2">
-                                                            <img src="img//car3.png" alt="كيا كارنيفال" class="car-image">
-                                                            <div class="card-body p-0">
-                                                                <div class="p-2">
-                                                                    <h5 class="car-title">هيونداي - أكسنت -  سيدان صغيرة - 2019 - ص ى ى 8445 - أحمر </h5>
-                                                                </div>
-                                    
-                                                                <div class="row car-data-row p-2">
-                                                                        <div class="car-icons">
-                                                                            <div class="icon-item">
-                                                                                <div class="icon">
-                                                                                    <img src="img/carDataIcons/Rectangle 94.svg" class="car-icondata">
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="icon-item">
-                                                                                <div class="icon">
-                                                                                    <img src="img/carDataIcons/Rectangle 93.svg" class="car-icondata">
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="icon-item">
-                                                                                <div class="icon">
-                                                                                    <img src="img/carDataIcons/Rectangle 95.svg" class="car-icondata">
-                                                                                </div>
-                                                                                <span class="icon-text">4</span>
-                                                                            </div>
-                                                                            <div class="icon-item">
-                                                                                <div class="icon">
-                                                                                    <img src="img/carDataIcons/Rectangle 96.svg" class="car-icondata">
-                                                                                </div>
-                                                                                <span class="icon-text">5</span>
-                                                                            </div>
-                                                                            <div class="icon-item">
-                                                                                <div class="icon">
-                                                                                    <img src="img/carDataIcons/Rectangle 97.svg" class="car-icondata">
-                                                                                </div>
-                                                                                <span class="icon-text">2</span>
-                                                                            </div>
-                                                                            <div class="icon-item">
-                                                                                <div class="icon">
-                                                                                    <img src="img/carDataIcons/Rectangle 98.svg" class="car-icondata">
-                                                                                </div>
-                                                                                <span class="icon-text">4</span>
-                                                                            </div>
-                                                                    </div>
-                                                                </div>
-                                    
-                                                                <div class="p-2 text-end">
-                                                                    <p>القراءة الحالية: 28٬000</p>
-                                                                    <p>6923958732</p>
-                                                                </div>
-                                    
-                                                                <div class="text-center">
-                                                                    <button class="btn more-btn" data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-                                                                       onclick="loadCarDetails('فورد تورس 2020', 'ford')">
-                                                                        <i class="bi bi-info-circle me-2"></i>المزيد من التفاصيل
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6 car-item"  data-type="عائلية كبيرة">
-                                                        <div class="card car-card p-2">
-                                                            <img src="img//car4.png" alt="كيا كارنيفال" class="car-image">
-                                                            <div class="card-body p-0">
-                                                                <div class="p-2">
-                                                                    <h5 class="car-title">كيا - كارنيفال أي اكس جان 8 - عائلية كبيرة - 2020 - ح س و 8630 -
-                                                                        أصفر</h5>
+                                                                    <h5 class="car-title">كيا - كارنيفال أي اكس جان 8 -  عائلية كبيرة - 2020 - ح س و 8630 - أصفر</h5>
                                                                 </div>
                                                     
                                                                 <div class="row car-data-row p-2">
@@ -988,17 +789,19 @@
                                                                 </div>
                                                     
                                                                 <div class="text-center">
-                                                                    <button class="btn more-btn" data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-                                                                        onclick="loadCarDetails('كيا كارنيفال 2020', 'carnival')">
-                                                                        <i class="bi bi-info-circle me-2"></i>المزيد من التفاصيل
+                                                                    <button class="btn more-btn"data-bs-toggle="modal" 
+                                                                        data-bs-target="#carDetailsModal"
+                                                                        data-car-id="1"
+                                                                        onclick="loadCarDetails(this)">
+                                                                        المزيد من التفاصيل
                                                                     </button>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-4 col-md-6 car-item"  data-type="سيدان متوسطة">
+                                                     <div class="col-lg-4 col-md-6 car-item" data-type="سيدان متوسطة">
                                                         <div class="card car-card p-2">
-                                                            <img src="img//car1.png" alt="كيا كارنيفال" class="car-image">
+                                                            <img src="img//car3.png" alt="فورد - تورس" class="car-image">
                                                             <div class="card-body p-0">
                                                                 <div class="p-2">
                                                                     <h5 class="car-title">فورد - تورس -  سيدان متوسطة - 2019 - س ك ب 3965 - عودي</h5>
@@ -1049,9 +852,74 @@
                                                                 </div>
                                                     
                                                                 <div class="text-center">
-                                                                    <button class="btn more-btn" data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-                                                                        onclick="loadCarDetails('كيا كارنيفال 2020', 'carnival')">
-                                                                        <i class="bi bi-info-circle me-2"></i>المزيد من التفاصيل
+                                                                    <button class="btn more-btn"data-bs-toggle="modal" 
+                                                                        data-bs-target="#carDetailsModal"
+                                                                        data-car-id="2"
+                                                                        onclick="loadCarDetails(this)">
+                                                                        المزيد من التفاصيل
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-6 car-item" data-type="اقتصادية">
+                                                        <div class="card car-card p-2">
+                                                            <img src="img//car4.png" alt="كيا - نيرو" class="car-image">
+                                                            <div class="card-body p-0">
+                                                                <div class="p-2">
+                                                                    <h5 class="car-title">كيا - نيرو -  اقتصادية - 2019 - ى ط ك 5078 - بيج</h5>
+                                                                </div>
+                                                    
+                                                                <div class="row car-data-row p-2">
+                                                                    <div class="car-icons">
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 94.svg" class="car-icondata">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 93.svg" class="car-icondata">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 95.svg" class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">4</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 96.svg" class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">5</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 97.svg" class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">2</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 98.svg" class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">4</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                    
+                                                                <div class="p-2 text-end">
+                                                                    <p>القراءة الحالية: 28٬000</p>
+                                                                    <p>6923958732</p>
+                                                                </div>
+                                                    
+                                                                <div class="text-center">
+                                                                    <button class="btn more-btn"data-bs-toggle="modal" 
+                                                                        data-bs-target="#carDetailsModal"
+                                                                        data-car-id="3"
+                                                                        onclick="loadCarDetails(this)">
+                                                                        المزيد من التفاصيل
                                                                     </button>
                                                                 </div>
                                                             </div>
@@ -1557,22 +1425,76 @@
             </div>
         </div>
     </div>
- <!-- Modal -->
-    <div class="modal fade" id="carDetailsModal" tabindex="-1" aria-labelledby="carDetailsModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
+  <!--car details Modal -->
+    <div class="modal fade" id="carDetailsModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="carDetailsModalLabel">تفاصيل السيارة</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h1 class="modal-title fs-5" id="modalCarTitle">
+                        <i class="bi bi-car-front mx-2"></i>
+                        تفاصيل السيارة
+                    </h1>
+                    <button type="button" class="btn-close m-0" data-bs-dismiss="modal"></button>
                 </div>
+
                 <div class="modal-body">
-                    <div id="carDetailsContent">
-                        <!-- Content will be loaded here -->
+                    <!-- Navigation Pills -->
+                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="pills-pricing-tab" data-bs-toggle="pill" data-bs-target="#pills-pricing" type="button" role="tab">
+                               <i class="fa-solid fa-tag"></i> الأسعار
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-rental-tab" data-bs-toggle="pill" data-bs-target="#pills-rental" type="button" role="tab">
+                                <i class="bi bi-clipboard-check"></i> بنود التأجير
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-documents-tab" data-bs-toggle="pill" data-bs-target="#pills-documents" type="button" role="tab">
+                                <i class="bi bi-file-earmark-text"></i> الوثائق
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-maintenance-tab" data-bs-toggle="pill" data-bs-target="#pills-maintenance" type="button" role="tab">
+                                <i class="bi bi-tools"></i> الصيانة
+                            </button>
+                        </li>
+                    </ul>
+
+                    <!-- Tab Content -->
+                    <div class="tab-content" id="pills-tabContent">
+                        <!-- Pricing Tab -->
+                        <div class="tab-pane fade show active" id="pills-pricing" role="tabpanel">
+                            <div class="row" id="pricingContent">
+                                <!-- سيتم ملئ المحتوى ديناميكياً -->
+                            </div>
+                        </div>
+
+                        <!-- Rental Terms Tab -->
+                        <div class="tab-pane fade" id="pills-rental" role="tabpanel">
+                            <div class="row" id="rentalContent">
+                                <!-- سيتم ملئ المحتوى ديناميكياً -->
+                            </div>
+                        </div>
+
+                        <!-- Documents Tab -->
+                        <div class="tab-pane fade" id="pills-documents" role="tabpanel">
+                            <div class="info-card" id="documentsContent">
+                                <!-- سيتم ملئ المحتوى ديناميكياً -->
+                            </div>
+                        </div>
+
+                        <!-- Maintenance Tab -->
+                        <div class="tab-pane fade" id="pills-maintenance" role="tabpanel">
+                            <div class="info-card" id="maintenanceContent">
+                                <!-- سيتم ملئ المحتوى ديناميكياً -->
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
-                </div>
+
+             
             </div>
         </div>
     </div>
@@ -1599,28 +1521,23 @@
             let currentPage = 0;
             let filteredCars = Array.from(carItems);
             
-            // Show the appropriate page of cars
             function showPage(page) {
                 const startIndex = page * itemsPerPage;
                 const endIndex = startIndex + itemsPerPage;
                 
-                // Hide all cars first
                 carItems.forEach(car => {
                     car.style.display = 'none';
                 });
                 
-                // Show only the cars for the current page
                 filteredCars.forEach((car, index) => {
                     if (index >= startIndex && index < endIndex) {
                         car.style.display = 'block';
                     }
                 });
                 
-                // Update button states
                 document.getElementById('prevBtn').disabled = page === 0;
                 document.getElementById('nextBtn').disabled = endIndex >= filteredCars.length;
                 
-                // Show message if no cars match the filter
                 const noCarsMessage = document.getElementById('noCarsMessage');
                 if (filteredCars.length === 0) {
                     if (!noCarsMessage) {
@@ -1635,7 +1552,6 @@
                 }
             }
             
-            // Previous button event listener
             document.getElementById('prevBtn').addEventListener('click', function() {
                 if (currentPage > 0) {
                     currentPage--;
@@ -1643,7 +1559,6 @@
                 }
             });
             
-            // Next button event listener
             document.getElementById('nextBtn').addEventListener('click', function() {
                 if ((currentPage + 1) * itemsPerPage < filteredCars.length) {
                     currentPage++;
@@ -1651,7 +1566,6 @@
                 }
             });
             
-            // Filter event listener
             document.getElementById('carFilter').addEventListener('change', function(e) {
                 const selectedType = e.target.value;
                 
@@ -1670,19 +1584,398 @@
             // Initialize
             showPage(currentPage);
         });
-        
-        // Function to load car details (placeholder)
-        function loadCarDetails(carName, carType) {
-            const content = `
-                <div class="text-center">
-                    <h4>${carName}</h4>
-                    <p>نوع السيارة: ${carType}</p>
-                    <p>هذا النموذج يظهر تفاصيل السيارة عند النقر على زر "المزيد من التفاصيل".</p>
-                    <p>يمكنك إضافة المزيد من المعلومات التفصيلية عن السيارة هنا.</p>
+    </script>
+    <script>
+        // بيانات السيارات
+        const carsData = {
+            0: {
+                title: "هيونداي - النترا - سيدان متوسطة - 2019 - و ق ق 6417 - عودي",
+                phone: "6923958732",
+                pricing: {
+                    daily: '140.00',
+                    weekly: '840.00',
+                    monthly: '3,000.00'
+                },
+                rental: {
+                    dailyKm: 340,
+                    extraKmPrice: 1.66,
+                    freeHours: 0,
+                    maxHours: 0,
+                    extraHourPrice: 40.00,
+                    cancelHours: 3,
+                    extraDriver: "متوفر" ,
+                    options: "غير متوفرة",
+                    additions: "غير متوفرة",
+                    minAge: 20
+                },
+                documents: {
+                    license: { date: "2028/01/11", status: "valid" },
+                    insurance: { date: "2026/01/27", status: "valid" },
+                    operatingCard: { date: "2026/01/08", status: "valid" },
+                    inspection: { date: "2026/01/18", status: "valid" }
+                },
+                maintenance: {
+                    tires: { date: "2028/02/03", km: "68,000" },
+                    oil: { date: "2026/01/28", km: "28,580" },
+                    service: { date: "2026/01/24", km: "43,580" }
+                }
+            },
+            1: {
+                title: "كيا - كارنيفال أي اكس جان 8 -  عائلية كبيرة - 2020 - ح س و 8630 - أصفر",
+                phone: "5551234567",
+                pricing: {
+                    daily: '600.00',
+                    weekly: '3,500.00',
+                    monthly: '12,000.00'
+                },
+                rental: {
+                    dailyKm: 400,
+                    extraKmPrice: 2.50,
+                    freeHours: 0,
+                    maxHours: 0,
+                    extraHourPrice: 50.00,
+                    cancelHours: 6,
+                    extraDriver: "متوفر",
+                    options: "متوفرة",
+                    additions: "متوفرة",
+                    minAge: 25
+                },
+                documents: {
+                    license: { date: "2027/05/15", status: "valid" },
+                    insurance: { date: "2025/12/30", status: "warning" },
+                    operatingCard: { date: "2025/11/20", status: "valid" },
+                    inspection: { date: "2025/09/10", status: "warning" }
+                },
+                maintenance: {
+                    tires: { date: "2027/08/20", km: "45,000" },
+                    oil: { date: "2025/11/15", km: "15,200" },
+                    service: { date: "2025/10/05", km: "14,800" }
+                }
+            },
+            2: {
+                title: "فورد - تورس -  سيدان متوسطة - 2019 - س ك ب 3965 - عودي",
+                phone: "9876543210",
+                pricing: {
+                    daily: '280.00',
+                    weekly: '1,400.00',
+                    monthly: '4,500.00'
+                },
+                rental: {
+                    dailyKm: 250,
+                    extraKmPrice: 1.25,
+                    freeHours: 2,
+                    maxHours: 24,
+                    extraHourPrice: 25.00,
+                    cancelHours: 2,
+                    extraDriver: "متوفر",
+                    options: "غير متوفرة",
+                    additions: "متوفرة",
+                    minAge: 21
+                },
+                documents: {
+                    license: { date: "2029/03/12", status: "valid" },
+                    insurance: { date: "2026/06/18", status: "valid" },
+                    operatingCard: { date: "2026/04/25", status: "valid" },
+                    inspection: { date: "2026/02/14", status: "valid" }
+                },
+                maintenance: {
+                    tires: { date: "2028/12/01", km: "25,000" },
+                    oil: { date: "2026/03/20", km: "8,100" },
+                    service: { date: "2026/01/10", km: "7,500" }
+                }
+            },
+              3: {
+                title: "كيا - نيرو -  اقتصادية - 2019 - ى ط ك 5078 - بيج",
+                phone: "9876543210",
+                pricing: {
+                    daily: '500.00',
+                    weekly: '2,800.00',
+                    monthly: '9,000.00'
+                },
+                rental: {
+                    dailyKm: 250,
+                    extraKmPrice: 1.25,
+                    freeHours: 2,
+                    maxHours: 24,
+                    extraHourPrice: 25.00,
+                    cancelHours: 2,
+                    extraDriver: "متوفر",
+                    options: "غير متوفرة",
+                    additions: "متوفرة جزئياً",
+                    minAge: 21
+                },
+                documents: {
+                    license: { date: "2029/03/12", status: "valid" },
+                    insurance: { date: "2026/06/18", status: "valid" },
+                    operatingCard: { date: "2026/04/25", status: "valid" },
+                    inspection: { date: "2026/02/14", status: "valid" }
+                },
+                maintenance: {
+                    tires: { date: "2028/12/01", km: "25,000" },
+                    oil: { date: "2026/03/20", km: "8,100" },
+                    service: { date: "2026/01/10", km: "7,500" }
+                }
+            }
+        };
+
+
+        function loadCarDetails(button) {
+            const carId = button.getAttribute('data-car-id');
+            const carData = carsData[carId];
+            
+            if (!carData) {
+                console.error('بيانات السيارة غير موجودة');
+                return;
+            }
+
+            document.getElementById('modalCarTitle').innerHTML = `
+                <i class="bi bi-car-front mx-2"></i>${carData.title}
+            `;
+
+            loadPricingTab(carData);
+            
+            loadRentalTab(carData);
+            
+            loadDocumentsTab(carData);
+            
+            loadMaintenanceTab(carData);
+
+        }
+
+        // تحديث الأسعار
+        function loadPricingTab(carData) {
+            const pricingContent = document.getElementById('pricingContent');
+            pricingContent.innerHTML = `
+                <div class="col-md-4">
+                    <div class="price-section">
+                        <div class="price-value">${carData.pricing.daily} </div>
+                        <div class="price-label"> يومي</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="price-section">
+                        <div class="price-value">${carData.pricing.weekly} </div>
+                        <div class="price-label"> أسبوعي</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="price-section">
+                        <div class="price-value">${carData.pricing.monthly} </div>
+                        <div class="price-label"> شهري</div>
+                    </div>
+                </div>
+              
+            `;
+        }
+
+        // تحديث بنود التأجير
+        function loadRentalTab(carData) {
+            const rentalContent = document.getElementById('rentalContent');
+            rentalContent.innerHTML = `
+                <div class="col-lg-6">
+                    <div class="info-card">
+                        <h5 class="section-title">
+                            <i class="bi bi-speedometer2"></i> حدود الاستخدام
+                        </h5>
+                        <div class="info-item">
+                            <div class="info-label">
+                                كيلومترات مجانية يومياً
+                            </div>
+                            <span class="info-value">${carData.rental.dailyKm} كم</span>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">
+                                قيمة الكيلو الإضافي
+                            </div>
+                            <span class="info-value">${carData.rental.extraKmPrice} </span>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">
+                                الساعات المجانية
+                            </div>
+                            <span class="info-value">${carData.rental.freeHours}</span>
+                        </div>
+                         <div class="info-item">
+                            <div class="info-label">
+                               الحد الاعلى للساعات
+                            </div>
+                            <span class="info-value">${carData.rental.maxHours}</span>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">
+                                قيمة الساعة الإضافية
+                            </div>
+                            <span class="info-value">${carData.rental.extraHourPrice} </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="info-card">
+                        <h5 class="section-title">
+                            <i class="bi bi-gear"></i> الشروط والأحكام
+                        </h5>
+                        <div class="info-item">
+                            <div class="info-label">
+                                ساعات إلغاء الحجز
+                            </div>
+                            <span class="info-value">${carData.rental.cancelHours} </span>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">
+                                سائق إضافي
+                            </div>
+                            <span class="info-value ${carData.rental.extraDriver === 'متوفر' ? 'available' : 'not-available'}">${carData.rental.extraDriver}</span>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">
+                                الخيارات
+                            </div>
+                            <span class="info-value ${carData.rental.options === 'متوفرة' ? 'available' : 'not-available'}">${carData.rental.options}</span>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">
+                                الإضافات
+                            </div>
+                            <span class="info-value ${carData.rental.additions === 'متوفرة' ? 'available' : 'not-available'}">${carData.rental.additions}</span>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">
+                                الحد الأدنى للعمر
+                            </div>
+                            <span class="info-value">${carData.rental.minAge} </span>
+                        </div>
+                    </div>
                 </div>
             `;
-            document.getElementById('carDetailsContent').innerHTML = content;
         }
+
+        // تحديث الوثائق
+        function loadDocumentsTab(carData) {
+            const documentsContent = document.getElementById('documentsContent');
+            
+            const getStatusClass = (status) => {
+                switch(status) {
+                    case 'valid': return 'status-valid';
+                    case 'warning': return 'status-warning';
+                    case 'expired': return 'status-expired';
+                    default: return 'status-valid';
+                }
+            };
+
+            const getStatusIcon = (status) => {
+                switch(status) {
+                    case 'valid': return 'bi-check-circle';
+                    case 'warning': return 'bi-exclamation-triangle';
+                    case 'expired': return 'bi-x-circle';
+                    default: return 'bi-check-circle';
+                }
+            };
+
+            documentsContent.innerHTML = `
+                <h5 class="section-title">
+                    <i class="bi bi-shield-check"></i> الوثائق
+                </h5>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="info-item">
+                            <div class="info-label">
+                                رخصة السير
+                            </div>
+                            <span class="status-badge ${getStatusClass(carData.documents.license.status)}">
+                                ${carData.documents.license.date}
+                            </span>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">
+                                وثيقة تأمين
+                            </div>
+                            <span class="status-badge ${getStatusClass(carData.documents.insurance.status)}">
+                                 ${carData.documents.insurance.date}
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-item">
+                            <div class="info-label">
+                                بطاقة تشغيل
+                            </div>
+                            <span class="status-badge ${getStatusClass(carData.documents.operatingCard.status)}">
+                               ${carData.documents.operatingCard.date}
+                            </span>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">
+                                الفحص الدوري
+                            </div>
+                            <span class="status-badge ${getStatusClass(carData.documents.inspection.status)}">
+                                 ${carData.documents.inspection.date}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+              
+            `;
+        }
+
+        // تحديث الصيانة
+        function loadMaintenanceTab(carData) {
+            const maintenanceContent = document.getElementById('maintenanceContent');
+            maintenanceContent.innerHTML = `
+                <h5 class="section-title">
+                    <i class="bi bi-wrench"></i> سجل الصيانة
+                </h5>
+                
+                <div class="maintenance-item">
+                    <div class="maintenance-title">
+                        <i class="bi bi-circle"></i> الإطارات
+                    </div>
+                    <div class="maintenance-info">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <strong>تاريخ التغيير:</strong> ${carData.maintenance.tires.date}
+                            </div>
+                            <div class="col-md-6">
+                                <strong>عند الكيلومتر:</strong> ${carData.maintenance.tires.km} كم
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="maintenance-item">
+                    <div class="maintenance-title">
+                        <i class="bi bi-droplet"></i> زيت المكينة
+                    </div>
+                    <div class="maintenance-info">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <strong>تاريخ التغيير:</strong> ${carData.maintenance.oil.date}
+                            </div>
+                            <div class="col-md-6">
+                                <strong>عند الكيلومتر:</strong> ${carData.maintenance.oil.km} كم
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="maintenance-item">
+                    <div class="maintenance-title">
+                        <i class="bi bi-gear-wide-connected"></i> الصيانة الدورية
+                    </div>
+                    <div class="maintenance-info">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <strong>آخر صيانة:</strong> ${carData.maintenance.service.date}
+                            </div>
+                            <div class="col-md-6">
+                                <strong>عند الكيلومتر:</strong> ${carData.maintenance.service.km} كم
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            `;
+        }     
     </script>
 </body>
 
