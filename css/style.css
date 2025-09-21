@@ -528,7 +528,7 @@ body::-webkit-scrollbar-track {
 
 /* Handle */
 body::-webkit-scrollbar-thumb {
-  background: #d68d3f;
+  background: #FF9626;
 
 }
 
@@ -551,7 +551,7 @@ body::-webkit-scrollbar-thumb {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #d68d3f;
+  background: #FF9626;
 }
 
 /* Handle on hover */
@@ -665,10 +665,6 @@ body::-webkit-scrollbar-thumb {
 .extra-details-row {
   position: relative;
 }
-
-
-
-
 
 .dropdown-content-row {
   flex-direction: row-reverse;
@@ -1033,6 +1029,14 @@ body::-webkit-scrollbar-thumb {
 
 @media (min-width:768px) {
 
+  #carouselItem2,
+  #carouselItem3,
+  #carouselItem4,
+  #carouselItem5 {
+    position: relative;
+    overflow-y: auto;
+  }
+
   #carouselItem1,
   #carouselItem2,
   #carouselItem3,
@@ -1098,12 +1102,11 @@ body::-webkit-scrollbar-thumb {
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1rem;
   overflow: visible;
   transition: all 0.3s ease;
   display: flex;
-  gap: 1rem;
-  align-items: flex-start;
+  gap: 5px;
+  align-items: center;
 }
 
 .car-card:hover {
@@ -1440,6 +1443,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 14px;
   font-weight: 500;
   margin: 0;
+  color: #39629C;
 }
 
 .filter_Container {
@@ -1458,7 +1462,7 @@ body::-webkit-scrollbar-thumb {
 
 #nextBtn,
 #prevBtn {
-  color: green;
+  color: #39629C;
 }
 
 #nextBtn:disabled,
@@ -1523,6 +1527,7 @@ body::-webkit-scrollbar-thumb {
   transition: all 0.4s ease;
   border: none;
   height: 100%;
+  min-height: 23rem;
 }
 
 .card-body {
@@ -1540,36 +1545,32 @@ body::-webkit-scrollbar-thumb {
   font-size: .8rem;
   font-weight: 500;
   color: #2c3e50;
-  margin-bottom: 0.5rem;
   text-align: center;
 }
 
 .more-btn {
-  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
-  border: none;
-  color: white;
-  padding: 0.75rem 2rem;
-  border-radius: 50px;
+  background: white;
+  color: #ff9626;
   font-weight: 600;
   font-size: 0.9rem;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
 }
 
 .more-btn:hover {
-  background: linear-gradient(135deg, #ee5a24 0%, #ff6b6b 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
   color: white;
+  background: #ff9626;
 }
 
 
-#carousel3 {
+#carousel2,
+#carousel3,
+#carousel4,
+#carousel5 {
   height: 100%;
   overflow: auto;
 }
 
-#carFilter {
+.carFilter {
   background-color: rgb(255, 253, 253);
   border-radius: 8px;
   border: 3px solid #FF9626;
@@ -1579,6 +1580,12 @@ body::-webkit-scrollbar-thumb {
   padding: .375rem .75rem .375rem 2.25rem;
   width: 100%;
   max-width: 250px;
+}
+
+.form-select:focus {
+  border-color: #FF9626;
+  outline: 0;
+  box-shadow: none;
 }
 
 .currentReading {
@@ -1603,12 +1610,11 @@ body::-webkit-scrollbar-thumb {
 .modal-header {
   color: rgb(0, 0, 0);
   border-radius: 0.5rem 0.5rem 0 0;
-  background: #f8f9fa;
 }
 
 #carDetailsModal .modal-content {
   direction: rtl;
-  min-height: 550px;
+  border: 2px solid #FF9626;
 }
 
 
@@ -1629,11 +1635,10 @@ body::-webkit-scrollbar-thumb {
 
 .info-card {
   background: white;
-  border-radius: 0.5rem;
   padding: 1.5rem;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
   margin-bottom: 1rem;
-  border-left: 4px solid #ee5a24;
+  height: 300px;
+  overflow-y: auto;
 }
 
 .info-item {
@@ -1652,6 +1657,16 @@ body::-webkit-scrollbar-thumb {
   font-weight: 600;
   color: #495057;
   font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.info-status {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+
 }
 
 .info-value {
@@ -1687,13 +1702,15 @@ body::-webkit-scrollbar-thumb {
 }
 
 .status-valid {
-  background: #d4edda;
-  color: #155724;
+  background: green;
 }
 
 .status-warning {
-  background: #fff3cd;
-  color: #856404;
+  background: #FF9626;
+}
+
+.status-expired {
+  background: #C32222;
 }
 
 .maintenance-item {
@@ -1710,19 +1727,134 @@ body::-webkit-scrollbar-thumb {
   margin-bottom: 0.5rem;
 }
 
-.section-title {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #495057;
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid #e9ecef;
-}
-
 .available {
   color: #28a745;
 }
 
 .not-available {
   color: #dc3545;
+}
+
+/*  */
+.pricing-row p {
+  margin-bottom: .5rem;
+}
+
+.currentReading p {
+  margin-bottom: .5rem;
+}
+
+.currentReading_Value {
+  font-weight: 600;
+  color: #39629C;
+}
+
+.car-title,
+.Serial-number {
+  font-weight: 600;
+}
+
+.Serial-number {
+  color: #39629C;
+}
+
+.price_Value {
+  color: #39629C;
+  font-weight: 600;
+
+}
+
+/*  */
+
+.reasons-dropdown {
+  direction: rtl;
+}
+
+.reasons-toggle {
+  background: white;
+  color: #ff9626;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-size: 12px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.reasons-list {
+  margin-top: 5px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.reasons-list.show {
+  max-height: 115px;
+}
+
+.reason-item {
+  padding: 2px 12px;
+  font-size: 11px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.reason-item:last-child {
+  border-bottom: none;
+}
+
+.reasons-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  height: 114px;
+  overflow-y: auto;
+  align-content: flex-start;
+}
+
+.reason-item {
+  background: #f8f9fa;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: start;
+  height: fit-content;
+}
+
+/*  */
+.carousel-inner::after {
+  display: none;
+}
+
+.carousel-inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+  position: relative;
+}
+
+/*  */
+.contract-section {
+  direction: rtl;
+}
+
+.contract-item {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  flex-wrap: wrap;
+}
+
+.contract-item:last-child {
+  border-bottom: none;
+}
+
+.contract-label i {
+  margin-left: 5px;
+  color: #39629C;
 }
