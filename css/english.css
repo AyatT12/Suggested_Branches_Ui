@@ -155,3 +155,11 @@ body {
   margin-left: 0px;
   margin-right: 5px;
 }
+/*  */
+
+@media (max-width: 991px) {
+  .buttons-container {
+    justify-content: flex-end;
+
+  }
+}

@@ -1073,11 +1073,11 @@ body::-webkit-scrollbar-thumb {
 
 .employee-chart-data,
 .branch-chart-data {
-  align-items: center;
+  align-items: start;
 }
 
 .pieChart-data {
-  align-items: center;
+  align-items: start;
 }
 
 #pieChart {
@@ -1385,7 +1385,7 @@ body::-webkit-scrollbar-thumb {
 
 @media (max-width: 991px) {
   .buttons-container {
-    justify-content: center;
+    justify-content: flex-start;
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
@@ -1626,7 +1626,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .nav-pills .nav-link.active {
-  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+  background: #FF9626;
 }
 
 #pills-tab {
@@ -1670,7 +1670,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .info-value {
-  font-weight: 500;
+  font-weight: 600;
   color: #212529;
 }
 
@@ -1701,17 +1701,7 @@ body::-webkit-scrollbar-thumb {
   font-weight: 600;
 }
 
-.status-valid {
-  background: green;
-}
 
-.status-warning {
-  background: #FF9626;
-}
-
-.status-expired {
-  background: #C32222;
-}
 
 .maintenance-item {
   background: #f8f9fa;
@@ -1727,13 +1717,6 @@ body::-webkit-scrollbar-thumb {
   margin-bottom: 0.5rem;
 }
 
-.available {
-  color: #28a745;
-}
-
-.not-available {
-  color: #dc3545;
-}
 
 /*  */
 .pricing-row p {
@@ -1745,7 +1728,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 .currentReading_Value {
-  font-weight: 600;
   color: #39629C;
 }
 
@@ -1760,8 +1742,6 @@ body::-webkit-scrollbar-thumb {
 
 .price_Value {
   color: #39629C;
-  font-weight: 600;
-
 }
 
 /*  */
@@ -1854,7 +1834,45 @@ body::-webkit-scrollbar-thumb {
   border-bottom: none;
 }
 
-.contract-label i {
-  margin-left: 5px;
-  color: #39629C;
+/*  */
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
+.contract-value{
+  color: #39629C ;
+} 
+.Days-left-badge{
+    color: #39629C ;
+}
+.maintenance-info p{
+ color: #39629C;
+ margin-bottom: .2rem;
+}
+.maintenance_subtitle{
+  color: #000000;
+}
+.status-valid {
+  background: green;
+}
+
+.status-warning {
+  background: #FF9626;
+}
+
+.status-expired {
+  background: #C32222;
+}
+.available {
+  color: green;
+}
+
+.not-available {
+  color: #C32222;
+}
+.expired{
+  color: #C32222;
+}
+.valid{
+    color: green;
 }
