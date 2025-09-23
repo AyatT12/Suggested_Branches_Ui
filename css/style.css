@@ -748,7 +748,7 @@ body::-webkit-scrollbar-thumb {
 /*======================= Media ======================*/
 
 
-@media (max-width: 375px) {
+@media (max-width: 320px) {
 
   .extra-small-mobile {
     display: none;
