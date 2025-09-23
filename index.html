@@ -33,8 +33,7 @@
         <div class="navbar-area">
             <!-- Topbar -->
             <nav class="navbar navbar-expand navbar-light topbar mb-1 static-top  justify-content-between"
-                style="height:100px">
-                <!-- Topbar -->
+                style="min-height:100px">
                 <!-- Topbar Navbar -->
                 <ul class="navbar-nav p-0">
                     <!-- Nav Item - User Information -->
@@ -157,17 +156,27 @@
                         </a>
                     </li>
                 </ul>
-                <!-- logo -->
+                <!-- warning messages -->
+                <div class="warning-section" id="warningSection">
+                <div class="marquee">
+                    <div class="marquee-content">
+                       <p> خدمة الرسائل النصية غير متاحة حالياً</p>
+                       <p> خدمة الرسائل النصية غير متاحة حالياً</p>
+                    </div>
+                </div>
+                <i class="fa-regular fa-circle-xmark marquee-xmark" id="marquee-xmark" onclick="closeWarning()"></i>
+            </div>
 
+                <!-- logo -->
                 <div class="d-flex align-items-end on-mobile gap-3" style="color:black;">
                     <div class="">
                         <h1 class="hide-on-mobile" style="font-size: 1.2rem;font-weight: bold;">
                             شركة كدي لتأجير السيارات </h1>
                         <p class="extra-small-mobile m-0">
-                            &#x627;&#x644;&#x631;&#x626;&#x64A;&#x633;&#x64A; </p>
+                           الرئيسي </p>
                     </div>
                     <a href="#">
-                        <img class="extra-small-mobile " src="img/CompanyLogo_20240325231449.png" style="height: 60px;">
+                        <img class="extra-small-mobile Logo " src="img/CompanyLogo_20240325231449.png">
                     </a>
                 </div>
             </nav>
@@ -175,12 +184,8 @@
     </header>
 
     <div class="wrapper flex-grow-1 d-flex align-items-center flex-column ">
-        <!-- Alerts -->
-        <div class="col">
-
-        </div>
-        <!-- --- -->
-        <div class="col">
+      
+        <div class="col d-flex align-items-center">
             <div class="container-fluid ">
                 <!-- Content Row -->
                 <section class="home-section">
@@ -304,7 +309,50 @@
                                                                     <p class="text-center m-0 Serial-number">6923958732
                                                                     </p>
                                                                 </div>
-                                                              
+                                                               <div class="row car-data-row py-1 px-2">
+                                                                    <div class="car-icons">
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 94.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 93.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 95.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">4</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 96.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">5</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 97.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">2</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 98.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">4</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                              <div class="contract-section py-1 px-2">
                                                                      <div class="contract-item">
                                                                         <div class="contract-label">
@@ -352,6 +400,50 @@
                                                                         عائلية كبيرة - 2020 - ح س و 8630 - أصفر</h5>
                                                                     <p class="text-center m-0 Serial-number">6923958732
                                                                     </p>
+                                                                </div>
+                                                                 <div class="row car-data-row py-1 px-2">
+                                                                    <div class="car-icons">
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 94.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 93.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 95.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">4</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 96.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">5</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 97.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">2</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 98.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">4</span>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                                 <div class="contract-section py-1 px-2">
                                                                      <div class="contract-item">
@@ -401,7 +493,51 @@
                                                                         2019 - س ك ب 3965 - عودي</h5>
                                                                     <p class="text-center m-0 Serial-number">6923958732
                                                                     </p>
-                                                                </div>                                                                
+                                                                </div>  
+                                                                 <div class="row car-data-row py-1 px-2">
+                                                                    <div class="car-icons">
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 94.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 93.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 95.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">4</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 96.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">5</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 97.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">2</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 98.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">4</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>                                                              
                                                              <div class="contract-section py-1 px-2">
                                                                      <div class="contract-item">
                                                                         <div class="contract-label">
@@ -449,7 +585,50 @@
                                                                     <p class="text-center m-0 Serial-number">6923958732
                                                                     </p>
                                                                 </div>
-                                                             
+                                                              <div class="row car-data-row py-1 px-2">
+                                                                    <div class="car-icons">
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 94.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 93.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 95.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">4</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 96.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">5</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 97.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">2</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 98.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">4</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                                   <div class="contract-section py-1 px-2">
                                                                      <div class="contract-item">
                                                                         <div class="contract-label">
@@ -521,7 +700,7 @@
                                                         <div class="card car-card p-2">
                                                             <img src="img/105-19.png" alt="هيونداي - النترا"
                                                                 class="car-image">
-                                                            <div class="card-body p-0">
+                                                            <div class="card-body Available_Car_Card p-0">
                                                                 <div class="p-1">
                                                                     <h5 class="car-title">هيونداي - النترا - سيدان
                                                                         متوسطة - 2019 - و ق ق 6417 - عودي</h5>
@@ -608,7 +787,7 @@
                                                         <div class="card car-card p-2">
                                                             <img src="img//car2.png" alt="كيا كارنيفال"
                                                                 class="car-image">
-                                                            <div class="card-body p-0">
+                                                            <div class="card-body Available_Car_Card p-0">
                                                                 <div class="p-1">
                                                                     <h5 class="car-title">كيا - كارنيفال أي اكس جان 8 -
                                                                         عائلية كبيرة - 2020 - ح س و 8630 - أصفر</h5>
@@ -695,7 +874,7 @@
                                                         <div class="card car-card p-2">
                                                             <img src="img//car3.png" alt="فورد - تورس"
                                                                 class="car-image">
-                                                            <div class="card-body p-0">
+                                                            <div class="card-body Available_Car_Card p-0">
                                                                 <div class="p-1">
                                                                     <h5 class="car-title">فورد - تورس - سيدان متوسطة -
                                                                         2019 - س ك ب 3965 - عودي</h5>
@@ -781,7 +960,7 @@
                                                     <div class="col-xl-4 col-md-6 car-item" data-type="اقتصادية">
                                                         <div class="card car-card p-2">
                                                             <img src="img//car4.png" alt="كيا - نيرو" class="car-image">
-                                                            <div class="card-body p-0">
+                                                            <div class="card-body Available_Car_Card p-0">
                                                                 <div class="p-1">
                                                                     <h5 class="car-title">كيا - نيرو - اقتصادية - 2019 -
                                                                         ى ط ك 5078 - بيج</h5>
@@ -1253,7 +1432,50 @@
                                                                     <p class="text-center m-0 Serial-number">6923958732
                                                                     </p>
                                                                 </div>
-                                                              
+                                                               <div class="row car-data-row py-1 px-2">
+                                                                    <div class="car-icons">
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 94.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 93.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 95.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">4</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 96.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">5</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 97.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">2</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 98.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">4</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                              <div class="contract-section py-1 px-2">
                                                                      <div class="contract-item">
                                                                         <div class="contract-label">
@@ -1301,6 +1523,50 @@
                                                                         عائلية كبيرة - 2020 - ح س و 8630 - أصفر</h5>
                                                                     <p class="text-center m-0 Serial-number">6923958732
                                                                     </p>
+                                                                </div>
+                                                                 <div class="row car-data-row py-1 px-2">
+                                                                    <div class="car-icons">
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 94.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 93.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 95.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">4</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 96.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">5</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 97.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">2</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 98.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">4</span>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                                 <div class="contract-section py-1 px-2">
                                                                      <div class="contract-item">
@@ -1350,7 +1616,51 @@
                                                                         2019 - س ك ب 3965 - عودي</h5>
                                                                     <p class="text-center m-0 Serial-number">6923958732
                                                                     </p>
-                                                                </div>                                                                
+                                                                </div>   
+                                                                 <div class="row car-data-row py-1 px-2">
+                                                                    <div class="car-icons">
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 94.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 93.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 95.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">4</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 96.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">5</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 97.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">2</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 98.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">4</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>                                                             
                                                              <div class="contract-section py-1 px-2">
                                                                      <div class="contract-item">
                                                                         <div class="contract-label">
@@ -1398,7 +1708,50 @@
                                                                     <p class="text-center m-0 Serial-number">6923958732
                                                                     </p>
                                                                 </div>
-                                                             
+                                                              <div class="row car-data-row py-1 px-2">
+                                                                    <div class="car-icons">
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 94.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 93.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 95.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">4</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 96.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">5</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 97.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">2</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 98.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">4</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                                   <div class="contract-section py-1 px-2">
                                                                      <div class="contract-item">
                                                                         <div class="contract-label">
@@ -1725,637 +2078,8 @@
 
     <script src="js/javascript/scripts.js"></script>
     <script src="js/javascript/charts.js"></script>
-    <!-- show main carouse items by bottons ( etc ,مؤجرة , احصائيات) -->
-    <!-- and control Pagination -->
-    <script>
-        const carouselsConfig = {
-            1: { currentPage: 0, itemsPerPage: 3, filteredCars: [] },
-            2: { currentPage: 0, itemsPerPage: 3, filteredCars: [] },
-            3: { currentPage: 0, itemsPerPage: 3, filteredCars: [] },
-            4: { currentPage: 0, itemsPerPage: 3, filteredCars: [] },
-            5: { currentPage: 0, itemsPerPage: 3, filteredCars: [] }
-        };
-
-        document.addEventListener('DOMContentLoaded', function () {
-            for (let i = 1; i <= 5; i++) {
-                initCarousel(i);
-            }
-
-            showCarouselItem(1);
-        });
-
-        function initCarousel(carouselNumber) {
-            const carItems = document.querySelectorAll(`#carouselItem${carouselNumber} .car-item`);
-            const config = carouselsConfig[carouselNumber];
-            config.filteredCars = Array.from(carItems);
-
-            document.getElementById(`prevBtn${carouselNumber}`)?.addEventListener('click', function () {
-                if (config.currentPage > 0) {
-                    config.currentPage--;
-                    showPage(carouselNumber);
-                }
-            });
-
-            document.getElementById(`nextBtn${carouselNumber}`)?.addEventListener('click', function () {
-                if ((config.currentPage + 1) * config.itemsPerPage < config.filteredCars.length) {
-                    config.currentPage++;
-                    showPage(carouselNumber);
-                }
-            });
-
-            // Set up event listener for filter
-            document.getElementById(`carFilter${carouselNumber}`)?.addEventListener('change', function (e) {
-                const selectedType = e.target.value;
-
-                if (selectedType === 'all') {
-                    config.filteredCars = Array.from(carItems);
-                } else {
-                    config.filteredCars = Array.from(carItems).filter(car =>
-                        car.getAttribute('data-type') === selectedType
-                    );
-                }
-
-                config.currentPage = 0;
-                showPage(carouselNumber);
-            });
-
-            showPage(carouselNumber);
-
-            // Update items per page based on screen size
-            updateItemsPerPage(carouselNumber);
-            window.addEventListener('resize', () => updateItemsPerPage(carouselNumber));
-        }
-
-        function updateItemsPerPage(carouselNumber) {
-            const config = carouselsConfig[carouselNumber];
-            if (window.innerWidth <= 1199) {
-                config.itemsPerPage = 2;
-            } else {
-                config.itemsPerPage = 3;
-            }
-            config.currentPage = 0;
-            showPage(carouselNumber);
-        }
-
-        function showPage(carouselNumber) {
-            const config = carouselsConfig[carouselNumber];
-            const carItems = document.querySelectorAll(`#carouselItem${carouselNumber} .car-item`);
-            const startIndex = config.currentPage * config.itemsPerPage;
-            const endIndex = startIndex + config.itemsPerPage;
-
-            carItems.forEach(car => {
-                car.style.display = 'none';
-            });
-
-            config.filteredCars.forEach((car, index) => {
-                if (index >= startIndex && index < endIndex) {
-                    car.style.display = 'block';
-                }
-            });
-
-            if (document.getElementById(`prevBtn${carouselNumber}`)) {
-                document.getElementById(`prevBtn${carouselNumber}`).disabled = config.currentPage === 0;
-                document.getElementById(`nextBtn${carouselNumber}`).disabled = endIndex >= config.filteredCars.length;
-            }
-        }
-
-        function showCarouselItem(itemNumber, event) {
-            document.querySelectorAll('.nav-btn').forEach(btn => {
-                btn.classList.remove('active1');
-            });
-
-            if (event && event.currentTarget) {
-                event.currentTarget.classList.add('active1');
-            }
-
-            const carouselItems = document.getElementsByClassName('main-carousel-item');
-            for (let i = 0; i < carouselItems.length; i++) {
-                carouselItems[i].classList.remove('active');
-            }
-
-            const carouselItem = document.getElementById(`carouselItem${itemNumber}`);
-            if (carouselItem) {
-                carouselItem.classList.add('active');
-                showPage(itemNumber);
-            }
-        }
-
-    </script>
-    <!-- عرض البيانات التفصيلية للسيارات المتاحة -->
-    <script>
-        // بيانات السيارات
-const carsData = {
-    0: {
-        title: "هيونداي - النترا - سيدان متوسطة - 2019 - و ق ق 6417 - عودي",
-        phone: "6923958732",
-        pricing: {
-            daily: '160.00',
-            weekly: '950.00',
-            monthly: '3,200.00'
-        },
-        rental: {
-            dailyKm: 320,
-            extraKmPrice: 1.45,
-            freeHours: 1,
-            maxHours: 12,
-            extraHourPrice: 35.00,
-            cancelHours: 4,
-            extraDriver: "متوفر",
-            options: "غير متوفرة",
-            additions: "غير متوفرة",
-            minAge: 21
-        },
-        documents: {
-            license: { date: "2028/03/15", DaysLeft: "45", status: "valid" },
-            insurance: { date: "2025/12/20", DaysLeft: "2", status: "expired" },
-            operatingCard: { date: "2026/02/28", DaysLeft: "85", status: "valid" },
-            inspection: { date: "2026/01/05", DaysLeft: "18", status: "valid" }
-        },
-        maintenance: {
-            tires: { date: "2025/11/30", DaysLeft: "3", Days_status: "expired", km: "28,500", KilosLeft: "320", Km_status: "expired" },
-            oil: { date: "2026/04/15", DaysLeft: "120", Days_status: "valid", km: "7,800", KilosLeft: "450", Km_status: "valid" },
-            service: { date: "2025/10/10", DaysLeft: "1", Days_status: "expired", km: "8,200", KilosLeft: "680", Km_status: "valid" },
-            Front_brakes: { date: "2026/05/10", DaysLeft: "145", Days_status: "valid", km: "15,200", KilosLeft: "2,100", Km_status: "valid" },
-            Rear_brake: { date: "2026/03/20", DaysLeft: "92", Days_status: "valid", km: "18,500", KilosLeft: "1,800", Km_status: "valid" }
-        }
-    },
-    1: {
-        title: "كيا - كارنيفال أي اكس جان 8 - عائلية كبيرة - 2020 - ح س و 8630 - أصفر",
-        phone: "5551234567",
-        pricing: {
-            daily: '550.00',
-            weekly: '3,200.00',
-            monthly: '11,500.00'
-        },
-        rental: {
-            dailyKm: 380,
-            extraKmPrice: 2.25,
-            freeHours: 0,
-            maxHours: 0,
-            extraHourPrice: 45.00,
-            cancelHours: 5,
-            extraDriver: "متوفر",
-            options: "متوفرة",
-            additions: "متوفرة",
-            minAge: "22 - 75"
-        },
-        documents: {
-            license: { date: "2027/06/20", DaysLeft: "25", status: "valid" },
-            insurance: { date: "2025/11/15", DaysLeft: "0", status: "expired" },
-            operatingCard: { date: "2026/03/10", DaysLeft: "95", status: "valid" },
-            inspection: { date: "2025/09/05", DaysLeft: "4", status: "expired" }
-        },
-        maintenance: {
-            tires: { date: "2026/01/15", DaysLeft: "88", Days_status: "valid", km: "32,000", KilosLeft: "1,200", Km_status: "valid" },
-            oil: { date: "2025/12/01", DaysLeft: "2", Days_status: "expired", km: "9,500", KilosLeft: "280", Km_status: "expired" },
-            service: { date: "2026/02/28", DaysLeft: "135", Days_status: "valid", km: "6,800", KilosLeft: "950", Km_status: "valid" },
-            Front_brakes: { date: "2025/10/25", DaysLeft: "0", Days_status: "expired", km: "22,300", KilosLeft: "150", Km_status: "expired" },
-            Rear_brake: { date: "2026/06/15", DaysLeft: "182", Days_status: "valid", km: "20,100", KilosLeft: "2,400", Km_status: "valid" }
-        }
-    },
-    2: {
-        title: "فورد - تورس - سيدان متوسطة - 2019 - س ك ب 3965 - عودي",
-        phone: "9876543210",
-        pricing: {
-            daily: '270.00',
-            weekly: '1,350.00',
-            monthly: '4,800.00'
-        },
-        rental: {
-            dailyKm: 280,
-            extraKmPrice: 1.35,
-            freeHours: 3,
-            maxHours: 18,
-            extraHourPrice: 28.00,
-            cancelHours: 3,
-            extraDriver: "متوفر",
-            options: "غير متوفرة",
-            additions: "متوفرة",
-            minAge: "21 - 78"
-        },
-        documents: {
-            license: { date: "2026/08/10", DaysLeft: "210", status: "valid" },
-            insurance: { date: "2025/10/30", DaysLeft: "0", status: "expired" },
-            operatingCard: { date: "2026/05/15", DaysLeft: "110", status: "valid" },
-            inspection: { date: "2025/11/20", DaysLeft: "1", status: "expired" }
-        },
-        maintenance: {
-            tires: { date: "2026/03/01", DaysLeft: "125", Days_status: "valid", km: "26,500", KilosLeft: "890", Km_status: "valid" },
-            oil: { date: "2025/09/15", DaysLeft: "0", Days_status: "expired", km: "8,700", KilosLeft: "150", Km_status: "expired" },
-            service: { date: "2026/01/30", DaysLeft: "98", Days_status: "valid", km: "7,200", KilosLeft: "1,100", Km_status: "valid" },
-            Front_brakes: { date: "2026/04/05", DaysLeft: "160", Days_status: "valid", km: "17,800", KilosLeft: "1,950", Km_status: "valid" },
-            Rear_brake: { date: "2025/12/10", DaysLeft: "12", Days_status: "valid", km: "19,200", KilosLeft: "650", Km_status: "valid" }
-        }
-    },
-    3: {
-        title: "كيا - نيرو - اقتصادية - 2019 - ى ط ك 5078 - بيج",
-        phone: "9876543210",
-        pricing: {
-            daily: '480.00',
-            weekly: '2,650.00',
-            monthly: '8,800.00'
-        },
-        rental: {
-            dailyKm: 260,
-            extraKmPrice: 1.30,
-            freeHours: 2,
-            maxHours: 20,
-            extraHourPrice: 26.00,
-            cancelHours: 2,
-            extraDriver: "متوفر",
-            options: "غير متوفرة",
-            additions: "متوفرة",
-            minAge: "20 - 80"
-        },
-        documents: {
-            license: { date: "2026/07/12", DaysLeft: "185", status: "valid" },
-            insurance: { date: "2025/12/05", DaysLeft: "4", status: "expired" },
-            operatingCard: { date: "2026/04/20", DaysLeft: "105", status: "valid" },
-            inspection: { date: "2026/01/14", DaysLeft: "12", status: "valid" }
-        },
-        maintenance: {
-            tires: { date: "2025/10/20", DaysLeft: "0", Days_status: "expired", km: "27,800", KilosLeft: "210", Km_status: "expired" },
-            oil: { date: "2026/02/15", DaysLeft: "75", Days_status: "valid", km: "8,400", KilosLeft: "520", Km_status: "valid" },
-            service: { date: "2025/11/30", DaysLeft: "2", Days_status: "expired", km: "7,900", KilosLeft: "650", Km_status: "valid" },
-            Front_brakes: { date: "2025/09/28", DaysLeft: "0", Days_status: "expired", km: "16,500", KilosLeft: "180", Km_status: "expired" },
-            Rear_brake: { date: "2026/03/25", DaysLeft: "108", Days_status: "valid", km: "14,800", KilosLeft: "2,150", Km_status: "valid" }
-        }
-    }
-};
-
-        function loadCarDetails(button) {
-            const carId = button.getAttribute('data-car-id');
-            const carData = carsData[carId];
-
-            if (!carData) {
-                console.error('بيانات السيارة غير موجودة');
-                return;
-            }
-
-            document.getElementById('modalCarTitle').innerHTML = `
-                <i class="bi bi-car-front mx-2"></i>${carData.title}
-            `;
-
-
-            loadRentalTab(carData);
-
-            loadDocumentsTab(carData);
-
-            loadMaintenanceTab(carData);
-
-        }
-
-        // تحديث بنود التأجير
-        function loadRentalTab(carData) {
-            const rentalContent = document.getElementById('rentalContent');
-            rentalContent.innerHTML = `
-                <div class="col-lg-8">
-                    <div class="info-card">
-                        <div class="info-item">
-                            <div class="info-label">
-                                كيلومترات مجانية يومياً
-                            </div>
-                            <span class="info-value">${carData.rental.dailyKm} كم</span>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-label">
-                                قيمة الكيلو الإضافي
-                            </div>
-                            <span class="info-value">${carData.rental.extraKmPrice} </span>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-label">
-                                الساعات المجانية
-                            </div>
-                            <span class="info-value">${carData.rental.freeHours}</span>
-                        </div>
-                         <div class="info-item">
-                            <div class="info-label">
-                               الحد الاعلى للساعات
-                            </div>
-                            <span class="info-value">${carData.rental.maxHours}</span>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-label">
-                                قيمة الساعة الإضافية
-                            </div>
-                            <span class="info-value">${carData.rental.extraHourPrice} </span>
-                        </div>
-                          <div class="info-item">
-                            <div class="info-label">
-                                ساعات إلغاء الحجز
-                            </div>
-                            <span class="info-value">${carData.rental.cancelHours} </span>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-label">
-                                سائق إضافي
-                            </div>
-                            <span class="info-value ${carData.rental.extraDriver === 'متوفر' ? 'available' : 'not-available'}">${carData.rental.extraDriver}</span>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-label">
-                                الخيارات
-                            </div>
-                            <span class="info-value ${carData.rental.options === 'متوفرة' ? 'available' : 'not-available'}">${carData.rental.options}</span>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-label">
-                                الإضافات
-                            </div>
-                            <span class="info-value ${carData.rental.additions === 'متوفرة' ? 'available' : 'not-available'}">${carData.rental.additions}</span>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-label">
-                                العمر
-                            </div>
-                            <span class="info-value">${carData.rental.minAge} </span>
-                        </div>
-                    </div>
-                </div>
-                
-              
-            `;
-        }
-
-        // تحديث الوثائق
-        function loadDocumentsTab(carData) {
-            const documentsContent = document.getElementById('documentsContent');
-
-            const getStatusClass = (status) => {
-                switch (status) {
-                    case 'valid': return 'status-valid';
-                    case 'warning': return 'status-warning';
-                    case 'expired': return 'status-expired';
-                    default: return 'status-valid';
-                }
-            };
-
-            const getStatusIcon = (status) => {
-                switch (status) {
-                    case 'valid': return 'bi-check-circle';
-                    case 'warning': return 'bi-exclamation-triangle';
-                    case 'expired': return 'bi-x-circle';
-                    default: return 'bi-check-circle';
-                }
-            };
-
-            documentsContent.innerHTML = `
-
-                <div class="row justify-content-center">
-                    <div class="col-lg-6">
-                        <div class="info-item">
-                            
-                            <div class="info-label d-flex">
-                                <div class="info-status  ${getStatusClass(carData.documents.license.status)}"></div>
-                                رخصة السير
-                            </div>
-                            <span class="status-badge">
-                                ${carData.documents.license.date}
-                                 <span class="Days-left-badge ${carData.documents.license.status === 'expired' ? 'expired' : ''}">
-                                (${carData.documents.license.DaysLeft})
-                                </span>
-                            </span>
-                           
-                        </div>
-                        <div class="info-item">
-                            <div class="info-label">
-                                <div class="info-status ${getStatusClass(carData.documents.insurance.status)}"></div>
-                                وثيقة تأمين
-                            </div>
-                            <span class="status-badge ">
-                                 ${carData.documents.insurance.date}
-                                 <span class="Days-left-badge ${carData.documents.insurance.status === 'expired' ? 'expired' : ''}">
-                                (${carData.documents.insurance.DaysLeft})
-                            </span>
-                        </div>
-                         <div class="info-item">
-                            <div class="info-label">
-                                <div class="info-status ${getStatusClass(carData.documents.operatingCard.status)}"></div>
-                                بطاقة تشغيل
-                            </div>
-                            <span class="status-badge">
-                               ${carData.documents.operatingCard.date}
-                                 <span class="Days-left-badge ${carData.documents.operatingCard.status === 'expired' ? 'expired' : ''}">
-                                  (${carData.documents.operatingCard.DaysLeft})
-                            </span>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-label">
-                                <div class="info-status ${getStatusClass(carData.documents.inspection.status)}"></div>
-                                الفحص الدوري
-                            </div>
-                            <span class="status-badge">
-                                 ${carData.documents.inspection.date}
-                                    <span class="Days-left-badge ${carData.documents.inspection.status === 'expired' ? 'expired' : ''}">
-                                    (${carData.documents.inspection.DaysLeft})
-                            </span>
-                        </div>
-                    </div>
-                   
-                </div>
-              
-            `;
-        }
-
-        // تحديث الصيانة
-        function loadMaintenanceTab(carData) {
-            console.log(carData.maintenance);
-            const maintenanceContent = document.getElementById('maintenanceContent');
-            maintenanceContent.innerHTML = `
-                <div class="row">
-                 <div class="col-lg-4">
-                     <div class="maintenance-item">
-                     <div class="maintenance-title">
-                         الإطارات
-                    </div>
-                    <div class="maintenance-info">
-                            <p>
-                                <strong>${carData.maintenance.tires.date}</strong> 
-                                <span> - </span>
-                                <strong>${carData.maintenance.tires.km} كم</strong> 
-                             </p>
-                              <p>
-                                <strong class="${carData.maintenance.tires.Days_status === 'expired' ? 'expired' : ''}">(${carData.maintenance.tires.DaysLeft})</strong> 
-                                <span> - </span>
-                                <strong class="${carData.maintenance.tires.Km_status === 'expired' ? 'expired' : ''}">(${carData.maintenance.tires.KilosLeft})</strong> 
-                             </p>
-                    </div>
-                </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="maintenance-item">
-                    <div class="maintenance-title">
-                      زيت المكينة
-                    </div>
-                    <div class="maintenance-info">
-                            <p>
-                                <strong>${carData.maintenance.oil.date}</strong> 
-                                <span> - </span>
-                                <strong>${carData.maintenance.oil.km} كم</strong> 
-                             </p>
-                                <p>
-                                    <strong class="${carData.maintenance.oil.Days_status === 'expired' ? 'expired' : ''}" >(${carData.maintenance.oil.DaysLeft})</strong> 
-                                    <span> - </span>
-                                    <strong class="${carData.maintenance.oil.Km_status === 'expired' ? 'expired' : ''}">(${carData.maintenance.oil.KilosLeft})</strong>
-                                </p>
-                    </div>
-                    </div>
-                </div>               
-                <div class="col-lg-4">
-                    <div class="maintenance-item">
-                    <div class="maintenance-title">
-                        الصيانة الدورية
-                    </div>
-                    <div class="maintenance-info">
-                            <p>
-                                <strong>${carData.maintenance.service.date}</strong> 
-                                <span> - </span>
-                                <strong>${carData.maintenance.service.km} كم</strong> 
-                             </p>
-                                <p>
-                                    <strong class="${carData.maintenance.service.Days_status === 'expired' ? 'expired' : ''}" >(${carData.maintenance.service.DaysLeft})</strong> 
-                                    <span> - </span>
-                                    <strong class="${carData.maintenance.service.Km_status === 'expired' ? 'expired' : ''}">(${carData.maintenance.service.KilosLeft})</strong>
-                                 </p>
-                    </div>
-                    </div>
-                    </div>
-                    <div class="col-lg-4">
-                    <div class="maintenance-item">
-                    <div class="maintenance-title">
-                     الفرامل الخلفية
-                    </div>
-                    <div class="maintenance-info">
-                            <p>
-                                <strong>${carData.maintenance.Rear_brake.date}</strong> 
-                                <span> - </span>
-                                <strong>${carData.maintenance.Rear_brake.km} كم</strong> 
-                             </p>
-                                <p>
-                                    <strong class="${carData.maintenance.Rear_brake.Days_status === 'expired' ? 'expired' : ''}" >(${carData.maintenance.Rear_brake.DaysLeft})</strong> 
-                                    <span> - </span>
-                                    <strong class="${carData.maintenance.Rear_brake.Km_status === 'expired' ? 'expired' : ''}">(${carData.maintenance.Rear_brake.KilosLeft})</strong>
-                                </p>
-                    </div>
-                    </div>
-                </div>      
-                    <div class="col-lg-4">
-                    <div class="maintenance-item">
-                    <div class="maintenance-title">
-                     الفرامل الأمامية
-                    </div>
-                    <div class="maintenance-info">
-                            <p>
-                                <strong>${carData.maintenance.Front_brakes.date}</strong> 
-                                <span> - </span>
-                                <strong>${carData.maintenance.Front_brakes.km} كم</strong> 
-                             </p>
-                                 <p>
-                                    <strong class="${carData.maintenance.Front_brakes.Days_status === 'expired' ? 'expired' : ''}" >(${carData.maintenance.Front_brakes.DaysLeft})</strong> 
-                                    <span> - </span>
-                                    <strong class="${carData.maintenance.Front_brakes.Km_status === 'expired' ? 'expired' : ''}">(${carData.maintenance.Front_brakes.KilosLeft})</strong>
-                                </p>
-                    </div>
-                    </div>
-                </div>    
-                <div class="col-lg-4">
-                    <div class="maintenance-item">
-                    <div class="maintenance-title">
-                    زيت المكينة
-                    </div>
-                    <div class="maintenance-info">
-                            <p>
-                                <strong>${carData.maintenance.oil.date}</strong> 
-                                <span> - </span>
-                                <strong>${carData.maintenance.oil.km} كم</strong> 
-                             </p>
-                               <p>
-                                    <strong class="${carData.maintenance.oil.Days_status === 'expired' ? 'expired' : ''}" >(${carData.maintenance.oil.DaysLeft})</strong> 
-                                    <span> - </span>
-                                    <strong class="${carData.maintenance.oil.Km_status === 'expired' ? 'expired' : ''}">(${carData.maintenance.oil.KilosLeft})</strong>
-                                </p>
-                    </div>
-                    </div>
-                     
-                </div>
-                <div class="col-lg-4">
-                    <div class="maintenance-item">
-                    <div class="maintenance-title">
-                      زيت المكينة
-                    </div>
-                    <div class="maintenance-info">
-                            <p>
-                                <strong>${carData.maintenance.oil.date}</strong> 
-                                <span> - </span>
-                                <strong>${carData.maintenance.oil.km} كم</strong> 
-                             </p>
-                                 <p>
-                                    <strong class="${carData.maintenance.oil.Days_status === 'expired' ? 'expired' : ''}" >(${carData.maintenance.oil.DaysLeft})</strong> 
-                                    <span> - </span>
-                                    <strong class="${carData.maintenance.oil.Km_status === 'expired' ? 'expired' : ''}">(${carData.maintenance.oil.KilosLeft})</strong>
-                                </p>
-                    </div>
-                    </div>
-                </div>      
-                <div class="col-lg-4">
-                    <div class="maintenance-item">
-                    <div class="maintenance-title">
-                      زيت المكينة
-                    </div>
-                    <div class="maintenance-info">
-                            <p>
-                                <strong>${carData.maintenance.oil.date}</strong> 
-                                <span> - </span>
-                                <strong>${carData.maintenance.oil.km} كم</strong> 
-                             </p>
-                                <p>
-                                    <strong class="${carData.maintenance.oil.Days_status === 'expired' ? 'expired' : ''}" >(${carData.maintenance.oil.DaysLeft})</strong> 
-                                    <span> - </span>
-                                    <strong class="${carData.maintenance.oil.Km_status === 'expired' ? 'expired' : ''}">(${carData.maintenance.oil.KilosLeft})</strong>
-                                </p>
-                    </div>
-                    </div>
-                </div>      
-                <div class="col-lg-4">
-                    <div class="maintenance-item">
-                    <div class="maintenance-title">
-                      زيت المكينة
-                    </div>
-                    <div class="maintenance-info">
-                            <p>
-                                <strong>${carData.maintenance.oil.date}</strong> 
-                                <span> - </span>
-                                <strong>${carData.maintenance.oil.km} كم</strong> 
-                             </p>
-                                <p>
-                                    <strong class="${carData.maintenance.oil.Days_status === 'expired' ? 'expired' : ''}" >(${carData.maintenance.oil.DaysLeft})</strong> 
-                                    <span> - </span>
-                                    <strong class="${carData.maintenance.oil.Km_status === 'expired' ? 'expired' : ''}">(${carData.maintenance.oil.KilosLeft})</strong>
-                                </p>
-                    </div>
-                    </div>
-                </div>      
-                </div>
-            `;
-        }     
-    </script>
-    <!-- Toggle Reasons List For Not Avaliables Cars -->
-    <script>
-        function toggleReasons(button) {
-            const reasonsList = button.nextElementSibling;
-            const chevron = button.querySelector('.fa-chevron-down');
-
-            reasonsList.classList.toggle('show');
-
-            if (reasonsList.classList.contains('show')) {
-                chevron.style.transform = 'rotate(180deg)';
-            } else {
-                chevron.style.transform = 'rotate(0deg)';
-            }
-        }
-    </script>
+   
+    
 </body>
 
 </html>
