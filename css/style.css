@@ -1408,11 +1408,11 @@ body::-webkit-scrollbar-thumb {
 
   .btn-secondary1 {
     margin: 10px 5px;
-    width: 150px;
+    width: 120px;
   }
 
   #branchList {
-    width: 150px;
+    width: 120px;
     margin: 10px 5px;
   }
 
