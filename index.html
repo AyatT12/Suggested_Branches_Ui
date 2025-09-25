@@ -24,6 +24,7 @@
         rel="stylesheet">
 
     <!-- <link rel="stylesheet" href='css/english.css' /> -->
+   
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -158,22 +159,21 @@
                 </ul>
                 <!-- warning messages -->
                 <div class="warning-section" id="warningSection">
-                <div class="marquee">
-                    <div class="marquee-content">
-                       <p> خدمة الرسائل النصية غير متاحة حالياً</p>
-                       <p> خدمة الرسائل النصية غير متاحة حالياً</p>
+                    <div class="marquee">
+                        <div class="marquee-content">
+                            <p> خدمة الرسائل النصية غير متاحة حالياً</p>
+                            <p> خدمة الرسائل النصية غير متاحة حالياً</p>
+                        </div>
                     </div>
+                    <i class="fa-regular fa-circle-xmark marquee-xmark" id="marquee-xmark" onclick="closeWarning()"></i>
                 </div>
-                <i class="fa-regular fa-circle-xmark marquee-xmark" id="marquee-xmark" onclick="closeWarning()"></i>
-            </div>
 
                 <!-- logo -->
-                <div class="d-flex align-items-end on-mobile gap-3" style="color:black;">
+                <div class="d-flex align-items-end on-mobile gap-2 gap-md-3">
                     <div class="">
-                        <h1 class="hide-on-mobile" style="font-size: 1.2rem;font-weight: bold;">
-                            شركة كدي لتأجير السيارات </h1>
-                        <p class="extra-small-mobile m-0">
-                           الرئيسي </p>
+                        <h1 class="hide-on-mobile" style="font-size: 1.2rem;font-weight: bold;">شركة كدي لتأجير السيارات
+                        </h1>
+                        <span class="extra-small-mobile m-0"> الرئيسي </span> <span class="BranchStatus">موقوف</span>
                     </div>
                     <a href="#">
                         <img class="extra-small-mobile Logo " src="img/CompanyLogo_20240325231449.png">
@@ -184,7 +184,7 @@
     </header>
 
     <div class="wrapper flex-grow-1 d-flex align-items-center flex-column ">
-      
+
         <div class="col d-flex align-items-center">
             <div class="container-fluid ">
                 <!-- Content Row -->
@@ -197,38 +197,57 @@
 
                                 <div class="card-body" id="cardBody">
                                     <div class="main-carousel-item active" id="carouselItem1">
-                                        <div class="row " id="first-row-of-charts">
-                                            <div class="col-md-6 card-col Branch-car-col">
-                                                <div class="row Branch-car-canvas-row">
-                                                    <div class=" col-md-9 col-lg-9 col-xl-9 ">
-                                                        <canvas id="horizontal_bar" aria-label="chart"></canvas>
+                                        <div class="row" id="first-row-of-charts">
+                                            <div class="col-md-6">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                       <div class="chart-container">
+                                                            <canvas id="Cars_Chart" style="display: block; width: 100%; height: 100%;"></canvas>
+                                                             <!-- Info Button -->
+                                                            <button class="chart-info-btn" onclick="toggleDropdown('cars-dropdown', this)">
+                                                                <i class="fa-solid fa-car-side"></i>
+                                                            </button>
+                                                            
+                                                            <!-- Dropdown -->
+                                                            <div class="chart-dropdown" id="cars-dropdown">
+                                                                <div class="dropdown-item-custom">
+                                                                    <span class="dropdown-label"> : سيارات الفرع</span>
+                                                                    <span class="dropdown-value">500</span>
+                                                                </div>
+                                                            
+                                                            </div>
+                                                        </div>                                                  
                                                     </div>
-                                                    <div class=" col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                                                        <p class="chart-p">سيارات الفرع : <span>500</span></p>
-
-                                                    </div>
+                                                    
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-6 card-col pieChart-col">
+                                            <div class="col-md-6 pieChart-col">
                                                 <div class="row flex-row-reverse">
-                                                    <div class="col-md-4 pieChart-data">
-                                                        <div class="chart-legend" style="line-height: normal;">
-                                                            <p class="chart-p ">
-                                                                <span>32</span> : العقود القائمة
-                                                            </p>
-                                                            <p class="chart-p ">
-                                                                <span>2</span> : العقود المغلقة
-                                                            </p>
-                                                            <p class="chart-p ">
-                                                                <span>2</span> : العقود المغلقة
-                                                            </p>
+                                                    
+                                                    <div class="col-md-12">
+                                                            <div class="chart-container">
+                                                            <canvas id="Contracts_Chart" style="display: block; width: 100%; height: 100%; padding: 0;"></canvas>
 
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-8 pieChart">
-                                                        <canvas id="pieChart" aria-label="chart"></canvas>
-
+                                                            <button class="chart-info-btn" onclick="toggleDropdown('contracts-dropdown', this)">
+                                                                <i class="fa-solid fa-file-contract"></i>
+                                                            </button>
+                                                            
+                                                            <div class="chart-dropdown style-gradient" id="contracts-dropdown">
+                                                                <div class="dropdown-item-custom">
+                                                                    <span class="dropdown-label"> : العقود القائمة</span>
+                                                                    <span class="dropdown-value">32</span>
+                                                                </div>
+                                                                <div class="dropdown-item-custom">
+                                                                    <span class="dropdown-label"> : العقود المغلقة</span>
+                                                                    <span class="dropdown-value">2</span>
+                                                                </div>
+                                                                <div class="dropdown-item-custom">
+                                                                    <span class="dropdown-label"> : العقود المعلقة</span>
+                                                                    <span class="dropdown-value">2</span>
+                                                                </div>
+                                                            </div>
+                                                          </div>
                                                     </div>
 
                                                 </div>
@@ -236,47 +255,66 @@
 
                                         </div>
 
-                                        <!-- <hr style="color:#FF9626" > -->
 
-                                        <div class="row" id="second-row-of-charts">
-
-                                            <div class="col-md-6 card-col branch-col">
-                                                <div class="row branch-row">
-                                                    <div class="col-sm-8">
-                                                        <canvas id="barChart2" aria-label="chart"></canvas>
-                                                    </div>
-                                                    <div class="col-sm-4 branch-chart-data">
-                                                        <div class="data chart-p">
-                                                            <p class="mb-2">عهدة الفرع : <span
-                                                                    id="brunch-custody">100000</span></p>
-                                                            <p class="mb-2">الرصيد المتاح : <span
-                                                                    id="Available-balance-brunch">5000</span></p>
-                                                            <p class="mb-2">الرصيد المحجوز : <span
-                                                                    id="used-balance-brunch">1820</span></p>
-                                                            <!--  -->
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="chart-container">
+                                                            <canvas id="Branch_Balance_Chart" style="display: block; width: 100%; height: 100%;"></canvas>
+                                                              <!-- Corner Info Button -->
+                                                            <button class="chart-info-btn" onclick="toggleDropdown('branch-dropdown', this)">
+                                                                <i class="fas fa-building"></i>
+                                                            </button>
+                                                            
+                                                            <div class="chart-dropdown " id="branch-dropdown">
+                                                               
+                                                                <div class="dropdown-item-custom">
+                                                                    <span class="dropdown-label"> : رصيد الفرع</span>
+                                                                    <span class="dropdown-value" id="brunch-custody">38,447.29</span>
+                                                                </div>
+                                                                <div class="dropdown-item-custom">
+                                                                    <span class="dropdown-label"> : الرصيد المتاح</span>
+                                                                    <span class="dropdown-value" id="Available-balance-brunch">32,598.59</span>
+                                                                </div>
+                                                                <div class="dropdown-item-custom">
+                                                                    <span class="dropdown-label"> : الرصيد المحجوز</span>
+                                                                    <span class="dropdown-value" id="used-balance-brunch">5,848.70</span>
+                                                                </div>
+                                                            </div>
                                                         </div>
-
                                                     </div>
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-6 card-col employee-col">
-                                                <div class="row employee-row">
-                                                    <div class="col-sm-8">
-                                                        <canvas id="chartId" aria-label="chart"></canvas>
-                                                    </div>
-                                                    <div class="col-sm-4 employee-chart-data">
-                                                        <div class="data chart-p">
-                                                            <p class="mb-2 ">عهدة الموظف :<span
-                                                                    id="employee-custody">100000</span></p>
-                                                            <p class="mb-2">الرصيد المتاح : <span
-                                                                    id="Available-balance-employee">50000</span></p>
-                                                            <p class="mb-2">الرصيد المحجوز : <span
-                                                                    id="used-balance-employee">500</span></p>
-                                                            <!--  -->
-                                                        </div>
+                                            <div class="col-md-6 employee-col">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                            <div class="chart-container">
+                                                            <canvas id="Employee_Balance_Chart" style="display: block; width: 100%; height: 100%;"></canvas>
 
+                                                            <button class="chart-info-btn " onclick="toggleDropdown('employee-dropdown', this)">
+                                                                <i class="fas fa-user"></i>
+                                                            </button>
+                                                            
+                                                            <!-- Compact dropdown -->
+                                                            <div class="chart-dropdown compact" id="employee-dropdown">
+                                                                <div class="dropdown-item-custom">
+                                                                    <span class="dropdown-label"> : رصيد الموظف</span>
+                                                                    <span class="dropdown-value" id="employee-custody">100,000</span>
+                                                                </div>
+                                                                <div class="dropdown-item-custom">
+                                                                    <span class="dropdown-label"> : الرصيد المتاح</span>
+                                                                    <span class="dropdown-value" id="Available-balance-employee">50,000</span>
+                                                                </div>
+                                                                <div class="dropdown-item-custom">
+                                                                    <span class="dropdown-label"> : الرصيد المحجوز</span>
+                                                                    <span class="dropdown-value" id="used-balance-employee">500</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
+                                                  
                                                 </div>
                                             </div>
 
@@ -309,99 +347,7 @@
                                                                     <p class="text-center m-0 Serial-number">6923958732
                                                                     </p>
                                                                 </div>
-                                                               <div class="row car-data-row py-1 px-2">
-                                                                    <div class="car-icons">
-                                                                        <div class="icon-item">
-                                                                            <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 94.svg"
-                                                                                    class="car-icondata">
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="icon-item">
-                                                                            <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 93.svg"
-                                                                                    class="car-icondata">
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="icon-item">
-                                                                            <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 95.svg"
-                                                                                    class="car-icondata">
-                                                                            </div>
-                                                                            <span class="icon-text">4</span>
-                                                                        </div>
-                                                                        <div class="icon-item">
-                                                                            <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 96.svg"
-                                                                                    class="car-icondata">
-                                                                            </div>
-                                                                            <span class="icon-text">5</span>
-                                                                        </div>
-                                                                        <div class="icon-item">
-                                                                            <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 97.svg"
-                                                                                    class="car-icondata">
-                                                                            </div>
-                                                                            <span class="icon-text">2</span>
-                                                                        </div>
-                                                                        <div class="icon-item">
-                                                                            <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 98.svg"
-                                                                                    class="car-icondata">
-                                                                            </div>
-                                                                            <span class="icon-text">4</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                             <div class="contract-section py-1 px-2">
-                                                                     <div class="contract-item">
-                                                                        <div class="contract-label">
-                                                                           المصدر  : 
-                                                                        </div>
-                                                                        <div class="contract-value">
-                                                                           شركة كدي لتأجير السيارات
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="contract-item">
-                                                                        <div class="contract-label">
-                                                                           رقم العقد : 
-                                                                        </div>
-                                                                        <div class="contract-value">
-                                                                            25-1401-4001105-000054</div>
-                                                                    </div>
-
-                                                                    <div class="contract-item">
-                                                                        <div class="contract-label">
-                                                                           المستأجر :
-                                                                        </div>
-                                                                        <div class="contract-value">عبدالجبار شاكر أحمد
-                                                                            موسى</div>
-                                                                    </div>
-
-                                                                    <div class="contract-item">
-                                                                        <div class="contract-label">
-                                                                            الزمن المتبقي :
-                                                                        </div>
-                                                                        <div class="contract-value ">
-                                                                            5:09:22:30
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xl-4 col-md-6 car-item" data-type="عائلية كبيرة">
-                                                        <div class="card car-card p-2">
-                                                            <img src="img//30-21.png" alt="كيا كارنيفال"
-                                                                class="car-image">
-                                                            <div class="card-body p-0">
-                                                                <div class="p-1">
-                                                                    <h5 class="car-title">كيا - كارنيفال أي اكس جان 8 -
-                                                                        عائلية كبيرة - 2020 - ح س و 8630 - أصفر</h5>
-                                                                    <p class="text-center m-0 Serial-number">6923958732
-                                                                    </p>
-                                                                </div>
-                                                                 <div class="row car-data-row py-1 px-2">
+                                                                <div class="row car-data-row py-1 px-2">
                                                                     <div class="car-icons">
                                                                         <div class="icon-item">
                                                                             <div class="icon">
@@ -446,17 +392,17 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="contract-section py-1 px-2">
-                                                                     <div class="contract-item">
+                                                                    <div class="contract-item">
                                                                         <div class="contract-label">
-                                                                           المصدر  : 
+                                                                            المصدر :
                                                                         </div>
                                                                         <div class="contract-value">
-                                                                           شركة كدي لتأجير السيارات
+                                                                            شركة كدي لتأجير السيارات
                                                                         </div>
                                                                     </div>
                                                                     <div class="contract-item">
                                                                         <div class="contract-label">
-                                                                           رقم العقد : 
+                                                                            رقم العقد :
                                                                         </div>
                                                                         <div class="contract-value">
                                                                             25-1401-4001105-000054</div>
@@ -464,7 +410,99 @@
 
                                                                     <div class="contract-item">
                                                                         <div class="contract-label">
-                                                                           المستأجر :
+                                                                            المستأجر :
+                                                                        </div>
+                                                                        <div class="contract-value">عبدالجبار شاكر أحمد
+                                                                            موسى</div>
+                                                                    </div>
+
+                                                                    <div class="contract-item">
+                                                                        <div class="contract-label">
+                                                                            الزمن المتبقي :
+                                                                        </div>
+                                                                        <div class="contract-value ">
+                                                                            5:09:22:30
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-4 col-md-6 car-item" data-type="عائلية كبيرة">
+                                                        <div class="card car-card p-2">
+                                                            <img src="img//30-21.png" alt="كيا كارنيفال"
+                                                                class="car-image">
+                                                            <div class="card-body p-0">
+                                                                <div class="p-1">
+                                                                    <h5 class="car-title">كيا - كارنيفال أي اكس جان 8 -
+                                                                        عائلية كبيرة - 2020 - ح س و 8630 - أصفر</h5>
+                                                                    <p class="text-center m-0 Serial-number">6923958732
+                                                                    </p>
+                                                                </div>
+                                                                <div class="row car-data-row py-1 px-2">
+                                                                    <div class="car-icons">
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 94.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 93.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 95.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">4</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 96.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">5</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 97.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">2</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 98.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">4</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="contract-section py-1 px-2">
+                                                                    <div class="contract-item">
+                                                                        <div class="contract-label">
+                                                                            المصدر :
+                                                                        </div>
+                                                                        <div class="contract-value">
+                                                                            شركة كدي لتأجير السيارات
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="contract-item">
+                                                                        <div class="contract-label">
+                                                                            رقم العقد :
+                                                                        </div>
+                                                                        <div class="contract-value">
+                                                                            25-1401-4001105-000054</div>
+                                                                    </div>
+
+                                                                    <div class="contract-item">
+                                                                        <div class="contract-label">
+                                                                            المستأجر :
                                                                         </div>
                                                                         <div class="contract-value">عبدالجبار شاكر أحمد
                                                                             موسى</div>
@@ -493,8 +531,8 @@
                                                                         2019 - س ك ب 3965 - عودي</h5>
                                                                     <p class="text-center m-0 Serial-number">6923958732
                                                                     </p>
-                                                                </div>  
-                                                                 <div class="row car-data-row py-1 px-2">
+                                                                </div>
+                                                                <div class="row car-data-row py-1 px-2">
                                                                     <div class="car-icons">
                                                                         <div class="icon-item">
                                                                             <div class="icon">
@@ -537,19 +575,19 @@
                                                                             <span class="icon-text">4</span>
                                                                         </div>
                                                                     </div>
-                                                                </div>                                                              
-                                                             <div class="contract-section py-1 px-2">
-                                                                     <div class="contract-item">
+                                                                </div>
+                                                                <div class="contract-section py-1 px-2">
+                                                                    <div class="contract-item">
                                                                         <div class="contract-label">
-                                                                           المصدر  : 
+                                                                            المصدر :
                                                                         </div>
                                                                         <div class="contract-value">
-                                                                           شركة كدي لتأجير السيارات
+                                                                            شركة كدي لتأجير السيارات
                                                                         </div>
                                                                     </div>
                                                                     <div class="contract-item">
                                                                         <div class="contract-label">
-                                                                           رقم العقد : 
+                                                                            رقم العقد :
                                                                         </div>
                                                                         <div class="contract-value">
                                                                             25-1401-4001105-000054</div>
@@ -557,7 +595,7 @@
 
                                                                     <div class="contract-item">
                                                                         <div class="contract-label">
-                                                                           المستأجر :
+                                                                            المستأجر :
                                                                         </div>
                                                                         <div class="contract-value">عبدالجبار شاكر أحمد
                                                                             موسى</div>
@@ -585,7 +623,7 @@
                                                                     <p class="text-center m-0 Serial-number">6923958732
                                                                     </p>
                                                                 </div>
-                                                              <div class="row car-data-row py-1 px-2">
+                                                                <div class="row car-data-row py-1 px-2">
                                                                     <div class="car-icons">
                                                                         <div class="icon-item">
                                                                             <div class="icon">
@@ -629,18 +667,18 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                  <div class="contract-section py-1 px-2">
-                                                                     <div class="contract-item">
+                                                                <div class="contract-section py-1 px-2">
+                                                                    <div class="contract-item">
                                                                         <div class="contract-label">
-                                                                           المصدر  : 
+                                                                            المصدر :
                                                                         </div>
                                                                         <div class="contract-value">
-                                                                           شركة كدي لتأجير السيارات
+                                                                            شركة كدي لتأجير السيارات
                                                                         </div>
                                                                     </div>
                                                                     <div class="contract-item">
                                                                         <div class="contract-label">
-                                                                           رقم العقد : 
+                                                                            رقم العقد :
                                                                         </div>
                                                                         <div class="contract-value">
                                                                             25-1401-4001105-000054</div>
@@ -648,7 +686,7 @@
 
                                                                     <div class="contract-item">
                                                                         <div class="contract-label">
-                                                                           المستأجر :
+                                                                            المستأجر :
                                                                         </div>
                                                                         <div class="contract-value">عبدالجبار شاكر أحمد
                                                                             موسى</div>
@@ -666,7 +704,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    
+
                                                 </div>
                                                 <!-- Pagination controls -->
                                                 <div
@@ -1409,7 +1447,7 @@
                                     <div class="main-carousel-item" id="carouselItem5">
                                         <div id="carousel5" class="carousel slide" data-bs-ride="carousel">
                                             <div class="carousel-inner h-100 px-3" id="carousel-inner5">
-                                                   <!-- select type  -->
+                                                <!-- select type  -->
                                                 <div class="text-end filter_Container mb-1">
                                                     <select id="carFilter5"
                                                         class="form-select w-auto d-inline-block carFilter">
@@ -1432,99 +1470,7 @@
                                                                     <p class="text-center m-0 Serial-number">6923958732
                                                                     </p>
                                                                 </div>
-                                                               <div class="row car-data-row py-1 px-2">
-                                                                    <div class="car-icons">
-                                                                        <div class="icon-item">
-                                                                            <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 94.svg"
-                                                                                    class="car-icondata">
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="icon-item">
-                                                                            <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 93.svg"
-                                                                                    class="car-icondata">
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="icon-item">
-                                                                            <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 95.svg"
-                                                                                    class="car-icondata">
-                                                                            </div>
-                                                                            <span class="icon-text">4</span>
-                                                                        </div>
-                                                                        <div class="icon-item">
-                                                                            <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 96.svg"
-                                                                                    class="car-icondata">
-                                                                            </div>
-                                                                            <span class="icon-text">5</span>
-                                                                        </div>
-                                                                        <div class="icon-item">
-                                                                            <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 97.svg"
-                                                                                    class="car-icondata">
-                                                                            </div>
-                                                                            <span class="icon-text">2</span>
-                                                                        </div>
-                                                                        <div class="icon-item">
-                                                                            <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 98.svg"
-                                                                                    class="car-icondata">
-                                                                            </div>
-                                                                            <span class="icon-text">4</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                             <div class="contract-section py-1 px-2">
-                                                                     <div class="contract-item">
-                                                                        <div class="contract-label">
-                                                                           المصدر  : 
-                                                                        </div>
-                                                                        <div class="contract-value">
-                                                                           شركة كدي لتأجير السيارات
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="contract-item">
-                                                                        <div class="contract-label">
-                                                                           رقم العقد : 
-                                                                        </div>
-                                                                        <div class="contract-value">
-                                                                            25-1401-4001105-000054</div>
-                                                                    </div>
-
-                                                                    <div class="contract-item">
-                                                                        <div class="contract-label">
-                                                                           المستأجر :
-                                                                        </div>
-                                                                        <div class="contract-value">عبدالجبار شاكر أحمد
-                                                                            موسى</div>
-                                                                    </div>
-
-                                                                    <div class="contract-item">
-                                                                        <div class="contract-label">
-                                                                            الزمن المتبقي :
-                                                                        </div>
-                                                                        <div class="contract-value ">
-                                                                            5:09:22:30
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xl-4 col-md-6 car-item" data-type="عائلية كبيرة">
-                                                        <div class="card car-card p-2">
-                                                            <img src="img//30-21.png" alt="كيا كارنيفال"
-                                                                class="car-image">
-                                                            <div class="card-body p-0">
-                                                                <div class="p-1">
-                                                                    <h5 class="car-title">كيا - كارنيفال أي اكس جان 8 -
-                                                                        عائلية كبيرة - 2020 - ح س و 8630 - أصفر</h5>
-                                                                    <p class="text-center m-0 Serial-number">6923958732
-                                                                    </p>
-                                                                </div>
-                                                                 <div class="row car-data-row py-1 px-2">
+                                                                <div class="row car-data-row py-1 px-2">
                                                                     <div class="car-icons">
                                                                         <div class="icon-item">
                                                                             <div class="icon">
@@ -1569,17 +1515,17 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="contract-section py-1 px-2">
-                                                                     <div class="contract-item">
+                                                                    <div class="contract-item">
                                                                         <div class="contract-label">
-                                                                           المصدر  : 
+                                                                            المصدر :
                                                                         </div>
                                                                         <div class="contract-value">
-                                                                           شركة كدي لتأجير السيارات
+                                                                            شركة كدي لتأجير السيارات
                                                                         </div>
                                                                     </div>
                                                                     <div class="contract-item">
                                                                         <div class="contract-label">
-                                                                           رقم العقد : 
+                                                                            رقم العقد :
                                                                         </div>
                                                                         <div class="contract-value">
                                                                             25-1401-4001105-000054</div>
@@ -1587,7 +1533,99 @@
 
                                                                     <div class="contract-item">
                                                                         <div class="contract-label">
-                                                                           المستأجر :
+                                                                            المستأجر :
+                                                                        </div>
+                                                                        <div class="contract-value">عبدالجبار شاكر أحمد
+                                                                            موسى</div>
+                                                                    </div>
+
+                                                                    <div class="contract-item">
+                                                                        <div class="contract-label">
+                                                                            الزمن المتبقي :
+                                                                        </div>
+                                                                        <div class="contract-value ">
+                                                                            5:09:22:30
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-4 col-md-6 car-item" data-type="عائلية كبيرة">
+                                                        <div class="card car-card p-2">
+                                                            <img src="img//30-21.png" alt="كيا كارنيفال"
+                                                                class="car-image">
+                                                            <div class="card-body p-0">
+                                                                <div class="p-1">
+                                                                    <h5 class="car-title">كيا - كارنيفال أي اكس جان 8 -
+                                                                        عائلية كبيرة - 2020 - ح س و 8630 - أصفر</h5>
+                                                                    <p class="text-center m-0 Serial-number">6923958732
+                                                                    </p>
+                                                                </div>
+                                                                <div class="row car-data-row py-1 px-2">
+                                                                    <div class="car-icons">
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 94.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 93.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 95.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">4</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 96.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">5</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 97.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">2</span>
+                                                                        </div>
+                                                                        <div class="icon-item">
+                                                                            <div class="icon">
+                                                                                <img src="img/carDataIcons/Rectangle 98.svg"
+                                                                                    class="car-icondata">
+                                                                            </div>
+                                                                            <span class="icon-text">4</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="contract-section py-1 px-2">
+                                                                    <div class="contract-item">
+                                                                        <div class="contract-label">
+                                                                            المصدر :
+                                                                        </div>
+                                                                        <div class="contract-value">
+                                                                            شركة كدي لتأجير السيارات
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="contract-item">
+                                                                        <div class="contract-label">
+                                                                            رقم العقد :
+                                                                        </div>
+                                                                        <div class="contract-value">
+                                                                            25-1401-4001105-000054</div>
+                                                                    </div>
+
+                                                                    <div class="contract-item">
+                                                                        <div class="contract-label">
+                                                                            المستأجر :
                                                                         </div>
                                                                         <div class="contract-value">عبدالجبار شاكر أحمد
                                                                             موسى</div>
@@ -1616,8 +1654,8 @@
                                                                         2019 - س ك ب 3965 - عودي</h5>
                                                                     <p class="text-center m-0 Serial-number">6923958732
                                                                     </p>
-                                                                </div>   
-                                                                 <div class="row car-data-row py-1 px-2">
+                                                                </div>
+                                                                <div class="row car-data-row py-1 px-2">
                                                                     <div class="car-icons">
                                                                         <div class="icon-item">
                                                                             <div class="icon">
@@ -1660,19 +1698,19 @@
                                                                             <span class="icon-text">4</span>
                                                                         </div>
                                                                     </div>
-                                                                </div>                                                             
-                                                             <div class="contract-section py-1 px-2">
-                                                                     <div class="contract-item">
+                                                                </div>
+                                                                <div class="contract-section py-1 px-2">
+                                                                    <div class="contract-item">
                                                                         <div class="contract-label">
-                                                                           المصدر  : 
+                                                                            المصدر :
                                                                         </div>
                                                                         <div class="contract-value">
-                                                                           شركة كدي لتأجير السيارات
+                                                                            شركة كدي لتأجير السيارات
                                                                         </div>
                                                                     </div>
                                                                     <div class="contract-item">
                                                                         <div class="contract-label">
-                                                                           رقم العقد : 
+                                                                            رقم العقد :
                                                                         </div>
                                                                         <div class="contract-value">
                                                                             25-1401-4001105-000054</div>
@@ -1680,7 +1718,7 @@
 
                                                                     <div class="contract-item">
                                                                         <div class="contract-label">
-                                                                           المستأجر :
+                                                                            المستأجر :
                                                                         </div>
                                                                         <div class="contract-value">عبدالجبار شاكر أحمد
                                                                             موسى</div>
@@ -1708,7 +1746,7 @@
                                                                     <p class="text-center m-0 Serial-number">6923958732
                                                                     </p>
                                                                 </div>
-                                                              <div class="row car-data-row py-1 px-2">
+                                                                <div class="row car-data-row py-1 px-2">
                                                                     <div class="car-icons">
                                                                         <div class="icon-item">
                                                                             <div class="icon">
@@ -1752,18 +1790,18 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                  <div class="contract-section py-1 px-2">
-                                                                     <div class="contract-item">
+                                                                <div class="contract-section py-1 px-2">
+                                                                    <div class="contract-item">
                                                                         <div class="contract-label">
-                                                                           المصدر  : 
+                                                                            المصدر :
                                                                         </div>
                                                                         <div class="contract-value">
-                                                                           شركة كدي لتأجير السيارات
+                                                                            شركة كدي لتأجير السيارات
                                                                         </div>
                                                                     </div>
                                                                     <div class="contract-item">
                                                                         <div class="contract-label">
-                                                                           رقم العقد : 
+                                                                            رقم العقد :
                                                                         </div>
                                                                         <div class="contract-value">
                                                                             25-1401-4001105-000054</div>
@@ -1771,7 +1809,7 @@
 
                                                                     <div class="contract-item">
                                                                         <div class="contract-label">
-                                                                           المستأجر :
+                                                                            المستأجر :
                                                                         </div>
                                                                         <div class="contract-value">عبدالجبار شاكر أحمد
                                                                             موسى</div>
@@ -1789,7 +1827,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    
+
                                                 </div>
                                                 <!-- Pagination controls -->
                                                 <div
@@ -1811,7 +1849,7 @@
                         <div class="col-lg-2  bg-transparent " id="button-on-mobile">
                             <!-- Card Body -->
                             <div class="card-body">
-                                <form action="" method="" id="formID" class="buttons-container">
+                                <form action="" method="" id="Branch_Form" class="buttons-container">
                                     <select class="form-select" id="branchList" name="branchList">
                                         <option selected>اختر </option>
                                         <option value="الفرع_الاول"> الرئيسي </option>
@@ -2064,7 +2102,7 @@
     </div>
     <!-- ========================= JS here ========================= -->
     <!-- charts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!--link to make javascript function operate-->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
@@ -2078,8 +2116,8 @@
 
     <script src="js/javascript/scripts.js"></script>
     <script src="js/javascript/charts.js"></script>
-   
-    
+
+
 </body>
 
 </html>
