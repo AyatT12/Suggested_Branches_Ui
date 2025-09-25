@@ -13,13 +13,6 @@ body {
   height: 100vh;
 }
 
-.section-mainCard {
-  min-height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 #content {
   height: 100%;
 }
@@ -87,6 +80,11 @@ nav {
   height: 60px;
 }
 
+.BranchStatus {
+  font-size: .75rem;
+  color: red;
+}
+
 /*=======================topbar  warnings line ======================*/
 .warning-section {
   background-color: rgb(253 253 253 / 56%);
@@ -115,7 +113,8 @@ nav {
   color: #C32222;
   font-weight: 500;
 }
-.marquee-content p{
+
+.marquee-content p {
   margin-bottom: 0;
 }
 
@@ -129,33 +128,33 @@ nav {
   }
 }
 
-.marquee-xmark{
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    background: #C32222;
-    border-radius: 50%;
-    cursor: pointer;
-    color: white;
-    font-size: 16px;
-    border: white 1px solid;
+.marquee-xmark {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: #C32222;
+  border-radius: 50%;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  border: white 1px solid;
 }
 
 
-        @media (max-width: 991px) {
-            .navbar {
-                flex-wrap: wrap;
-                height: auto;
-                gap: 1rem;
-            }
-            
-            .warning-section {
-                order: 3;
-                flex-basis: 100%;
-                max-width: 100%;
-                margin: 0;
-            }
-        }
+@media (max-width: 991px) {
+  .navbar {
+    flex-wrap: wrap;
+    height: auto;
+    gap: 1rem;
+  }
+
+  .warning-section {
+    order: 3;
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
 
 /*======================= Cards Contnt Section ======================*/
 
@@ -199,6 +198,10 @@ nav {
   display: flex;
   justify-content: flex-end;
   padding-left: 0;
+}
+
+.chart-container canvas {
+  padding-right: 50px;
 }
 
 .card-col {
@@ -1088,17 +1091,12 @@ body::-webkit-scrollbar-thumb {
   align-items: start;
 }
 
-#pieChart {
-  max-height: 240px;
-}
+.chart-container {
+  position: relative;
+  width: 100%;
+  height: 25vh;
+  min-height: 15rem;
 
-/* 4k screen */
-@media(min-height:1000px) and (min-width:2560px) {
-
-  #pieChart,
-  #horizontal_bar {
-    height: 330px !important;
-  }
 }
 
 /*=======================Improved Car Card Structure======================*/
@@ -1122,270 +1120,6 @@ body::-webkit-scrollbar-thumb {
   transform: translateY(-2px);
 }
 
-.car-main-info {
-  display: flex;
-  flex-direction: row-reverse;
-  padding: 1rem;
-  gap: 1rem;
-  flex: 1;
-}
-
-.car-image-section {
-  flex: 0 0 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.car-image-section .carImg {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  object-fit: cover;
-}
-
-.car-details-section {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.car-basic-info {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.car-id {
-  background: #f8f9fa;
-  padding: 0.25rem 0.75rem;
-  border-radius: 4px;
-  font-weight: 600;
-  color: #495057;
-}
-
-.car-odometer {
-  color: #6c757d;
-  font-size: 0.875rem;
-}
-
-.car-description p {
-  margin: 0;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #212529;
-}
-
-.car-features {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.feature-item {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-  background: #f8f9fa;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-}
-
-.feature-item img {
-  width: 20px;
-  height: 20px;
-}
-
-.feature-item span {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: #495057;
-}
-
-.car-pricing-section {
-  display: flex;
-  gap: 1rem;
-  padding: 1rem;
-  background: #f8f9fa;
-  border-top: none;
-  border-left: 1px solid #e9ecef;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  flex: 0 0 300px;
-  align-self: stretch;
-  overflow: visible;
-}
-
-.pricing-item {
-  text-align: center;
-  min-width: 120px;
-  position: relative;
-}
-
-.pricing-item h4 {
-  margin: 0 0 0.5rem 0;
-  font-size: 0.875rem;
-  color: #6c757d;
-  font-weight: 500;
-}
-
-.pricing-item .price {
-  margin: 0 0 0.75rem 0;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #212529;
-}
-
-
-
-.dropdown-item .Status {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  margin: 0 0.5rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .car-card {
-    flex-direction: column;
-  }
-
-  .car-main-info {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .car-image-section {
-    flex: none;
-    max-width: 250px;
-    margin: 0 auto;
-  }
-
-  .car-pricing-section {
-    flex-direction: column;
-    align-items: center;
-    border-left: none;
-    border-top: 1px solid #e9ecef;
-    flex: none;
-  }
-
-  .pricing-item {
-    min-width: 200px;
-  }
-
-  .dropdown-content {
-    min-width: 250px;
-    left: 0;
-    transform: none;
-  }
-
-  .dropdown-content::before {
-    left: 20px;
-    transform: none;
-  }
-}
-
-@media (max-width: 480px) {
-  .car-basic-info {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .car-features {
-    justify-content: center;
-  }
-
-  .dropdown-content {
-    min-width: 200px;
-  }
-}
-
-/* Make old dropdown-content rules more specific to avoid conflicts */
-.dropdown-content {
-  border: 1px solid orange;
-  background: #ffffff;
-  display: none;
-  border-radius: 8px;
-  box-shadow: 0px 2px 4px 0px #39629C3D;
-  width: 220px;
-  margin-top: 16px;
-  position: absolute;
-  z-index: 9999;
-  font-size: 0.75rem;
-  padding: 8px;
-}
-
-.dropdown-content p {
-  margin-bottom: .4rem;
-}
-
-/* Update the media query rule to be more specific */
-@media(max-width:768px) {
-
-  .extra-details .dropdown-content,
-  .car-data-row .dropdown-content {
-    width: 220px !important;
-  }
-}
-
-/* Make new dropdown-content rules more specific */
-.car-pricing-section .dropdown-content {
-  display: block;
-}
-
-.car-pricing-section .dropdown-trigger:hover .dropdown-content {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-
-.car-pricing-section .dropdown-content::before {
-  content: '';
-  position: absolute;
-  top: -6px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-bottom: 6px solid white;
-}
-
-.car-pricing-section .dropdown-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.75rem 1rem;
-  border-bottom: 1px solid #f1f3f4;
-}
-
-.car-pricing-section .dropdown-item:last-child {
-  border-bottom: none;
-}
-
-.car-pricing-section .dropdown-item .title {
-  font-weight: 500;
-  color: #212529;
-  flex: 1;
-}
-
-.car-pricing-section .dropdown-item .details {
-  color: #6c757d;
-  font-size: 0.875rem;
-  margin-left: 1rem;
-}
-
-.car-pricing-section .dropdown-item .Status {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  margin: 0 0.5rem;
-}
 
 .buttons-container {
   justify-content: center;
@@ -1611,14 +1345,6 @@ body::-webkit-scrollbar-thumb {
 @media (max-width: 768px) {
   .car-specs {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .page-title {
-    font-size: 2rem;
-  }
-
-  .spec-icon {
-    font-size: 1.25rem;
   }
 }
 
@@ -1900,4 +1626,107 @@ body::-webkit-scrollbar-thumb {
 
 .valid {
   color: green;
+}
+
+/* charts  */
+
+/* Info Button Styles */
+.chart-info-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background:#39629C;
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  color: white;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.chart-info-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(129, 129, 129, 0.4);
+}
+
+.chart-info-btn.active {
+  background: white;
+  color: #39629C;
+  border: 2px solid #39629C;
+}
+
+/* Dropdown Styles */
+.chart-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e9ecef;
+  padding: 0;
+  min-width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.chart-dropdown.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-item-custom {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f8f9fa;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.2s ease;
+}
+
+.dropdown-item-custom:hover {
+  background: #f8f9fa;
+}
+
+.dropdown-item-custom:last-child {
+  border-bottom: none;
+}
+
+.dropdown-label {
+  font-weight: 600;
+}
+
+.dropdown-value {
+  font-weight: 600;
+}
+
+
+
+.chart-p span {
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .chart-info-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
+  }
+}
+
+.chart-info-btn:active {
+  transform: scale(0.95);
 }
