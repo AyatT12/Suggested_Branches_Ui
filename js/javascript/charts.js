@@ -207,7 +207,7 @@ function createBarChart() {
                     ticks: {
                         font: {
                             family: "'Cairo', sans-serif",
-                            size: 11 
+                            size: 9
                         },
                     }
                 },
@@ -243,7 +243,7 @@ function createEmployee_Balance_Chart() {
     Employee_Balance_Chart = new Chart(canvas, {
         type: "bar",
         data: {
-            labels: ['نقدًا', 'مدى', 'فيزا', 'اميركن اكسبرس', 'ماستر كارد ', 'تحويل'],
+            labels: ['نقدًا', 'مدى', 'فيزا', 'اميركن اكسبرس', 'ماستر كارد ',],
             datasets: [
                 {
                     data: [200, 1000, 45, 1800, 1600, 1200],
@@ -253,7 +253,6 @@ function createEmployee_Balance_Chart() {
                         "rgba(255, 206, 86, 1)",
                         "rgba(75, 192, 192, 1)",
                         "rgba(153, 102, 255, 1)",
-                        "rgba(255, 159, 64, 1)"
                     ],
                     barThickness: 40,
                 }
@@ -292,7 +291,7 @@ function createEmployee_Balance_Chart() {
                     ticks: {
                         font: {
                             family: "'Cairo', sans-serif",
-                            size: 11
+                            size: 9
                         }
                     }
                 },
