@@ -623,7 +623,7 @@ const carouselsConfig = {
                 chevron.style.transform = 'rotate(0deg)';
             }
     }
-        // Close the warnning nav
+ // Close the warnning nav
     function closeWarning() {
             const warningSection = document.getElementById('warningSection');
             warningSection.style.transform = 'translateY(-100%)';
@@ -632,3 +632,74 @@ const carouselsConfig = {
                 warningSection.style.display = 'none';
             }, 300);
     }
+
+
+    // add active class to the clicked button and remove from others
+    function setActiveButton(buttonIndex) {
+    var buttons = document.querySelectorAll('.btn-secondary1');
+
+    // Remove the active class from all buttons
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].classList.remove('active1');
+    }
+
+    // Set the active class for the clicked button
+    buttons[buttonIndex].classList.add('active1');
+}
+
+/////////////function to submit branch name without button/////////////
+$(document).ready(function () {
+    $("#branchList").change(function () {
+        $("#Branch_Form").submit();
+    });
+});
+///////////// function to toggle the charts Dropdown data /////////////
+        function toggleDropdown(dropdownId, button) {
+            document.querySelectorAll('.chart-dropdown').forEach(dropdown => {
+                if (dropdown.id !== dropdownId) {
+                    dropdown.classList.remove('show');
+                    document.querySelectorAll('.chart-info-btn').forEach(btn => {
+                        if (btn !== button) {
+                            btn.classList.remove('active');
+                        }
+                    });
+                }
+            });
+            
+            // Toggle current dropdown
+            const dropdown = document.getElementById(dropdownId);
+            const isShowing = dropdown.classList.contains('show');
+            
+            if (isShowing) {
+                dropdown.classList.remove('show');
+                button.classList.remove('active');
+            } else {
+                dropdown.classList.add('show');
+                button.classList.add('active');
+            }
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.chart-container')) {
+                document.querySelectorAll('.chart-dropdown').forEach(dropdown => {
+                    dropdown.classList.remove('show');
+                });
+                document.querySelectorAll('.chart-info-btn').forEach(button => {
+                    button.classList.remove('active');
+                });
+            }
+        });
+
+        // Optional: Auto-hide dropdown after delay
+        function autoHideDropdown(dropdownId, delay = 5000) {
+            setTimeout(() => {
+                const dropdown = document.getElementById(dropdownId);
+                if (dropdown.classList.contains('show')) {
+                    dropdown.classList.remove('show');
+                    document.querySelectorAll('.chart-info-btn').forEach(button => {
+                        button.classList.remove('active');
+                    });
+                }
+            }, delay);
+        }
