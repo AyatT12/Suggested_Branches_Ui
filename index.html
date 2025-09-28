@@ -162,7 +162,6 @@
                     <div class="marquee">
                         <div class="marquee-content">
                             <p> خدمة الرسائل النصية غير متاحة حالياً</p>
-                            <p> خدمة الرسائل النصية غير متاحة حالياً</p>
                         </div>
                     </div>
                     <i class="fa-regular fa-circle-xmark marquee-xmark" id="marquee-xmark" onclick="closeWarning()"></i>
@@ -173,7 +172,9 @@
                     <div class="">
                         <h1 class="hide-on-mobile" style="font-size: 1.2rem;font-weight: bold;">شركة كدي لتأجير السيارات
                         </h1>
-                        <span class="extra-small-mobile m-0"> الرئيسي </span> <span class="BranchStatus">موقوف</span>
+                        <div class="Name_status">
+                            <span class="extra-small-mobile m-0"> الرئيسي </span> <span class="BranchStatus">موقوف</span>
+                        </div>
                     </div>
                     <a href="#">
                         <img class="extra-small-mobile Logo " src="img/CompanyLogo_20240325231449.png">
@@ -184,17 +185,14 @@
     </header>
 
     <div class="wrapper flex-grow-1 d-flex align-items-center flex-column ">
-
         <div class="col d-flex align-items-center">
             <div class="container-fluid ">
                 <!-- Content Row -->
                 <section class="home-section">
                     <div class="row justify-content-center  main-row ">
-                        <!--  Chart -->
+                        <!--  Chart & Cars -->
                         <div class="col-lg-10 col-xl-9">
-
                             <div class="card shadow ">
-
                                 <div class="card-body" id="cardBody">
                                     <div class="main-carousel-item active" id="carouselItem1">
                                         <div class="row" id="first-row-of-charts">
@@ -682,9 +680,7 @@
                                                             class="fa-solid fa-angles-right"></i></button>
                                                 </div>
                                             </div>
-
                                         </div>
-
                                     </div>
                                     <div class="main-carousel-item " id="carouselItem3">
                                         <div id="carousel3" class="carousel slide" data-bs-ride="carousel">
@@ -1812,15 +1808,15 @@
                             </div>
 
                         </div>
-
+                         <!--  Side Buttons -->
                         <div class="col-lg-2  bg-transparent " id="button-on-mobile">
                             <!-- Card Body -->
                             <div class="card-body">
                                 <form action="" method="" id="Branch_Form" class="buttons-container">
                                     <select class="form-select" id="branchList" name="branchList">
                                         <option selected>اختر </option>
-                                        <option value="الفرع_الاول"> الرئيسي </option>
-                                        <option value="الفرع_الثاني">الوشحاء</option>
+                                        <option value="1"> الرئيسي </option>
+                                        <option value="2">الوشحاء</option>
                                     </select>
                                     <button type="button" class="btn btn-secondary1  mt-2 active1" id="chart"
                                         onclick="showCarouselItem(1) , setActiveButton(0)"><img
@@ -1851,22 +1847,17 @@
                                             class="chart-buttons-img">
                                         <p>محفوظة</p>
                                     </button>
-
                                 </form>
-
                             </div>
-
                         </div>
 
                     </div>
-                    <!-- buttons  -->
                 </section>
             </div>
         </div>
     </div>
 
     <!-- Start Footer Area -->
-
     <footer>
         <div class="before-footer-widget">
             <svg width: 100%; height:auto viewbox="0 0 2444 132">
@@ -2086,6 +2077,5 @@
 
 
 </body>
-
 
 </html>
