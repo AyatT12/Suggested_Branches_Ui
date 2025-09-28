@@ -1,8 +1,4 @@
 ////////////////////////charts////////////////////////////////
-var available_cars = ["2005", "2012", "2001", "2005", "2012"];
-var not_available_cars = ["2005", "2001", "2001"];
-var rented_cars = ["2012", "2005" ,"2003",'2023'];
-
 // Cars_Chart
 var Cars_Chart = null;
 
@@ -20,7 +16,7 @@ function createHorizontalBarChart() {
             labels: ['متاحة', 'مؤجرة', 'غير متاحة'],
             datasets: [
                 {
-                    data: [available_cars.length, rented_cars.length, not_available_cars.length],
+                    data: ["100", "125", "300"],
                     backgroundColor: [
                         "rgba(255, 150, 38, 1)",
                         "rgba(151, 71, 255, 1)",
@@ -84,7 +80,6 @@ function createHorizontalBarChart() {
         }
     });
 }
-
 
 // Contracts_Chart 
 var Contracts_Chart = null;

@@ -210,10 +210,10 @@ const carouselsConfig = {
             inspection: { date: "2025/11/20", DaysLeft: "1", status: "expired" }
         },
         maintenance: {
-            tires: { date: "2026/03/01", DaysLeft: "125", Days_status: "valid", km: "26,500", KilosLeft: "890", Km_status: "valid" },
-            oil: { date: "2025/09/15", DaysLeft: "0", Days_status: "expired", km: "8,700", KilosLeft: "150", Km_status: "expired" },
+            tires: { date: "2026/03/01", DaysLeft: "125", Days_status: "valid", km: "26,500", KilosLeft: "100", Km_status: "expired" },
+            oil: { date: "2025/09/15", DaysLeft: "0", Days_status: "expired", km: "8,700", KilosLeft: "1000", Km_status: "valid" },
             service: { date: "2026/01/30", DaysLeft: "98", Days_status: "valid", km: "7,200", KilosLeft: "1,100", Km_status: "valid" },
-            Front_brakes: { date: "2026/04/05", DaysLeft: "160", Days_status: "valid", km: "17,800", KilosLeft: "1,950", Km_status: "valid" },
+            Front_brakes: { date: "2026/04/05", DaysLeft: "0", Days_status: "expired", km: "17,800", KilosLeft: "50", Km_status: "expired" },
             Rear_brake: { date: "2025/12/10", DaysLeft: "12", Days_status: "valid", km: "19,200", KilosLeft: "650", Km_status: "valid" }
         }
     },
@@ -244,7 +244,7 @@ const carouselsConfig = {
             inspection: { date: "2026/01/14", DaysLeft: "12", status: "valid" }
         },
         maintenance: {
-            tires: { date: "2025/10/20", DaysLeft: "0", Days_status: "expired", km: "27,800", KilosLeft: "210", Km_status: "expired" },
+            tires: { date: "2025/10/20", DaysLeft: "0", Days_status: "expired", km: "27,800", KilosLeft: "700", Km_status: "valid" },
             oil: { date: "2026/02/15", DaysLeft: "75", Days_status: "valid", km: "8,400", KilosLeft: "520", Km_status: "valid" },
             service: { date: "2025/11/30", DaysLeft: "2", Days_status: "expired", km: "7,900", KilosLeft: "650", Km_status: "valid" },
             Front_brakes: { date: "2025/09/28", DaysLeft: "0", Days_status: "expired", km: "16,500", KilosLeft: "180", Km_status: "expired" },
@@ -383,7 +383,9 @@ const carouselsConfig = {
                             <span class="status-badge">
                                 ${carData.documents.license.date}
                                  <span class="Days-left-badge ${carData.documents.license.status === 'expired' ? 'expired' : ''}">
+                                  المتبقي
                                 (${carData.documents.license.DaysLeft})
+                                    يوم
                                 </span>
                             </span>
                            
@@ -396,7 +398,10 @@ const carouselsConfig = {
                             <span class="status-badge ">
                                  ${carData.documents.insurance.date}
                                  <span class="Days-left-badge ${carData.documents.insurance.status === 'expired' ? 'expired' : ''}">
+                                 المتبقي
                                 (${carData.documents.insurance.DaysLeft})
+                                  يوم
+
                             </span>
                         </div>
                          <div class="info-item">
@@ -407,7 +412,10 @@ const carouselsConfig = {
                             <span class="status-badge">
                                ${carData.documents.operatingCard.date}
                                  <span class="Days-left-badge ${carData.documents.operatingCard.status === 'expired' ? 'expired' : ''}">
+                                 المتبقي
                                   (${carData.documents.operatingCard.DaysLeft})
+                                يوم
+
                             </span>
                         </div>
                         <div class="info-item">
@@ -418,7 +426,9 @@ const carouselsConfig = {
                             <span class="status-badge">
                                  ${carData.documents.inspection.date}
                                     <span class="Days-left-badge ${carData.documents.inspection.status === 'expired' ? 'expired' : ''}">
+                                    المتبقي
                                     (${carData.documents.inspection.DaysLeft})
+                                     يوم
                             </span>
                         </div>
                     </div>
@@ -445,10 +455,11 @@ const carouselsConfig = {
                                 <span> - </span>
                                 <strong>${carData.maintenance.tires.km} كم</strong> 
                              </p>
-                              <p>
-                                <strong class="${carData.maintenance.tires.Days_status === 'expired' ? 'expired' : ''}">(${carData.maintenance.tires.DaysLeft})</strong> 
+                              <p style="font-size: 10px;">
+                                <strong style="color:#495057"> المتبقي: </strong>
+                                <strong class="${carData.maintenance.tires.Days_status === 'expired' ? 'expired' : ''}">(${carData.maintenance.tires.DaysLeft})يوم </strong> 
                                 <span> - </span>
-                                <strong class="${carData.maintenance.tires.Km_status === 'expired' ? 'expired' : ''}">(${carData.maintenance.tires.KilosLeft})</strong> 
+                                <strong class="${carData.maintenance.tires.Km_status === 'expired' ? 'expired' : ''}">(${carData.maintenance.tires.KilosLeft})كم </strong> 
                              </p>
                     </div>
                 </div>
@@ -465,10 +476,11 @@ const carouselsConfig = {
                                 <span> - </span>
                                 <strong>${carData.maintenance.oil.km} كم</strong> 
                              </p>
-                                <p>
-                                    <strong class="${carData.maintenance.oil.Days_status === 'expired' ? 'expired' : ''}" >(${carData.maintenance.oil.DaysLeft})</strong> 
+                                <p style="font-size: 10px;">
+                                <strong style="color:#495057"> المتبقي: </strong>
+                                    <strong class="${carData.maintenance.oil.Days_status === 'expired' ? 'expired' : ''}" >(${carData.maintenance.oil.DaysLeft})يوم</strong> 
                                     <span> - </span>
-                                    <strong class="${carData.maintenance.oil.Km_status === 'expired' ? 'expired' : ''}">(${carData.maintenance.oil.KilosLeft})</strong>
+                                    <strong class="${carData.maintenance.oil.Km_status === 'expired' ? 'expired' : ''}">(${carData.maintenance.oil.KilosLeft})كم</strong>
                                 </p>
                     </div>
                     </div>
@@ -484,10 +496,11 @@ const carouselsConfig = {
                                 <span> - </span>
                                 <strong>${carData.maintenance.service.km} كم</strong> 
                              </p>
-                                <p>
-                                    <strong class="${carData.maintenance.service.Days_status === 'expired' ? 'expired' : ''}" >(${carData.maintenance.service.DaysLeft})</strong> 
+                                <p style="font-size: 10px;">
+                                <strong style="color:#495057"> المتبقي: </strong>
+                                    <strong class="${carData.maintenance.service.Days_status === 'expired' ? 'expired' : ''}" >(${carData.maintenance.service.DaysLeft})يوم</strong> 
                                     <span> - </span>
-                                    <strong class="${carData.maintenance.service.Km_status === 'expired' ? 'expired' : ''}">(${carData.maintenance.service.KilosLeft})</strong>
+                                    <strong class="${carData.maintenance.service.Km_status === 'expired' ? 'expired' : ''}">(${carData.maintenance.service.KilosLeft})كم</strong>
                                  </p>
                     </div>
                     </div>
@@ -503,10 +516,11 @@ const carouselsConfig = {
                                 <span> - </span>
                                 <strong>${carData.maintenance.Rear_brake.km} كم</strong> 
                              </p>
-                                <p>
-                                    <strong class="${carData.maintenance.Rear_brake.Days_status === 'expired' ? 'expired' : ''}" >(${carData.maintenance.Rear_brake.DaysLeft})</strong> 
+                                <p style="font-size: 10px;">
+                                <strong style="color:#495057"> المتبقي: </strong>
+                                    <strong class="${carData.maintenance.Rear_brake.Days_status === 'expired' ? 'expired' : ''}" >(${carData.maintenance.Rear_brake.DaysLeft})يوم</strong> 
                                     <span> - </span>
-                                    <strong class="${carData.maintenance.Rear_brake.Km_status === 'expired' ? 'expired' : ''}">(${carData.maintenance.Rear_brake.KilosLeft})</strong>
+                                    <strong class="${carData.maintenance.Rear_brake.Km_status === 'expired' ? 'expired' : ''}">(${carData.maintenance.Rear_brake.KilosLeft})كم</strong>
                                 </p>
                     </div>
                     </div>
@@ -522,10 +536,11 @@ const carouselsConfig = {
                                 <span> - </span>
                                 <strong>${carData.maintenance.Front_brakes.km} كم</strong> 
                              </p>
-                                 <p>
-                                    <strong class="${carData.maintenance.Front_brakes.Days_status === 'expired' ? 'expired' : ''}" >(${carData.maintenance.Front_brakes.DaysLeft})</strong> 
+                                 <p style="font-size: 10px;">
+                                <strong style="color:#495057"> المتبقي: </strong>
+                                    <strong class="${carData.maintenance.Front_brakes.Days_status === 'expired' ? 'expired' : ''}" >(${carData.maintenance.Front_brakes.DaysLeft})يوم</strong> 
                                     <span> - </span>
-                                    <strong class="${carData.maintenance.Front_brakes.Km_status === 'expired' ? 'expired' : ''}">(${carData.maintenance.Front_brakes.KilosLeft})</strong>
+                                    <strong class="${carData.maintenance.Front_brakes.Km_status === 'expired' ? 'expired' : ''}">(${carData.maintenance.Front_brakes.KilosLeft})كم</strong>
                                 </p>
                     </div>
                     </div>
@@ -541,10 +556,11 @@ const carouselsConfig = {
                                 <span> - </span>
                                 <strong>${carData.maintenance.oil.km} كم</strong> 
                              </p>
-                               <p>
-                                    <strong class="${carData.maintenance.oil.Days_status === 'expired' ? 'expired' : ''}" >(${carData.maintenance.oil.DaysLeft})</strong> 
+                               <p style="font-size: 10px;">
+                                <strong style="color:#495057"> المتبقي: </strong>
+                                    <strong class="${carData.maintenance.oil.Days_status === 'expired' ? 'expired' : ''}" >(${carData.maintenance.oil.DaysLeft})يوم</strong> 
                                     <span> - </span>
-                                    <strong class="${carData.maintenance.oil.Km_status === 'expired' ? 'expired' : ''}">(${carData.maintenance.oil.KilosLeft})</strong>
+                                    <strong class="${carData.maintenance.oil.Km_status === 'expired' ? 'expired' : ''}">(${carData.maintenance.oil.KilosLeft})كم</strong>
                                 </p>
                     </div>
                     </div>
@@ -561,10 +577,11 @@ const carouselsConfig = {
                                 <span> - </span>
                                 <strong>${carData.maintenance.oil.km} كم</strong> 
                              </p>
-                                 <p>
-                                    <strong class="${carData.maintenance.oil.Days_status === 'expired' ? 'expired' : ''}" >(${carData.maintenance.oil.DaysLeft})</strong> 
+                                <p style="font-size: 10px;">
+                                <strong style="color:#495057"> المتبقي: </strong>
+                                    <strong class="${carData.maintenance.oil.Days_status === 'expired' ? 'expired' : ''}" >(${carData.maintenance.oil.DaysLeft})يوم</strong> 
                                     <span> - </span>
-                                    <strong class="${carData.maintenance.oil.Km_status === 'expired' ? 'expired' : ''}">(${carData.maintenance.oil.KilosLeft})</strong>
+                                    <strong class="${carData.maintenance.oil.Km_status === 'expired' ? 'expired' : ''}">(${carData.maintenance.oil.KilosLeft})كم</strong>
                                 </p>
                     </div>
                     </div>
@@ -580,10 +597,11 @@ const carouselsConfig = {
                                 <span> - </span>
                                 <strong>${carData.maintenance.oil.km} كم</strong> 
                              </p>
-                                <p>
-                                    <strong class="${carData.maintenance.oil.Days_status === 'expired' ? 'expired' : ''}" >(${carData.maintenance.oil.DaysLeft})</strong> 
+                                <p style="font-size: 10px;">
+                                <strong style="color:#495057"> المتبقي: </strong>
+                                    <strong class="${carData.maintenance.oil.Days_status === 'expired' ? 'expired' : ''}" >(${carData.maintenance.oil.DaysLeft})يوم</strong> 
                                     <span> - </span>
-                                    <strong class="${carData.maintenance.oil.Km_status === 'expired' ? 'expired' : ''}">(${carData.maintenance.oil.KilosLeft})</strong>
+                                    <strong class="${carData.maintenance.oil.Km_status === 'expired' ? 'expired' : ''}">(${carData.maintenance.oil.KilosLeft})كم</strong>
                                 </p>
                     </div>
                     </div>
@@ -599,10 +617,11 @@ const carouselsConfig = {
                                 <span> - </span>
                                 <strong>${carData.maintenance.oil.km} كم</strong> 
                              </p>
-                                <p>
-                                    <strong class="${carData.maintenance.oil.Days_status === 'expired' ? 'expired' : ''}" >(${carData.maintenance.oil.DaysLeft})</strong> 
+                            <p style="font-size: 10px;">
+                                <strong style="color:#495057"> المتبقي: </strong>
+                                    <strong class="${carData.maintenance.oil.Days_status === 'expired' ? 'expired' : ''}" >(${carData.maintenance.oil.DaysLeft})يوم</strong> 
                                     <span> - </span>
-                                    <strong class="${carData.maintenance.oil.Km_status === 'expired' ? 'expired' : ''}">(${carData.maintenance.oil.KilosLeft})</strong>
+                                    <strong class="${carData.maintenance.oil.Km_status === 'expired' ? 'expired' : ''}">(${carData.maintenance.oil.KilosLeft})كم</strong>
                                 </p>
                     </div>
                     </div>
