@@ -84,7 +84,13 @@ nav {
   font-size: .75rem;
   color: red;
 }
-
+.Name_status{
+     display: flex;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    gap: 3px;
+    align-items: center;
+}
 /*=======================topbar  warnings line ======================*/
 .warning-section {
   background-color: rgb(253 253 253 / 56%);
@@ -549,7 +555,7 @@ body::-webkit-scrollbar-thumb {
 
 @media (max-width: 320px) {
 
-  .extra-small-mobile {
+  .extra-small-mobile ,.BranchStatus {
     display: none;
   }
 }
@@ -1301,6 +1307,7 @@ body::-webkit-scrollbar-thumb {
 
 .Days-left-badge {
   color: #39629C;
+  font-size: 10px;
 }
 
 .maintenance-info p {
