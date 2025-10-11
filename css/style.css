@@ -119,7 +119,9 @@ nav {
   color: #C32222;
   font-weight: 500;
 }
-
+.marquee-content:hover {
+   animation-play-state: paused;;
+}
 .marquee-content p {
   margin-bottom: 0;
 }
