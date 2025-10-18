@@ -381,7 +381,7 @@ footer {
 
 /*======================= global style for Modals ======================*/
 .modal-header .btn-close {
-  background: url(../../images/common/Static/cancel-2.svg) !important;
+  background: url(../img/cancel-2.svg) !important;
   background-size: contain !important;
   background-repeat: no-repeat !important;
   opacity: 1;
