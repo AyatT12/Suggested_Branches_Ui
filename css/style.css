@@ -84,13 +84,15 @@ nav {
   font-size: .75rem;
   color: red;
 }
-.Name_status{
-     display: flex;
-    justify-content: flex-start;
-    flex-direction: row-reverse;
-    gap: 3px;
-    align-items: center;
+
+.Name_status {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+  gap: 3px;
+  align-items: center;
 }
+
 /*=======================topbar  warnings line ======================*/
 .warning-section {
   background-color: rgb(253 253 253 / 56%);
@@ -119,9 +121,12 @@ nav {
   color: #C32222;
   font-weight: 500;
 }
+
 .marquee-content:hover {
-   animation-play-state: paused;;
+  animation-play-state: paused;
+  ;
 }
+
 .marquee-content p {
   margin-bottom: 0;
 }
@@ -130,6 +135,7 @@ nav {
   100% {
     transform: translateX(100%);
   }
+
   0% {
     transform: translateX(-100%);
   }
@@ -373,84 +379,118 @@ footer {
   }
 }
 
-/*======================= Password Modal ======================*/
-
-
-.password-modal-header {
-  flex-direction: column-reverse;
-  align-items: center;
-  border-bottom: none;
+/*======================= global style for Modals ======================*/
+.modal-header .btn-close {
+  background: url(../../images/common/Static/cancel-2.svg) !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  opacity: 1;
+  width: .5em;
+  border-radius: 0;
 }
 
-.card-title {
+.modal-header .modal-title {
   color: #FF9626;
   text-shadow: 1px 4px 4px rgb(187 187 187 / 68%);
-  font-size: 1rem;
+  font-size: 1.2rem;
   letter-spacing: 0.32px;
 }
 
-.password-modal-header .close {
-  padding: 1rem;
-  padding-left: .1rem;
-  margin: -1rem -1rem -2.5rem auto;
-  direction: rtl;
+/*======================= Password Modal ======================*/
+.password-input-page {
+  padding: 10px 40px 10px 30px;
+  font-size: 16px;
+  position: relative;
+  min-height: 48px !important;
 }
 
-.password-modal-body {
-  font-size: .8125rem;
+.lock-icon {
+  position: absolute;
+  right: 15px;
+  top: 35%;
+  transform: translateY(-50%);
+  color: #555;
+  z-index: 1;
 }
 
-.password-container {
-  border-radius: 8px;
-  border: 1px solid #39629C;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  padding: 15px;
-  margin: 0px 30px;
-  color: #000;
+.toggle-password {
+  position: absolute;
+  left: 15px;
+  top: 35%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #555;
+  z-index: 1;
 }
 
-.pass-titles {
-  text-align: end;
-}
-
-.password-input {
-  border-radius: 8px;
-  border: 2px solid #FF9626;
-  text-align: center;
-  color: #39629C;
+.input-wrapper {
+  position: relative;
+  display: inline-block;
   width: 100%;
-  direction: rtl;
-  height: 30px;
 }
 
-.requird-field {
-  justify-content: flex-end;
-  height: 20px;
-  text-align: end;
-  padding-right: 20px;
-  color: red;
-  font-size: 10px;
+#NewPassword::placeholder {
+  color: #D9D9D9;
 }
 
-.password-save-button-row {
-  border: none;
-  flex-direction: row-reverse;
-  padding-left: 40px;
-}
-
-#passowrd-save {
-  padding-left: 25px;
-}
-
-.password-btn-custom {
-  color: #fff !important;
-  background-color: #FF9626 !important;
-  border-color: #FF9626;
-  padding-top: 0;
-  padding-bottom: 1px;
-  padding-right: 15px;
+.password-input{
   border-radius: 8px;
-  padding-left: 15px;
+  border: 2px solid #faa64d;
+  resize: none;
+  font-size: .875rem;
+  min-height: 48px !important;
+}
+
+.password-input:focus{
+  box-shadow: none !important;
+  border: 2px solid #facd9c !important;
+}
+.PassWord-invaildBox {
+    margin-top: .25rem;
+    min-height: 20px;
+}
+.Password-invalid-feedback {
+    color: red;
+    display: block;
+    font-size: 12px;
+    margin-top: 0rem;
+    text-align: end;
+}
+/*======================= Feed Modal ======================*/
+/* تغذية الصندوق */
+.feed-acceptt-btn {
+  background: #FF9626;
+  color: white;
+}
+
+.feed-acceptt-btn:hover {
+  background: white;
+  color: #FF9626;
+  border: 1px solid #FF9626;
+}
+
+.Feed-textarea {
+  text-align: right;
+  width: 690px;
+  border-radius: 8px;
+  border: 2px solid #faa64d;
+  resize: none;
+  font-size: .875rem;
+}
+
+.Feed-textarea:focus {
+  box-shadow: none !important;
+  border: 2px solid #facd9c !important;
+}
+
+.Feed-Card {
+  border: 1px solid #39629c9c;
+  border-radius: 7px;
+  box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.Feed-data {
+  color: #39629C;
 }
 
 /*======================= scroll bar for index page ======================*/
@@ -562,7 +602,8 @@ footer {
 
 @media (max-width: 320px) {
 
-  .extra-small-mobile ,.BranchStatus {
+  .extra-small-mobile,
+  .BranchStatus {
     display: none;
   }
 }
@@ -807,11 +848,11 @@ footer {
 
 
 .buttons-container {
-    height: 80%;
-    display: flex;
-    height: 80%;
-    flex-direction: column;
-    justify-content: space-between;
+  height: 80%;
+  display: flex;
+  height: 80%;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 @media (max-width: 991px) {
@@ -832,7 +873,7 @@ footer {
   .btn-secondary1 {
     margin: 10px 3px;
     width: 110px;
-    }
+  }
 
   #branchList {
     width: 120px;
@@ -902,8 +943,9 @@ footer {
 #prevBtn:disabled {
   color: #6c757d;
 }
+
 @media (max-width:991px) {
-   .footer-buttons-row .col-sm-6:nth-child(1) {
+  .footer-buttons-row .col-sm-6:nth-child(1) {
     order: 8;
   }
 
@@ -944,13 +986,15 @@ footer {
 
   /* مستأجرين */
 }
+
 /* إعادة الترتيب للجوال */
 @media (max-width:575px) {
   .footer-buttons-row {
     display: flex;
     flex-direction: column;
   }
-   .footer-buttons-row .col-sm-6:nth-child(1) {
+
+  .footer-buttons-row .col-sm-6:nth-child(1) {
     order: 8;
   }
 
@@ -1366,7 +1410,7 @@ footer {
   position: absolute;
   top: 10px;
   right: 10px;
-  background:#39629C;
+  background: #39629C;
   border: 2px solid white;
   border-radius: 50%;
   width: 35px;

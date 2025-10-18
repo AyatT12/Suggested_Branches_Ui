@@ -150,3 +150,7 @@ body {
 
   }
 }
+/* Feed */
+.Feed-textarea {
+    text-align: left;
+  }
