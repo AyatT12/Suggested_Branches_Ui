@@ -22,18 +22,13 @@
     <!-- bootstrab icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css"
         rel="stylesheet">
-
     <!-- <link rel="stylesheet" href='css/english.css' /> -->
-
 </head>
-
 <body class="d-flex flex-column min-vh-100">
-
-
     <header class="header">
         <div class="navbar-area">
             <!-- Topbar -->
-            <nav class="navbar navbar-expand navbar-light topbar mb-1 static-top  justify-content-between"
+            <nav class="navbar navbar-expand navbar-light topbar mb-1 Static-top  justify-content-between"
                 style="min-height:100px">
                 <!-- Topbar Navbar -->
                 <ul class="navbar-nav p-0">
@@ -41,7 +36,7 @@
                     <li class="nav-item dropdown no-arrow position-relative">
                         <a class="nav-link dropdown-toggle  gap-2" href="#" id="userDropdown" role="button"
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="img-profile rounded-circle" src="img/pic (3).svg">
+                            <img class="img-profile rounded-circle" src="images/common/Demo/Employee_Picture.svg">
                             <div class="userName" style="display: flex; flex-direction: column;">
                                 <span class=" text-dark font-weight-bold">
                                     عيسى هاني مبروك عزام
@@ -55,21 +50,21 @@
                             style="font-size: 14px; width: 200px;" aria-labelledby="userDropdown">
                             <!-- item-->
                             <a class="dropdown-item notify-item ">
-                                <img src="img/Frame (2).svg" />
+                                <img src="images/common/Static/Frame (2).svg" />
                                 <span>حسابى</span>
                             </a>
-                            <a class="dropdown-item notify-item ">
-                                <img src="img/Frame (1).svg" />
+                            <a class="dropdown-item notify-item" data-bs-toggle="modal" data-bs-target="#PassWordModal">
+                                <img src="images/common/Static/Frame (1).svg" />
                                 <span>تغيير كلمة السر</span>
                             </a>
                             <a class="dropdown-item notify-item ">
-                                <img src="img/Frame (3).svg" />
+                                <img src="images/common/Static/Frame (3).svg" />
                                 <span>الانظمة</span>
                             </a>
                             <hr class="dropdown-divider">
                             <!-- item-->
                             <a class="dropdown-item notify-item ">
-                                <img src="img/Frame (4).svg" />
+                                <img src="images/common/Static/Frame (4).svg" />
                                 <span>تسجيل الخروج</span>
                             </a>
                         </div>
@@ -162,6 +157,9 @@
                     <div class="marquee">
                         <div class="marquee-content">
                             <p> خدمة الرسائل النصية غير متاحة حالياً</p>
+                            <p> خدمة الرسائل النصية غير متاحة حالياً</p>
+                            <p> خدمة الرسائل النصية غير متاحة حالياً</p>
+
                         </div>
                     </div>
                     <i class="fa-regular fa-circle-xmark marquee-xmark" id="marquee-xmark" onclick="closeWarning()"></i>
@@ -173,11 +171,12 @@
                         <h1 class="hide-on-mobile" style="font-size: 1.2rem;font-weight: bold;">شركة كدي لتأجير السيارات
                         </h1>
                         <div class="Name_status">
-                            <span class="extra-small-mobile m-0"> الرئيسي </span> <span class="BranchStatus">موقوف</span>
+                            <span class="extra-small-mobile m-0"> الرئيسي </span> <span
+                                class="BranchStatus">موقوف</span>
                         </div>
                     </div>
                     <a href="#">
-                        <img class="extra-small-mobile Logo " src="img/CompanyLogo_20240325231449.png">
+                        <img class="extra-small-mobile Logo " src="images/common/Static/Logo.png">
                     </a>
                 </div>
             </nav>
@@ -199,9 +198,10 @@
                                             <div class="col-md-6">
                                                 <div class="row  flex-column-reverse flex-sm-row">
                                                     <div class="col-md-9">
-                                                       <div class="chart-container">
-                                                            <canvas id="Cars_Chart" style="display: block; width: 100%; height: 100%;"></canvas>
-                                                        </div>                                                  
+                                                        <div class="chart-container">
+                                                            <canvas id="Cars_Chart"
+                                                                style="display: block; width: 100%; height: 100%;"></canvas>
+                                                        </div>
                                                     </div>
                                                     <div class="col-sm-3">
                                                         <p class="chart-p">سيارات الفرع : <span>500</span></p>
@@ -227,8 +227,9 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-md-8">
-                                                            <div class="chart-container">
-                                                            <canvas id="Contracts_Chart" style="display: block; width: 100%; height: 100%;"></canvas>
+                                                        <div class="chart-container">
+                                                            <canvas id="Contracts_Chart"
+                                                                style="display: block; width: 100%; height: 100%;"></canvas>
                                                         </div>
                                                     </div>
 
@@ -236,14 +237,13 @@
                                             </div>
 
                                         </div>
-
-
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="row  flex-column-reverse flex-sm-row">
                                                     <div class="col-sm-8">
                                                         <div class="chart-container">
-                                                            <canvas id="Branch_Balance_Chart" style="display: block; width: 100%; height: 100%;"></canvas>
+                                                            <canvas id="Branch_Balance_Chart"
+                                                                style="display: block; width: 100%; height: 100%;"></canvas>
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-4">
@@ -264,8 +264,9 @@
                                             <div class="col-md-6 employee-col">
                                                 <div class="row  flex-column-reverse flex-sm-row">
                                                     <div class="col-sm-8">
-                                                            <div class="chart-container">
-                                                            <canvas id="Employee_Balance_Chart" style="display: block; width: 100%; height: 100%;"></canvas>
+                                                        <div class="chart-container">
+                                                            <canvas id="Employee_Balance_Chart"
+                                                                style="display: block; width: 100%; height: 100%;"></canvas>
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-4 ">
@@ -303,8 +304,8 @@
                                                     <!-- Cars -->
                                                     <div class="col-xl-4 col-md-6 car-item" data-type="سيدان متوسطة">
                                                         <div class="card car-card p-2">
-                                                            <img src="img/rectangle-115.png" alt="هيونداي - النترا"
-                                                                class="car-image">
+                                                            <img src="images/common/Demo/rectangle-115.png"
+                                                                alt="هيونداي - النترا" class="car-image">
                                                             <div class="card-body p-0">
                                                                 <div class="p-1">
                                                                     <h5 class="car-title">هيونداي - النترا - سيدان
@@ -316,40 +317,40 @@
                                                                     <div class="car-icons">
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 94.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 94.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 93.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 93.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 95.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 95.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">4</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 96.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 96.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">5</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 97.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 97.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">2</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 98.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 98.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">4</span>
@@ -395,7 +396,7 @@
                                                     </div>
                                                     <div class="col-xl-4 col-md-6 car-item" data-type="عائلية كبيرة">
                                                         <div class="card car-card p-2">
-                                                            <img src="img//30-21.png" alt="كيا كارنيفال"
+                                                            <img src="images/common/Demo/30-21.png" alt="كيا كارنيفال"
                                                                 class="car-image">
                                                             <div class="card-body p-0">
                                                                 <div class="p-1">
@@ -408,40 +409,40 @@
                                                                     <div class="car-icons">
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 94.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 94.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 93.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 93.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 95.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 95.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">4</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 96.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 96.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">5</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 97.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 97.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">2</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 98.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 98.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">4</span>
@@ -488,7 +489,7 @@
                                                     </div>
                                                     <div class="col-xl-4 col-md-6 car-item" data-type="سيدان متوسطة">
                                                         <div class="card car-card p-2">
-                                                            <img src="img//34-20.png" alt="فورد - تورس"
+                                                            <img src="images/common/Demo/34-20.png" alt="فورد - تورس"
                                                                 class="car-image">
                                                             <div class="card-body p-0">
                                                                 <div class="p-1">
@@ -501,40 +502,40 @@
                                                                     <div class="car-icons">
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 94.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 94.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 93.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 93.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 95.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 95.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">4</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 96.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 96.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">5</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 97.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 97.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">2</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 98.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 98.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">4</span>
@@ -580,7 +581,8 @@
                                                     </div>
                                                     <div class="col-xl-4 col-md-6 car-item" data-type="اقتصادية">
                                                         <div class="card car-card p-2">
-                                                            <img src="img//car4.png" alt="كيا - نيرو" class="car-image">
+                                                            <img src="images/common/Demo/car4.png" alt="كيا - نيرو"
+                                                                class="car-image">
                                                             <div class="card-body p-0">
                                                                 <div class="p-1">
                                                                     <h5 class="car-title">كيا - نيرو - اقتصادية - 2019 -
@@ -592,40 +594,40 @@
                                                                     <div class="car-icons">
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 94.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 94.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 93.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 93.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 95.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 95.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">4</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 96.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 96.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">5</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 97.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 97.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">2</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 98.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 98.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">4</span>
@@ -699,8 +701,8 @@
                                                     <!-- Cars -->
                                                     <div class="col-xl-4 col-md-6 car-item" data-type="سيدان متوسطة">
                                                         <div class="card car-card p-2">
-                                                            <img src="img/105-19.png" alt="هيونداي - النترا"
-                                                                class="car-image">
+                                                            <img src="images/common/Demo/105-19.png"
+                                                                alt="هيونداي - النترا" class="car-image">
                                                             <div class="card-body Available_Car_Card p-0">
                                                                 <div class="p-1">
                                                                     <h5 class="car-title">هيونداي - النترا - سيدان
@@ -713,40 +715,40 @@
                                                                     <div class="car-icons">
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 94.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 94.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 93.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 93.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 95.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 95.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">4</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 96.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 96.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">5</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 97.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 97.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">2</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 98.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 98.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">4</span>
@@ -786,7 +788,7 @@
                                                     </div>
                                                     <div class="col-xl-4 col-md-6 car-item" data-type="عائلية كبيرة">
                                                         <div class="card car-card p-2">
-                                                            <img src="img//car2.png" alt="كيا كارنيفال"
+                                                            <img src="images/common/Demo/car2.png" alt="كيا كارنيفال"
                                                                 class="car-image">
                                                             <div class="card-body Available_Car_Card p-0">
                                                                 <div class="p-1">
@@ -800,40 +802,40 @@
                                                                     <div class="car-icons">
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 94.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 94.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 93.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 93.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 95.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 95.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">4</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 96.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 96.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">5</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 97.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 97.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">2</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 98.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 98.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">4</span>
@@ -873,7 +875,7 @@
                                                     </div>
                                                     <div class="col-xl-4 col-md-6 car-item" data-type="سيدان متوسطة">
                                                         <div class="card car-card p-2">
-                                                            <img src="img//car3.png" alt="فورد - تورس"
+                                                            <img src="images/common/Demo/car3.png" alt="فورد - تورس"
                                                                 class="car-image">
                                                             <div class="card-body Available_Car_Card p-0">
                                                                 <div class="p-1">
@@ -887,40 +889,40 @@
                                                                     <div class="car-icons">
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 94.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 94.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 93.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 93.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 95.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 95.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">4</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 96.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 96.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">5</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 97.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 97.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">2</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 98.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 98.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">4</span>
@@ -960,7 +962,8 @@
                                                     </div>
                                                     <div class="col-xl-4 col-md-6 car-item" data-type="اقتصادية">
                                                         <div class="card car-card p-2">
-                                                            <img src="img//car4.png" alt="كيا - نيرو" class="car-image">
+                                                            <img src="images/common/Demo/car4.png" alt="كيا - نيرو"
+                                                                class="car-image">
                                                             <div class="card-body Available_Car_Card p-0">
                                                                 <div class="p-1">
                                                                     <h5 class="car-title">كيا - نيرو - اقتصادية - 2019 -
@@ -973,40 +976,40 @@
                                                                     <div class="car-icons">
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 94.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 94.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 93.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 93.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 95.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 95.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">4</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 96.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 96.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">5</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 97.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 97.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">2</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 98.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 98.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">4</span>
@@ -1073,8 +1076,8 @@
                                                     <!-- Cars -->
                                                     <div class="col-xl-4 col-md-6 car-item" data-type="سيدان متوسطة">
                                                         <div class="card car-card p-2">
-                                                            <img src="img/rectangle-115-10.png" alt="هيونداي - النترا"
-                                                                class="car-image">
+                                                            <img src="images/common/Demo/rectangle-115-10.png"
+                                                                alt="هيونداي - النترا" class="car-image">
                                                             <div class="card-body p-0">
                                                                 <div class="p-1">
                                                                     <h5 class="car-title">هيونداي - النترا - سيدان
@@ -1087,40 +1090,40 @@
                                                                     <div class="car-icons">
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 94.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 94.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 93.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 93.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 95.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 95.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">4</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 96.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 96.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">5</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 97.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 97.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">2</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 98.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 98.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">4</span>
@@ -1146,8 +1149,8 @@
                                                     </div>
                                                     <div class="col-xl-4 col-md-6 car-item" data-type="عائلية كبيرة">
                                                         <div class="card car-card p-2">
-                                                            <img src="img//rectangle-115-14.png" alt="كيا كارنيفال"
-                                                                class="car-image">
+                                                            <img src="images/common/Demo/rectangle-115-14.png"
+                                                                alt="كيا كارنيفال" class="car-image">
                                                             <div class="card-body p-0">
                                                                 <div class="p-1">
                                                                     <h5 class="car-title">كيا - كارنيفال أي اكس جان 8 -
@@ -1160,40 +1163,40 @@
                                                                     <div class="car-icons">
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 94.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 94.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 93.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 93.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 95.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 95.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">4</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 96.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 96.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">5</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 97.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 97.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">2</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 98.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 98.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">4</span>
@@ -1228,8 +1231,8 @@
                                                     </div>
                                                     <div class="col-xl-4 col-md-6 car-item" data-type="سيدان متوسطة">
                                                         <div class="card car-card p-2">
-                                                            <img src="img//rectangle-115-10.png" alt="فورد - تورس"
-                                                                class="car-image">
+                                                            <img src="images/common/Demo/rectangle-115-10.png"
+                                                                alt="فورد - تورس" class="car-image">
                                                             <div class="card-body p-0">
                                                                 <div class="p-1">
                                                                     <h5 class="car-title">فورد - تورس - سيدان متوسطة -
@@ -1242,40 +1245,40 @@
                                                                     <div class="car-icons">
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 94.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 94.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 93.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 93.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 95.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 95.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">4</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 96.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 96.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">5</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 97.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 97.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">2</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 98.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 98.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">4</span>
@@ -1315,7 +1318,8 @@
                                                     </div>
                                                     <div class="col-xl-4 col-md-6 car-item" data-type="اقتصادية">
                                                         <div class="card car-card p-2">
-                                                            <img src="img//car4.png" alt="كيا - نيرو" class="car-image">
+                                                            <img src="images/common/Demo/car4.png" alt="كيا - نيرو"
+                                                                class="car-image">
                                                             <div class="card-body p-0">
                                                                 <div class="p-1">
                                                                     <h5 class="car-title">كيا - نيرو - اقتصادية - 2019 -
@@ -1328,40 +1332,40 @@
                                                                     <div class="car-icons">
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 94.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 94.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 93.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 93.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 95.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 95.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">4</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 96.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 96.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">5</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 97.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 97.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">2</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 98.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 98.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">4</span>
@@ -1424,8 +1428,8 @@
                                                     <!-- Cars -->
                                                     <div class="col-xl-4 col-md-6 car-item" data-type="سيدان متوسطة">
                                                         <div class="card car-card p-2">
-                                                            <img src="img/rectangle-115.png" alt="هيونداي - النترا"
-                                                                class="car-image">
+                                                            <img src="images/common/Demo/rectangle-115.png"
+                                                                alt="هيونداي - النترا" class="car-image">
                                                             <div class="card-body p-0">
                                                                 <div class="p-1">
                                                                     <h5 class="car-title">هيونداي - النترا - سيدان
@@ -1437,40 +1441,40 @@
                                                                     <div class="car-icons">
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 94.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 94.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 93.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 93.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 95.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 95.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">4</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 96.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 96.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">5</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 97.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 97.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">2</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 98.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 98.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">4</span>
@@ -1516,7 +1520,7 @@
                                                     </div>
                                                     <div class="col-xl-4 col-md-6 car-item" data-type="عائلية كبيرة">
                                                         <div class="card car-card p-2">
-                                                            <img src="img//30-21.png" alt="كيا كارنيفال"
+                                                            <img src="images/common/Demo/30-21.png" alt="كيا كارنيفال"
                                                                 class="car-image">
                                                             <div class="card-body p-0">
                                                                 <div class="p-1">
@@ -1529,40 +1533,40 @@
                                                                     <div class="car-icons">
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 94.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 94.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 93.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 93.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 95.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 95.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">4</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 96.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 96.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">5</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 97.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 97.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">2</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 98.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 98.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">4</span>
@@ -1609,7 +1613,7 @@
                                                     </div>
                                                     <div class="col-xl-4 col-md-6 car-item" data-type="سيدان متوسطة">
                                                         <div class="card car-card p-2">
-                                                            <img src="img//34-20.png" alt="فورد - تورس"
+                                                            <img src="images/common/Demo/34-20.png" alt="فورد - تورس"
                                                                 class="car-image">
                                                             <div class="card-body p-0">
                                                                 <div class="p-1">
@@ -1622,40 +1626,40 @@
                                                                     <div class="car-icons">
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 94.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 94.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 93.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 93.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 95.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 95.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">4</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 96.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 96.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">5</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 97.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 97.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">2</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 98.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 98.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">4</span>
@@ -1701,7 +1705,8 @@
                                                     </div>
                                                     <div class="col-xl-4 col-md-6 car-item" data-type="اقتصادية">
                                                         <div class="card car-card p-2">
-                                                            <img src="img//car4.png" alt="كيا - نيرو" class="car-image">
+                                                            <img src="images/common/Demo/car4.png" alt="كيا - نيرو"
+                                                                class="car-image">
                                                             <div class="card-body p-0">
                                                                 <div class="p-1">
                                                                     <h5 class="car-title">كيا - نيرو - اقتصادية - 2019 -
@@ -1713,40 +1718,40 @@
                                                                     <div class="car-icons">
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 94.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 94.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 93.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 93.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 95.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 95.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">4</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 96.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 96.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">5</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 97.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 97.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">2</span>
                                                                         </div>
                                                                         <div class="icon-item">
                                                                             <div class="icon">
-                                                                                <img src="img/carDataIcons/Rectangle 98.svg"
+                                                                                <img src="images/common/Static/carDataIcons/Rectangle 98.svg"
                                                                                     class="car-icondata">
                                                                             </div>
                                                                             <span class="icon-text">4</span>
@@ -1804,11 +1809,9 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
-
                         </div>
-                         <!--  Side Buttons -->
+                        <!--  Side Buttons -->
                         <div class="col-lg-2  bg-transparent " id="button-on-mobile">
                             <!-- Card Body -->
                             <div class="card-body h-100">
@@ -1820,37 +1823,36 @@
                                     </select>
                                     <button type="button" class="btn btn-secondary1  mt-2 active1" id="chart"
                                         onclick="showCarouselItem(1) , setActiveButton(0)"><img
-                                            src="img/Rectangle 74.svg" class="chart-buttons-img">
+                                            src="images/common/Static/Rectangle 74.svg" class="chart-buttons-img">
                                         <p>الاحصائيات</p>
                                     </button>
 
                                     <button type="button" class="btn btn-secondary1 " id="toggleCarousel"
                                         onclick="showCarouselItem(2) ,setActiveButton(1)"><img
-                                            src="img/Rectangle 75.svg" class="chart-buttons-img">
+                                            src="images/common/Static/Rectangle 75.svg" class="chart-buttons-img">
                                         <p>مؤجرة</p>
                                     </button>
                                     <button type="button" class="btn btn-secondary1 " id="toggleCarousel2"
                                         onclick="showCarouselItem(3) ,setActiveButton(2)"><img
-                                            src="img/Rectangle 76.svg" class="chart-buttons-img">
+                                            src="images/common/Static/Rectangle 76.svg" class="chart-buttons-img">
                                         <p>
                                             متاحة
                                         </p>
                                     </button>
                                     <button type="button" class="btn btn-secondary1 " id="toggleCarousel3"
-                                        onclick="showCarouselItem(4),setActiveButton(3)"><img src="img/Rectangle 77.svg"
-                                            class="chart-buttons-img">
+                                        onclick="showCarouselItem(4),setActiveButton(3)"><img
+                                            src="images/common/Static/Rectangle 77.svg" class="chart-buttons-img">
                                         <p>غير متاحة</p>
                                     </button>
 
                                     <button type="button" class="btn btn-secondary1"
-                                        onclick="showCarouselItem(5),setActiveButton(4)"><img src="img/SavedCars.svg"
-                                            class="chart-buttons-img">
+                                        onclick="showCarouselItem(5),setActiveButton(4)"><img
+                                            src="images/common/Static/SavedCars.svg" class="chart-buttons-img">
                                         <p>محفوظة</p>
                                     </button>
                                 </form>
                             </div>
                         </div>
-
                     </div>
                 </section>
             </div>
@@ -1870,23 +1872,23 @@
             <div class="row  footer-buttons-row">
                 <!-- First row of buttons -->
                 <div class="col-sm-6 col-md-6 col-lg-3 ">
-                    <a type="button" href="https://ayatt12.github.io/SavedContracts/"
-                        class="btn btn-Pages mb-2"><img src="img/Rectangle 35.png">
+                    <a type="button" href="#" class="btn btn-Pages mb-2"><img
+                            src="images/common/Static/Rectangle 35.png">
                         العقود المحفوظة </a>
                 </div>
                 <div class="col-sm-6 col-md-6 col-lg-3  ">
-                    <a type="button" href="https://ayatt12.github.io/extension/" class="btn btn-Pages mb-2"><img
-                            src="img/Rectangle 31.png">
+                    <a type="button" href="Pages/Extension/index.html" class="btn btn-Pages mb-2"><img
+                            src="images/common/Static/Rectangle 31.png">
                         تمديد العقد</a>
                 </div>
                 <div class="col-sm-6 col-md-6 col-lg-3  ">
                     <a type="button" href="https://ayatt12.github.io/settelment/index.html"
-                        class="btn btn-Pages mb-2"><img src="img/Rectangle 30.png">
+                        class="btn btn-Pages mb-2"><img src="images/common/Static/Rectangle 30.png">
                         تسوية العقد</a>
                 </div>
                 <div class="col-sm-6 col-md-6 col-lg-3  ">
-                    <a type="button" href="https://ayatt12.github.io/ContractV2/" class="btn btn-Pages mb-2"><img
-                            src="img/Rectangle 29.png">
+                    <a type="button" href="Pages/Create_Contract/index.html" class="btn btn-Pages mb-2"><img
+                            src="images/common/Static/Rectangle 29.png">
                         إنشاء العقد</a>
                 </div>
 
@@ -1894,23 +1896,24 @@
                 <!-- Second row of buttons -->
                 <div class="col-sm-6 col-md-6 col-lg-3 mb-1 ">
                     <a type="button" class="btn btn-Pages neonShadow " id="pulse-button-brunch"
-                        href="https://ayatt12.github.io/custody/"><img src="img/Rectangle 36.png" class="anm"
-                            id="brunch_button-img">تسليم
+                        href="https://ayatt12.github.io/custody/"><img src="images/common/Static/Rectangle 36.png"
+                            class="anm" id="brunch_button-img">تسليم
                         العهدة</a>
                 </div>
                 <div class="col-sm-6 col-md-6 col-lg-3  mb-1   ">
-                    <a type="button" href="https://ayatt12.github.io/Feed/" class="btn btn-Pages neonShadow "
-                        id="pulse-button-employee"><img src="img/Rectangle 33.png" class="anm"> تغذية
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#FeedModal"
+                        class="btn btn-Pages neonShadow " id="pulse-button-employee"><img
+                            src="images/common/Static/Rectangle 33.png" class="anm"> تغذية
                         الصندوق</a>
                 </div>
                 <div class="col-sm-6 col-md-6 col-lg-3  mb-1  ">
                     <a type="button" href="https://ayatt12.github.io/report/" class="btn btn-Pages "><img
-                            src="img/Rectangle 32.png">
+                            src="images/common/Static/Rectangle 32.png">
                         التقرير المالي</a>
                 </div>
                 <div class="col-sm-6 col-md-6 col-lg-3  mb-1 ">
                     <a type="button" href="https://ayatt12.github.io/tenant/" class="btn btn-Pages "><img
-                            src="img/Rectangle 34.png">
+                            src="images/common/Static/Rectangle 34.png">
                         مستأجرين</a>
                 </div>
 
@@ -1919,80 +1922,6 @@
     </footer>
     <!--/ End Footer Area -->
 
-    <!-- feed modal -->
-    <div class="modal fade" id="FeedModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header password-modal-header mb-2">
-                    <p class="card-title feed-card-title"> تغذية الصندوق </p>
-                    <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><img src="img/Close.svg"></span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="row feed-content-row">
-
-                        <form action="">
-                            <div class="col-12 feedRows">
-                                <div class="col-auto">
-                                    <P>رقم التغذية</P>
-                                </div>
-                                <div class="col-auto personal-data">
-                                    <P class="Feeddata"> 23-1-62-5001-000003 </P>
-                                </div>
-                            </div>
-                            <div class="col-12 feedRows">
-                                <div class="col-auto">
-                                    <P> المُغذي </P>
-                                </div>
-                                <div class="col-auto personal-data">
-                                    <P class="Feeddata">محمود سعد الكشغري </P>
-                                </div>
-                            </div>
-                            <div class="col-12 feedRows">
-                                <div class="col-auto">
-                                    <P> التاريخ </P>
-                                </div>
-                                <div class="col-auto personal-data">
-                                    <P class="Feeddata"> 2023/02/03</P>
-                                </div>
-                            </div>
-                            <div class="col-12 feedRows">
-                                <div class="col-auto">
-                                    <P> المبلغ </P>
-                                </div>
-                                <div class="col-auto personal-data">
-                                    <P class="Feeddata">1950.00 </P>
-                                </div>
-                            </div>
-                            <div class="col-12 feedRows">
-                                <div class="col-auto">
-                                    <label for="Feed-notes">ملاحظات</label>
-                                </div>
-                                <div class="col-md-10 pt-2">
-
-                                    <textarea class="form-control textarea-inputs" id="Feed-notes" maxlength="100"
-                                        rows="1" name="Feed-notes"></textarea>
-                                </div>
-                            </div>
-                            <div class="col-12 feedRows">
-                                <div class="col">
-                                    <p class="feed-error mt-4">يمكنك قبول أو رفض تغذية الصندوق الخاص بك بالفرع الحالي
-                                    </p>
-                                </div>
-
-                            </div>
-                        </form>
-
-                    </div>
-                </div>
-                <div class="modal-footer border-0 justify-content-center">
-                    <button type="button" class="btn btn-secondary px-5" data-bs-dismiss="modal">رفض</button>
-                    <button type="button" class="btn feed-acceptt-btn px-5" id="acceptBtn"> قبول </button>
-                </div>
-            </div>
-        </div>
-    </div>
     <!--car details Modal -->
     <div class="modal fade" id="carDetailsModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-lg">
@@ -2058,9 +1987,189 @@
             </div>
         </div>
     </div>
+    <!-- Feed Modal -->
+    <div class="modal fade" id="FeedModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="FeedModalLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <div class="col-auto">
+                        <button type="button" class="btn-close m-0 p-1" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="col">
+                        <h1 class="modal-title fs-5 text-center" id="FeedModalLabel">تغذية الصندوق</h1>
+                    </div>
+                </div>
+                <form>
+
+                    <div class="modal-body py-1">
+                        <div class="Feed-Card p-3">
+                            <div class="row flex-row-reverse">
+                                <div class="col-auto">
+                                    <p id="feed-number"> رقم التغذية </p>
+                                </div>
+                                <div class="col-auto Feed-data">
+                                    <p> 23-1-62-5001-000003</p>
+
+                                </div>
+                            </div>
+                            <div class="row flex-row-reverse">
+                                <div class="col-auto">
+                                    <p id="feed-number"> المُغذي</p>
+
+                                </div>
+                                <div class="col-auto Feed-data">
+                                    <p> محمود سعد الكشغري</p>
+
+                                </div>
+                            </div>
+                            <div class="row flex-row-reverse">
+                                <div class="col-auto">
+                                    <p id="feed-number"> التاريخ</p>
+
+                                </div>
+                                <div class="col-auto Feed-data">
+                                    <p>2023/01/05</p>
+
+                                </div>
+                            </div>
+                            <div class="row flex-row-reverse">
+                                <div class="col-auto">
+                                    <p id="feed-number"> المبلغ</p>
+
+                                </div>
+                                <div class="col-auto Feed-data">
+                                    <p> 1950.00</p>
+
+                                </div>
+                            </div>
+                            <div class="row align-items-center flex-row-reverse">
+                                <div class="col-auto">
+                                    <label id="notes" class="mb-lg-0">الملاحظات</label>
+                                </div>
+                                <div class="col d-flex justify-content-end ">
+                                    <textarea class="form-control Feed-textarea" rows="1" maxlength="100"
+                                        name="notes"></textarea>
+                                </div>
+                            </div>
+                            <div class="row flex-row-reverse">
+                                <div class="col-12 mt-3">
+                                    <p style="color:#D92626;text-align: end;">يمكنك قبول أو
+                                        رفض تغذية الصندوق الخاص بك بالفرع الحالي</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer border-0 py-1">
+                        <div class="row w-100 g-2">
+                            <div class="col-auto d-flex align-items-center p-md-0">
+                                <button type="button" class="btn feed-acceptt-btn px-5" id="acceptBtn"> قبول
+                                </button>
+                            </div>
+                            <div class="col-auto d-flex align-items-center">
+                                <button type="button" class="btn btn-secondary px-5"
+                                    data-bs-dismiss="modal">رفض</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <!-- Password Modal -->
+    <div class="modal fade" id="PassWordModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="PassWordModalLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered ">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <div class="col-auto">
+                        <button type="button" class="btn-close m-0 p-1" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="col">
+                        <h1 class="modal-title fs-5 text-center" id="PassWordModalLabel">تغيير كلمة السر</h1>
+                    </div>
+                </div>
+                <form>
+                    <div class="modal-body py-1">
+                        <div class="row gy-2">
+                            <div class="col-md-12 text-center">
+                                <img src="images/common/Static/DesignLock.svg">
+                            </div>
+                            <div class="col-md-12 d-flex flex-column align-items-end">
+                                <label for="CurrentPasword" class="form-label">كلمة السر
+                                    الحالية </label>
+                                <div class="input-wrapper">
+                                    <img src="images/common/Static/InputLock.svg" class="lock-icon">
+                                    <i class="fa-regular fa-eye-slash toggle-password"></i>
+                                    <input type="password" id="CurrentPasword"
+                                        class="form-control password-input text-center"
+                                        name="CurrentPasword" required>
+                                    <div class="PassWord-invaildBox">
+                                        <div class="Password-invalid-feedback ">
+                                            الحقل مطلوب
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-12 d-flex flex-column align-items-end">
+                                <label for="NewPassword" class="form-label">كلمة السر
+                                    الجديدة </label>
+                                <div class="input-wrapper">
+                                    <img src="images/common/Static/InputLock.svg" class="lock-icon">
+                                    <i class="fa-regular fa-eye-slash toggle-password"></i>
+                                    <input type="password" id="NewPassword"
+                                        class="form-control password-input text-center" name="NewPassword"
+                                        placeholder="كلمة السر" required>
+                                    <div class="PassWord-invaildBox">
+                                        <div class="Password-invalid-feedback ">
+                                            الحقل مطلوب
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-12 d-flex flex-column align-items-end">
+                                <label for="Confirm-password" class="form-label"> تأكيد كلمة
+                                    السر </label>
+                                <div class="input-wrapper">
+                                    <img src="images/common/Static/InputLock.svg" class="lock-icon">
+                                    <i class="fa-regular fa-eye-slash toggle-password"></i>
+                                    <input type="password" id="Confirm-password"
+                                        class="form-control password-input text-center"
+                                        name="Confirm-password" required>
+                                    <div class="PassWord-invaildBox">
+                                        <div class="Password-invalid-feedback ">
+                                            الحقل مطلوب
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer border-0 py-1">
+                        <div class="row w-100 g-2">
+                            <div class="col-auto d-flex align-items-center p-md-0">
+                                <button type="button" class="btn feed-acceptt-btn px-5" id="acceptBtn">
+                                    حفظ
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
     <!-- ========================= JS here ========================= -->
     <!-- charts -->
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!--link to make javascript function operate-->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
@@ -2072,14 +2181,25 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
-    <script src="js/javascript/scripts.js"></script>
-    <script src="js/javascript/charts.js"></script>
+    <script src="js/Index_Js/scripts.js"></script>
+    <script src="js/Index_Js/charts.js"></script>
+    <!-- Password input eye  -->
+ <script>
+        const inputs = document.querySelectorAll('#CurrentPasword , #NewPassword , #Confirm-password');
+        const togglePasswords = document.querySelectorAll('.toggle-password');
+        inputs.forEach((input, index) => {
+            const togglePassword = togglePasswords[index]
+            togglePassword.addEventListener('click', function () {
+                const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+                input.setAttribute('type', type);
 
+                this.classList.toggle('fa-eye-slash');
+                this.classList.toggle('fa-eye');
+
+            });
+        });
+    </script>
 
 </body>
 
-
 </html>
-
-
-
